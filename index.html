@@ -1,0 +1,3537 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="canonical" href="https://info.gmajor.biz/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GMAJOR - Global online B2B matching service</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.marquee/jquery.marquee.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=block");
+    </style>
+    <style>
+      .marquee {
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+    </style>
+    <meta name="title" content="GMAJOR - Global online B2B matching service" />
+    <meta
+      name="description"
+      content="GMAJOR is a global online B2B matching service that enables businesses from around the world to easily find partners, expand markets, and grow their business. With a user-friendly interface, smart search features, and high security, GMAJOR provides a comprehensive solution for businesses to find reliable partners and build sustainable partnerships. Join today to experience the difference!"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="language" content="vi" />
+    <meta name="author" content="GMAJOR" />
+
+    <!-- Social media share -->
+    <meta
+      property="og:title"
+      content="GMAJOR - Global online B2B matching service"
+    />
+    <meta property="og:site_name" content="GMAJOR" />
+    <meta property="og:url" content=https://info.gmajor.biz/>
+    <meta
+      property="og:description"
+      content="GMAJOR is a global online B2B matching service that enables businesses from around the world to easily find partners, expand markets, and grow their business. With a user-friendly interface, smart search features, and high security, GMAJOR provides a comprehensive solution for businesses to find reliable partners and build sustainable partnerships. Join today to experience the difference!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image"
+    content=https://themesberg.s3.us-east-2.amazonaws.com/public/github/landwind/og-image.png>
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gmajorglobal" />
+    <meta name="twitter:creator" content="@gmajorglobal" />
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <link href="../output.css" rel="stylesheet" />
+  </head>
+  <body class="transition">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-N5MP5Z8M"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header class="fixed w-full z-50">
+      <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900">
+        <div
+          class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto"
+        >
+          <a
+            href="https://gmajor.biz"
+            target="_blank"
+            class="flex items-center"
+          >
+            <img
+              src="../images/gmajor-logo.png"
+              class="h-6 mr-3 sm:h-9"
+              alt="GMAJOR Logo"
+            />
+          </a>
+          <div class="flex items-center lg:order-2 lg:gap-x-8">
+            <ul class="hidden lg:flex font-medium space-x-8">
+              <li>
+                <a
+                  href="https://gmajor.biz/about-us"
+                  target="_blank"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0"
+                  >About us</a
+                >
+              </li>
+            </ul>
+            <a
+              href="https://market.gmajor.biz/register"
+              target="_blank"
+              class="text-white bg-main hover:bg-main_hover focus:ring-4 focus:ring-main font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none hidden sm:block"
+              >Sign Up Now and Get 5000 Free Credits!</a
+            >
+            <div class="relative inline-block text-left z-50">
+              <button id="lang-button" type="button" class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none">
+                <img id="current-flag" src="https://flagcdn.com/us.svg" alt="flag" class="w-5 h-3 rounded-sm" />
+                <span id="current-lang">English</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            
+              <ul id="lang-dropdown" class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg">
+                <li data-lang="en" data-url="https://giangle1999.github.io/GMAJOR_New_Landing_Page_English/"
+                    class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/us.svg" alt="English" class="w-5 h-3 mr-3 rounded-sm" />
+                  English
+                </li>
+                <li data-lang="vi" data-url="https://giangle1999.github.io/GMAJOR_New_Landing_Page/"
+                    class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/vn.svg" alt="Tiếng Việt" class="w-5 h-3 mr-3 rounded-sm" />
+                  Tiếng Việt
+                </li>
+              </ul>
+              
+            </div>
+            
+            <button
+              data-collapse-toggle="mobile-menu-2"
+              type="button"
+              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+              aria-controls="mobile-menu-2"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+              <svg
+                class="hidden w-6 h-6"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full"
+            id="mobile-menu-2"
+          >
+            <ul
+              class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0"
+            >
+              <li>
+                <a
+                  href="https://gmajor.biz/about-us"
+                  target="_blank"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://market.gmajor.biz/register"
+                  target="_blank"
+                  class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0"
+                  >Sign Up Now and Get 5000 Free Credits!</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Start block -->
+    <section class="bg-white dark:bg-gray-900">
+      <div
+        class="lg:grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12 lg:pt-28"
+      >
+        <div class="mr-auto place-self-center space-y-5 lg:col-span-6">
+          <h1
+            class="lg:max-w-xl text-3xl font-extrabold tracking-tight md:text-[48px] md:leading-[60px] text-secondary"
+          >
+            Empower your business to <i>"go global"</i> with GMAJOR
+          </h1>
+          <p
+            class="lg:max-w-xl font-light text-secondary md:text-lg lg:text-2xl lg:leading-normal"
+          >
+            Connecting - Cross-border Trade Has Never Been Easier.
+          </p>
+          <p class="lg:max-w-xl text-text">
+            As a
+            <strong><i>global B2B matching service</i></strong
+            >, GMAJOR makes it simple to expand your market and find new
+            partners without facing any language barriers.
+          </p>
+          <p class="lg:max-w-xl text-text">
+            With advanced features like multilingual chat, Request for
+            Quotations (RFQs), and Bulk Proposals, you can optimize your
+            business processes completely free of charge. Additionally, to
+            enhance your business visibility on the GMAJOR platform, you can use
+            <strong>Credits</strong>C to access premium features.
+          </p>
+          <!-- List -->
+          <ul role="list" class="space-y-4 mb-7">
+            <li class="flex space-x-2">
+              <!-- Icon -->
+              <svg
+                class="text-main shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-hexagon-number-1"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+                />
+                <path d="M10 10l2 -2v8" />
+              </svg>
+              <span class="text-text -mt-[2px]">Premium Post</span>
+            </li>
+            <li class="flex space-x-2">
+              <!-- Icon -->
+              <svg
+                class="text-main shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-hexagon-number-2"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+                />
+                <path
+                  d="M10 8h3a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 0 -1 1v2a1 1 0 0 0 1 1h3"
+                />
+              </svg>
+              <span class="text-text -mt-[2px]">Business Banner Display</span>
+            </li>
+            <li class="flex space-x-2">
+              <!-- Icon -->
+              <!-- <svg
+                class="flex-shrink-0 w-5 h-5 text-main"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                fill="currentColor"
+              >
+                <path
+                  d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 48c110.5 0 200 89.5 200 200 0 110.5-89.5 200-200 200-110.5 0-200-89.5-200-200 0-110.5 89.5-200 200-200m140.2 130.3l-22.5-22.7c-4.7-4.7-12.3-4.7-17-.1L215.3 303.7l-59.8-60.3c-4.7-4.7-12.3-4.7-17-.1l-22.7 22.5c-4.7 4.7-4.7 12.3-.1 17l90.8 91.5c4.7 4.7 12.3 4.7 17 .1l172.6-171.2c4.7-4.7 4.7-12.3 .1-17z"
+                />
+              </svg> -->
+              <svg
+                class="text-main shrink-0"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="icon icon-tabler icons-tabler-outline icon-tabler-hexagon-number-3"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M19.875 6.27a2.225 2.225 0 0 1 1.125 1.948v7.284c0 .809 -.443 1.555 -1.158 1.948l-6.75 4.27a2.269 2.269 0 0 1 -2.184 0l-6.75 -4.27a2.225 2.225 0 0 1 -1.158 -1.948v-7.285c0 -.809 .443 -1.554 1.158 -1.947l6.75 -3.98a2.33 2.33 0 0 1 2.25 0l6.75 3.98h-.033z"
+                />
+                <path
+                  d="M10 9a1 1 0 0 1 1 -1h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2h2a1 1 0 0 1 1 1v2a1 1 0 0 1 -1 1h-2a1 1 0 0 1 -1 -1"
+                />
+              </svg>
+              <span class="text-text -mt-[2px]"
+                >Verification Badge for Businesses</span
+              >
+            </li>
+          </ul>
+          <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+            <a
+              href="https://market.gmajor.biz/register"
+              target="_blank"
+              class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center text-white bg-main hover:bg-main_hover border rounded-lg sm:w-auto"
+            >
+              Sign Up Now and Get 5000 Free Credits!
+            </a>
+          </div>
+        </div>
+        <div class="lg:col-span-6 mt-8 lg:mt-0">
+          <img
+            class="w-full object-contain"
+            src="../images/b2b-marketplace.png"
+            alt="Xuất khẩu sang thị trường Nhật Bản"
+          />
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white">
+      <div class="px-4 pb-8 mx-auto lg:pb-16 max-w-screen-xl">
+        <p class="text-xl text-text text-center mb-4">
+          Trusted by Businesses Using GMAJOR Services
+        </p>
+        <p class="text-text text-xs text-center mb-4">
+          (These are just a few “featured partners” – many other small
+          businesses are not listed yet.)
+        </p>
+        <div class="marquee">
+          <div
+            class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]"
+          >
+            <div
+              class="flex items-center lg:justify-center w-[60px] aspect-[78/85]"
+            >
+              <img
+                class="w-full h-full"
+                src="../images/logo-sohoma.png"
+                alt="Sohoma logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[100px]">
+              <img
+                class="w-full"
+                src="../images/tan-tien-phat-logo.png"
+                alt="Tân Tiến Phát logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[80px]">
+              <img
+                class="w-full"
+                src="../images/eufeed-logo.png"
+                alt="EU Feed JSC logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img
+                class="w-full"
+                src="../images/mhb-logo.jpeg"
+                alt="MHB Energy logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img
+                class="w-full"
+                src="../images/hung-phat-logo.jpg"
+                alt="Hưng Phát logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[140px]">
+              <img
+                class="w-full"
+                src="../images/logo-namtrung.png"
+                alt="Nam Trung Construction logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[90px]">
+              <img
+                class="w-full"
+                src="../images/sao-mai-logo.png"
+                alt="Sao Mai logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[60px]">
+              <img
+                class="w-full"
+                src="../images/logo-aeroco.png"
+                alt="Aeroco logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[40px]">
+              <img
+                class="w-full"
+                src="../images/3-sach-logo.webp"
+                alt="3 Sạch logo"
+              />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img
+                class="w-full"
+                src="../images/megarico-logo.jpeg"
+                alt="Megarico logo"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-gray-50">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="items-center gap-8 grid lg:grid-cols-2 xl:gap-16">
+          <img
+            class="hidden mb-4 rounded-lg lg:mb-0 lg:flex w-[90%]"
+            src="../images/b2b-matching-platform-la-gi.svg"
+            alt="feature image 2"
+          />
+          <div class="space-y-5">
+            <h2
+              class="mb-4 text-3xl font-extrabold tracking-tight text-secondary"
+            >
+              So, what is a global “B2B connection” matching service?
+            </h2>
+            <p
+              class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal"
+            >
+              A global B2B matching service is an online system that helps
+              businesses from all over the world connect and collaborate
+              effectively and quickly.
+            </p>
+            <p class="lg:max-w-xl text-text">
+              At
+              <strong
+                ><i
+                  ><a
+                    href="https://gmajor.biz"
+                    target="_blank"
+                    class="underline"
+                    >gmajor.biz</a
+                  ></i
+                ></strong
+              >, we provide a safe and convenient environment for you to find
+              new partners, suppliers, and customers without facing the common
+              obstacles of international trade.
+            </p>
+            <p class="lg:max-w-xl text-text">
+              Through GMAJOR, your business can expand its network, enhance
+              global presence, and capitalize on new market opportunities
+              without being limited by geographical distance or language
+              barriers. Our platform supports businesses of all sizes, from
+              small startups to large corporations.
+            </p>
+
+            <div class="grid grid-cols-3 gap-2 pt-2">
+              <div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 512 512"
+                  class="md:w-[52px] md:h-[52px] w-10 h-10 mb-3"
+                  fill="#1d7595"
+                  stroke="currentColor"
+                >
+                  <path
+                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4 .6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                  />
+                </svg>
+                <span class="md:text-xl text-sm">✅ Easy to use</span>
+              </div>
+              <div>
+                <svg
+                  class="md:w-[52px] md:h-[52px] w-10 h-10 mb-3"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  fill="#1d7595"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M479.07 111.36a16 16 0 0 0-13.15-14.74c-86.5-15.52-122.61-26.74-203.33-63.2a16 16 0 0 0-13.18 0C168.69 69.88 132.58 81.1 46.08 96.62a16 16 0 0 0-13.15 14.74c-3.85 61.11 4.36 118.05 24.43 169.24A349.47 349.47 0 0 0 129 393.11c53.47 56.73 110.24 81.37 121.07 85.73a16 16 0 0 0 12 0c10.83-4.36 67.6-29 121.07-85.73a349.47 349.47 0 0 0 71.5-112.51c20.07-51.19 28.28-108.13 24.43-169.24zm-131 75.11-110.8 128a16 16 0 0 1-11.41 5.53h-.66a16 16 0 0 1-11.2-4.57l-49.2-48.2a16 16 0 1 1 22.4-22.86l37 36.29 99.7-115.13a16 16 0 0 1 24.2 20.94z"
+                  ></path>
+                </svg>
+                <span class="md:text-xl text-sm">✅ Low cost</span>
+              </div>
+              <div>
+                <svg
+                  class="md:w-[52px] md:h-[52px] w-10 h-10 mb-3"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  fill="#1d7595"
+                  stroke="currentColor"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M271.1 144.3l54.3 14.3a8.6 8.6 0 0 1 6.6 8.1c0 4.6-4.1 8.4-9.1 8.4h-35.6a30 30 0 0 1 -11.2-2.2c-5.2-2.2-11.3-1.7-15.3 2l-19 17.5a11.7 11.7 0 0 0 -2.3 2.7 11.4 11.4 0 0 0 3.9 15.7 83.8 83.8 0 0 0 34.5 11.5V240c0 8.8 7.8 16 17.4 16h17.4c9.6 0 17.4-7.2 17.4-16V222.4c32.9-3.6 57.8-31 53.5-63-3.2-23-22.5-41.3-46.6-47.7L282.7 97.4a8.6 8.6 0 0 1 -6.6-8.1c0-4.6 4.1-8.4 9.1-8.4h35.6A30 30 0 0 1 332 83.1c5.2 2.2 11.3 1.7 15.3-2l19-17.5A11.3 11.3 0 0 0 368.5 61a11.4 11.4 0 0 0 -3.8-15.8 83.8 83.8 0 0 0 -34.5-11.5V16c0-8.8-7.8-16-17.4-16H295.4C285.8 0 278 7.2 278 16V33.6c-32.9 3.6-57.9 31-53.5 63C227.6 119.6 247 137.9 271.1 144.3zM565.3 328.1c-11.8-10.7-30.2-10-42.6 0L430.3 402a63.6 63.6 0 0 1 -40 14H272a16 16 0 0 1 0-32h78.3c15.9 0 30.7-10.9 33.3-26.6a31.2 31.2 0 0 0 .5-5.5A32 32 0 0 0 352 320H192a117.7 117.7 0 0 0 -74.1 26.3L71.4 384H16A16 16 0 0 0 0 400v96a16 16 0 0 0 16 16H372.8a64 64 0 0 0 40-14L564 377a32 32 0 0 0 1.3-48.9z"
+                  />
+                </svg>
+                <span class="md:text-xl text-sm">✅ High profit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="max-w-screen-md mx-auto text-center space-y-5">
+          <h2
+            class="mb-4 text-3xl font-extrabold tracking-tight text-secondary"
+          >
+            Core Functions of GMAJOR
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal"
+          >
+            Simply register and list your products, and GMAJOR’s smart
+            technology will take care of the rest.
+          </p>
+          <p class="text-text">
+            With advanced features and
+            <strong>AI </strong>support, you can easily find and collaborate
+            with strategic partners, enhancing your business's credibility and
+            visibility. Take advantage of every opportunity
+            <strong>GMAJOR</strong> offers to elevate your business to new
+            heights.
+          </p>
+
+          <p class="font-bold text-secondary">
+            Just take a look at the four standout features of GMAJOR below, and
+            you'll quickly see whether using the GMAJOR B2B connection platform
+            is the right choice for your business...
+          </p>
+        </div>
+
+        <div
+          class="max-w-screen-xl mx-auto grid md:grid-cols-4 grid-cols-2 md:gap-8 gap-4 text-center mt-12"
+        >
+          <div class="md:p-4 p-0">
+            <svg
+              class="w-12 mb-4 mx-auto"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              fill="#1d7595"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M177.8 63.2l10 17.4c2.8 4.8 4.2 10.3 4.2 15.9l0 41.4c0 3.9 1.6 7.7 4.3 10.4c6.2 6.2 16.5 5.7 22-1.2l13.6-17c4.7-5.9 12.9-7.7 19.6-4.3l15.2 7.6c3.4 1.7 7.2 2.6 11 2.6c6.5 0 12.8-2.6 17.4-7.2l3.9-3.9c2.9-2.9 7.3-3.6 11-1.8l29.2 14.6c7.8 3.9 12.6 11.8 12.6 20.5c0 10.5-7.1 19.6-17.3 22.2l-35.4 8.8c-7.4 1.8-15.1 1.5-22.4-.9l-32-10.7c-3.3-1.1-6.7-1.7-10.2-1.7c-7 0-13.8 2.3-19.4 6.5L176 212c-10.1 7.6-16 19.4-16 32l0 28c0 26.5 21.5 48 48 48l32 0c8.8 0 16 7.2 16 16l0 48c0 17.7 14.3 32 32 32c10.1 0 19.6-4.7 25.6-12.8l25.6-34.1c8.3-11.1 12.8-24.6 12.8-38.4l0-12.1c0-3.9 2.6-7.3 6.4-8.2l5.3-1.3c11.9-3 20.3-13.7 20.3-26c0-7.1-2.8-13.9-7.8-18.9l-33.5-33.5c-3.7-3.7-3.7-9.7 0-13.4c5.7-5.7 14.1-7.7 21.8-5.1l14.1 4.7c12.3 4.1 25.7-1.5 31.5-13c3.5-7 11.2-10.8 18.9-9.2l27.4 5.5C432 112.4 351.5 48 256 48c-27.7 0-54 5.4-78.2 15.2zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"
+              />
+            </svg>
+            <h3 class="font-bold md:text-xl text-lg mb-3 text-secondary">
+              Multilingual Chat
+            </h3>
+            <p class="md:text-base text-sm">
+              Break down language barriers with our multilingual chat feature.
+              Communicate easily with partners worldwide in your own language.
+            </p>
+          </div>
+
+          <div class="md:p-4 p-0">
+            <svg
+              class="w-12 mb-4 mx-auto"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              fill="#1d7595"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M128 64c0-35.3 28.7-64 64-64L352 0l0 128c0 17.7 14.3 32 32 32l128 0 0 288c0 35.3-28.7 64-64 64l-256 0c-35.3 0-64-28.7-64-64l0-112 174.1 0-39 39c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l80-80c9.4-9.4 9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0s-9.4 24.6 0 33.9l39 39L128 288l0-224zm0 224l0 48L24 336c-13.3 0-24-10.7-24-24s10.7-24 24-24l104 0zM512 128l-128 0L384 0 512 128z"
+              />
+            </svg>
+            <h3 class="font-bold md:text-xl text-lg mb-3 text-secondary">
+              Request for Quotations (RFQ)
+            </h3>
+            <p class="md:text-base text-sm">
+              Simplify your procurement process with the RFQ feature. Send
+              requests and receive quotes from trusted global suppliers.
+            </p>
+          </div>
+
+          <div class="md:p-4 p-0">
+            <svg
+              class="w-12 mb-4 mx-auto"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              fill="#1d7595"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480l0-83.6c0-4 1.5-7.8 4.2-10.8L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"
+              />
+            </svg>
+            <h3 class="font-bold md:text-xl text-lg mb-3 text-secondary">
+              Bulk Proposals
+            </h3>
+            <p class="md:text-base text-sm">
+              Save time with bulk proposals. Send multiple quotes or proposals
+              at once, ensuring maximum reach and efficiency.
+            </p>
+          </div>
+
+          <div class="md:p-4 p-0">
+            <svg
+              class="w-12 mb-4 mx-auto"
+              stroke-width="0"
+              viewBox="0 0 512 512"
+              fill="#1d7595"
+              stroke="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M192 104.8c0-9.2-5.8-17.3-13.2-22.8C167.2 73.3 160 61.3 160 48c0-26.5 28.7-48 64-48s64 21.5 64 48c0 13.3-7.2 25.3-18.8 34c-7.4 5.5-13.2 13.6-13.2 22.8c0 12.8 10.4 23.2 23.2 23.2l56.8 0c26.5 0 48 21.5 48 48l0 56.8c0 12.8 10.4 23.2 23.2 23.2c9.2 0 17.3-5.8 22.8-13.2c8.7-11.6 20.7-18.8 34-18.8c26.5 0 48 28.7 48 64s-21.5 64-48 64c-13.3 0-25.3-7.2-34-18.8c-5.5-7.4-13.6-13.2-22.8-13.2c-12.8 0-23.2 10.4-23.2 23.2L384 464c0 26.5-21.5 48-48 48l-56.8 0c-12.8 0-23.2-10.4-23.2-23.2c0-9.2 5.8-17.3 13.2-22.8c11.6-8.7 18.8-20.7 18.8-34c0-26.5-28.7-48-64-48s-64 21.5-64 48c0 13.3 7.2 25.3 18.8 34c7.4 5.5 13.2 13.6 13.2 22.8c0 12.8-10.4 23.2-23.2 23.2L48 512c-26.5 0-48-21.5-48-48L0 343.2C0 330.4 10.4 320 23.2 320c9.2 0 17.3 5.8 22.8 13.2C54.7 344.8 66.7 352 80 352c26.5 0 48-28.7 48-64s-21.5-64-48-64c-13.3 0-25.3 7.2-34 18.8C40.5 250.2 32.4 256 23.2 256C10.4 256 0 245.6 0 232.8L0 176c0-26.5 21.5-48 48-48l120.8 0c12.8 0 23.2-10.4 23.2-23.2z"
+              />
+            </svg>
+            <h3 class="font-bold md:text-xl text-lg mb-3 text-secondary">
+              Advanced Matching System
+            </h3>
+            <p class="md:text-base text-sm">
+              GMAJOR.biz's matching and partner search features allow you to
+              easily connect with the most suitable businesses.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-main">
+      <div class="max-w-screen-xl px-4 pt-8 mx-auto lg:pt-16 lg:px-6">
+        <div class="max-w-screen-md mx-auto text-center">
+          <p class="font-light text-white mb-4">
+            Does GMAJOR Really Benefit You?
+          </p>
+          <h2
+            class="md:text-lg lg:text-2xl lg:leading-normal tracking-tight font-semibold text-white mb-10 max-w-screen-sm mx-auto"
+          >
+            Absolutely! With GMAJOR, reaching out to international customers
+            becomes much easier.
+          </h2>
+
+          <a
+            href="https://market.gmajor.biz/register"
+            target="_blank"
+            class="bg-white hover:bg-gray-100 transition text-main font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none"
+          >
+            Sign Up Now and Get 5000 Free Credits!</a
+          >
+
+          <div class="mt-10 relative w-full h-full">
+            <img
+              src="../images/laptop-wrapper.png"
+              class="w-full h-auto"
+              alt="Laptop"
+            />
+            <iframe
+              class="absolute aspect-[1.6] w-[86.7%] top-[10.8%] left-[6.5%]"
+              src="https://www.youtube.com/embed/-3Ssr5Fd0kg"
+              title="Cách đơn giản để Kinh Doanh online bán hàng sang Nước Ngoài"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="max-w-screen-lg mx-auto">
+          <h2
+            class="mb-4 text-3xl font-extrabold tracking-tight text-secondary text-center"
+          >
+            How to Use GMAJOR?
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal text-center"
+          >
+            In just 5 quick steps, GMAJOR will help your business thrive:
+          </p>
+
+          <div class="mt-[60px] grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <img
+              class="w-full aspect-[1.5] border rounded-md shadow-md sm:order-1 order-2"
+              src="../images/buoc-1.png"
+            />
+            <div class="flex flex-col justify-center sm:order-2 order-1">
+              <h3 class="font-bold text-xl mb-[10px]">
+                Step 1: Register & Receive 5000 Free Credits
+              </h3>
+              <p class="leading-6 mb-2">
+                It only takes a minute to create a new account, and you'll
+                instantly receive
+                <strong class="text-main">free 5000 Credits</strong>
+                to experience GMAJOR's premium features.
+              </p>
+              <a
+                class="text-[#1a78fe] flex items-center gap-1 font-semibold underline"
+                href="https://market.gmajor.biz/register"
+                target="_blank"
+                >Create your new account on GMAJOR today.
+                <svg
+                  class="w-3 h-3 ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-[60px] grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <div class="flex flex-col justify-center">
+              <h3 class="font-bold text-xl mb-[10px]">
+                Step 2: Upload Your Products and Services
+              </h3>
+              <p class="leading-6">
+                List your products and services on the platform to showcase them
+                to potential partners and customers worldwide.
+              </p>
+            </div>
+            <img
+              class="w-full aspect-[1.5] border rounded-md shadow-md"
+              src="../images/buoc-2.png"
+            />
+          </div>
+
+          <div class="mt-[60px] grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <img
+              class="w-full aspect-[1.5] border rounded-md shadow-md sm:order-1 order-2"
+              src="../images/buoc-3.png"
+            />
+            <div class="flex flex-col justify-center sm:order-2 order-1">
+              <h3 class="font-bold text-xl mb-[10px]">
+                Step 3: Use Free Features
+              </h3>
+              <p class="leading-6">
+                Start with GMAJOR's free tools: multilingual chat, RFQ, and bulk
+                proposals to connect and negotiate with potential partners.
+              </p>
+            </div>
+          </div>
+
+          <div class="mt-[60px] grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <div class="flex flex-col justify-center">
+              <h3 class="font-bold text-xl mb-[10px]">
+                Step 4: Use Credits to Purchase Premium Services
+              </h3>
+              <p class="leading-6">
+                Use the credits in your account to access premium posts,
+                advertise your company banner on the homepage, and verify your
+                company to boost credibility.
+              </p>
+            </div>
+            <img
+              class="w-full aspect-[1.5] border rounded-md shadow-md"
+              src="../images/buoc-4.png"
+            />
+          </div>
+
+          <div class="mt-[60px] grid sm:grid-cols-2 grid-cols-1 gap-10">
+            <img
+              class="w-full aspect-[1.3] border rounded-md shadow-md sm:order-1 order-2"
+              src="../images/buoc-5.png"
+            />
+            <div class="flex flex-col justify-center sm:order-2 order-1">
+              <h3 class="font-bold text-xl mb-[10px]">
+                Step 5: Earn More Credits
+              </h3>
+              <p class="leading-6">
+                Share GMAJOR's product/service posts on Facebook to earn
+                additional credits and sustain your business growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white lg:bg-gray-50 dark:bg-gray-900">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
+          <h2
+            class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            Why Choose GMAJOR Among Countless B2B Matching Service?
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal text-center"
+          >
+            Below is a comparative table showcasing how GMAJOR stands against
+            other domestic and international B2B connection platforms.
+          </p>
+        </div>
+
+        <div class="overflow-x-scroll" style="scrollbar-width: none">
+          <div class="flex">
+            <div class="w-[25%] min-w-[308px]">
+              <div class="p-4 pl-0 pb-[12.5px] font-bold text-lg border-b">
+                Cost & Core Features
+              </div>
+              <!-- Pricing -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Cost
+                <button data-tooltip-target="tooltip-default" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-default"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  The cost for using services provided by the platform over a
+                  specified period.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 1 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Advanced Search Filters
+                <button data-tooltip-target="tooltip-1" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-1"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Detailed filters that allow users to search for businesses by
+                  industry, location, company size, and type of product/service.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 2 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                AI-powered Matching
+                <button data-tooltip-target="tooltip-2" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-2"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Uses AI algorithms to suggest potential business partners
+                  based on user profile data.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 3 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Request for Quotations (RFQs)
+                <button data-tooltip-target="tooltip-3" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-3"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Monthly RFQ feature allowing users to send requests to
+                  potential suppliers.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 4 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Multilingual Chat
+                <button data-tooltip-target="tooltip-4" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-4"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  A chat system supporting multiple languages, enabling
+                  businesses from different countries to communicate easily..
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 5 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Bulk Proposals
+                <button data-tooltip-target="tooltip-5" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-5"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  The ability to send bulk business proposals to multiple
+                  potential partners simultaneously.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 6 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Company Profile
+                <button data-tooltip-target="tooltip-6" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-6"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Detailed company profiles with information on
+                  products/services, industry, location, contact details, and
+                  business needs.
+                </div>
+              </div>
+
+              <!-- Feature 7 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Verification Process
+                <button data-tooltip-target="tooltip-7" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-7"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  A process for verifying businesses to ensure authenticity and
+                  reliability.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 8 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Verification Badge
+                <button data-tooltip-target="tooltip-8" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-8"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  A verification tag displayed on the company profile to
+                  indicate that the business has been authenticated.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 9 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Premium Posts
+                <button data-tooltip-target="tooltip-9" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-9"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Feature for posting prominent listings on the platform to
+                  attract more attention from business partners.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 10 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Custom Banner Placement
+                <button data-tooltip-target="tooltip-10" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-10"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Purchase banner placement to promote your business or special
+                  events.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 11 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Data Security
+                <button data-tooltip-target="tooltip-11" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-11"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Robust data protection policies to safeguard user and business
+                  information.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 12 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Personalized Dashboard
+                <button data-tooltip-target="tooltip-12" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-12"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  A personalized dashboard for each user with partner
+                  suggestions, messages, and related notifications.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 13 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Localized Content
+                <button data-tooltip-target="tooltip-13" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-13"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Content provided and tailored to specific regions to support
+                  the local business environment.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 14 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Industry News and Insights
+                <button data-tooltip-target="tooltip-14" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-14"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Regular updates on industry trends, news, and expert analysis.
+                  Limite
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 15 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Resource Library
+                <button data-tooltip-target="tooltip-15" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-15"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Access to documents, research reports, and business support
+                  resources for free.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 16 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Social Media Integration
+                <button data-tooltip-target="tooltip-16" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-16"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Integration with social media platforms to expand reach and
+                  engagement.
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+
+              <!-- Feature 17 -->
+              <div
+                class="p-4 pl-0 flex items-center gap-2 justify-between border-b"
+              >
+                Customer Support
+                <button data-tooltip-target="tooltip-17" type="button">
+                  <img
+                    src="../images/info.svg"
+                    class="w-4 h-4 mt-[1px]"
+                    alt="Info icon"
+                  />
+                </button>
+                <div
+                  id="tooltip-17"
+                  role="tooltip"
+                  class="w-[300px] absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white bg-main rounded-lg shadow-sm opacity-0 tooltip"
+                >
+                  Customer support through chat, email, and pho
+                  <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Alibaba -->
+            <div class="w-[15%] min-w-[184.8px]">
+              <div class="p-3 font-semibold border-b">
+                <div class="flex items-center gap-2 justify-center">
+                  <img
+                    src="../images/alibaba-logo.png"
+                    class="w-8 h-8"
+                    alt="Logo Alibaba"
+                  />
+                  <span class="text-[#FF6C09]">Alibaba</span>
+                </div>
+              </div>
+
+              <div class="p-4 flex items-center justify-center border-b">
+                40~400m / year
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-3 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#FF6C09]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- Trang Vàng -->
+            <div class="w-[15%] min-w-[184.8px]">
+              <div class="p-3 font-semibold border-b">
+                <div class="flex items-center gap-2 justify-center">
+                  <img
+                    src="../images/trangvang-logo.png"
+                    class="w-8 h-8"
+                    alt="Logo Trang Vàng"
+                  />
+                  <span class="text-[#e7cc33]">Yellow Pages</span>
+                </div>
+              </div>
+
+              <div class="p-4 border-b flex items-center justify-center">
+                6~10m / year
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#e7cc33]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- VIETGO -->
+            <div class="w-[15%] min-w-[184.8px]">
+              <div class="p-3 font-semibold border-b">
+                <div class="flex items-center gap-2 justify-center">
+                  <img
+                    src="../images/vietgo-logo.png"
+                    class="h-8 aspect-[1.31]"
+                    alt="Logo Trang Vàng"
+                  />
+                  <span class="text-[#ED1C24]">VIETGO</span>
+                </div>
+              </div>
+
+              <div class="p-4 flex items-center justify-center border-b">
+                18m / 3 months
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#ED1C24]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- INMERGERS -->
+            <div class="w-[15%] min-w-[184.8px]">
+              <div class="p-3 font-semibold border-b">
+                <div class="flex items-center gap-2 justify-center">
+                  <img
+                    src="../images/inmergers-logo.png"
+                    class="w-8 h-8"
+                    alt="Logo INMERGERS"
+                  />
+                  <span class="text-[#636365]">INMERGERS</span>
+                </div>
+              </div>
+
+              <div class="p-4 flex items-center justify-center border-b">
+                16.7m / year
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              ></div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-[#636365]"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+
+            <!-- GMAJOR -->
+            <div class="w-[15%] min-w-[184.8px]">
+              <div class="p-3 font-semibold border-b">
+                <div class="flex items-center gap-2 justify-center">
+                  <img src="favicon.ico" class="w-8 h-8" alt="Logo GMAJOR" />
+                  <span class="text-[#000000]">GMAJOR</span>
+                </div>
+              </div>
+
+              <div
+                class="p-4 border-b flex items-center justify-center font-bold text-main"
+              >
+                FREE
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+
+              <div
+                class="p-4 flex items-center justify-center h-[56.8px] border-b"
+              >
+                <svg
+                  class="flex-shrink-0 w-5 h-5 text-main"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="max-w-screen-md mx-auto text-center">
+          <h2
+            class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white"
+          >
+            Testimonials
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal text-center"
+          >
+            Below are some highly positive reviews from brands that have
+            achieved impressive results after using the B2B connection services
+            at GMAJOR.
+          </p>
+        </div>
+
+        <div
+          id="controls-carousel"
+          class="relative w-full"
+          data-carousel="static"
+        >
+          <!-- Carousel wrapper -->
+          <div class="relative overflow-hidden rounded-lg h-72">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <figure
+                class="max-w-screen-md mx-auto text-center h-full flex flex-col items-center justify-center"
+              >
+                <svg
+                  class="h-12 mx-auto mb-3 text-main"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-lg font-medium text-text">
+                    “One of the most impressive features of Gmajor.biz is the
+                    multilingual chat support. This feature allows businesses to
+                    communicate easily and effectively with international
+                    partners without language barriers. This is particularly
+                    important in expanding markets and fostering international
+                    collaborations.”
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex items-center justify-center mt-6 space-x-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="../images/khac-hang-3.jpeg"
+                    alt="profile picture"
+                  />
+                  <div
+                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+                  >
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                      Pham Thi Lan
+                    </div>
+                    <div
+                      class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                    >
+                      Head of International Sales
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <figure
+                class="max-w-screen-md mx-auto text-center h-full flex flex-col items-center justify-center"
+              >
+                <svg
+                  class="h-12 mx-auto mb-3 text-main"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-lg font-medium text-text">
+                    "The security of Gmajor.biz is also a significant advantage.
+                    The platform ensures that all personal information and
+                    transactions are securely protected, giving businesses
+                    greater peace of mind when using it."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex items-center justify-center mt-6 space-x-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="../images/khac-hang-2.jpeg"
+                    alt="profile picture"
+                  />
+                  <div
+                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+                  >
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                      Trần Văn Hùng
+                    </div>
+                    <div
+                      class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                    >
+                      Sales Director
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- Item 3 -->
+            <div
+              class="hidden duration-700 ease-in-out"
+              data-carousel-item="active"
+            >
+              <figure
+                class="max-w-screen-md mx-auto text-center h-full flex flex-col items-center justify-center"
+              >
+                <svg
+                  class="h-12 mx-auto mb-3 text-main"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-lg font-medium text-text">
+                    "The website offers many useful features such as business
+                    account registration, product listing, partner search, and
+                    online consultation support. This helps businesses save time
+                    and costs in the process of finding and connecting with
+                    partners."
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex items-center justify-center mt-6 space-x-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full"
+                    src="../images/khach-hang-1.jpg"
+                    alt="profile picture"
+                  />
+                  <div
+                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+                  >
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                      Nguyen Thi Mai
+                    </div>
+                    <div
+                      class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                    >
+                      Business Consultant
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <figure
+                class="max-w-screen-md mx-auto text-center h-full flex flex-col items-center justify-center"
+              >
+                <svg
+                  class="h-12 mx-auto mb-3 text-main"
+                  viewBox="0 0 24 27"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M14.017 18L14.017 10.609C14.017 4.905 17.748 1.039 23 0L23.995 2.151C21.563 3.068 20 5.789 20 8H24V18H14.017ZM0 18V10.609C0 4.905 3.748 1.038 9 0L9.996 2.151C7.563 3.068 6 5.789 6 8H9.983L9.983 18L0 18Z"
+                    fill="currentColor"
+                  />
+                </svg>
+                <blockquote>
+                  <p class="text-lg font-medium text-text">
+                    “GMAJOR's bulk proposal feature allows users to send
+                    proposals to multiple partners simultaneously. This saves a
+                    lot of time and effort compared to sending individual
+                    proposals. For large-scale businesses that need to reach
+                    many partners, this is an extremely useful tool.”
+                  </p>
+                </blockquote>
+                <figcaption
+                  class="flex items-center justify-center mt-6 space-x-3"
+                >
+                  <img
+                    class="w-6 h-6 rounded-full object-cover"
+                    src="../images/khac-hang-4.jpeg"
+                    alt="profile picture"
+                  />
+                  <div
+                    class="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700"
+                  >
+                    <div class="pr-3 font-medium text-gray-900 dark:text-white">
+                      Do Van Nam
+                    </div>
+                    <div
+                      class="pl-3 text-sm font-light text-gray-500 dark:text-gray-400"
+                    >
+                      Sales Specialist
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <!-- Slider controls -->
+          <button
+            type="button"
+            class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-prev
+          >
+            <span
+              class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-md bg-gray-200 shadow-sm"
+            >
+              <svg
+                class="w-4 h-4 text-main rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 1 1 5l4 4"
+                />
+              </svg>
+              <span class="sr-only">Trước</span>
+            </span>
+          </button>
+          <button
+            type="button"
+            class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
+            data-carousel-next
+          >
+            <span
+              class="hidden lg:inline-flex items-center justify-center w-10 h-10 rounded-md bg-gray-200 shadow-sm"
+            >
+              <svg
+                class="w-4 h-4 text-main rtl:rotate-180"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 6 10"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m1 9 4-4-4-4"
+                />
+              </svg>
+              <span class="sr-only">Sau</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-gray-50 dark:bg-gray-900">
+      <div
+        class="items-center max-w-screen-xl px-4 py-8 mx-auto lg:grid lg:grid-cols-4 lg:gap-16 xl:gap-24 lg:py-16 lg:px-6"
+      >
+        <div class="col-span-2 mb-8">
+          <p class="text-lg text-main font-bold">
+            Global Online B2B Matching Service
+          </p>
+          <h2
+            class="mt-3 mb-4 text-3xl font-extrabold tracking-tight text-gray-900 md:text-3xl dark:text-white"
+          >
+            GMAJOR is Now Used in Many Countries
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal"
+          >
+            GMAJOR is proud to be a trusted and widely used platform in many
+            countries around the world.
+          </p>
+          <div
+            class="pt-6 mt-6 space-y-4 border-t border-gray-200 dark:border-gray-700"
+          >
+            <div>
+              <a
+                href="https://market.gmajor.biz/register"
+                target="_blank"
+                class="inline-flex items-center text-base font-medium text-main hover:text-main_hover"
+              >
+                Sign Up Now and Get 5000 Free Credits!
+                <svg
+                  class="w-5 h-5 ml-1"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0"
+        >
+          <div>
+            <svg
+              class="w-10 h-10 mb-2 text-main md:w-12 md:h-12"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <h3 class="mb-2 text-2xl font-bold dark:text-white">
+              +217 Products
+            </h3>
+            <p class="font-light text-gray-500 dark:text-gray-400">
+              Over 100 B2B products/services and M&A deals
+            </p>
+          </div>
+          <div>
+            <svg
+              class="w-10 h-10 mb-2 text-main md:w-12 md:h-12"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"
+              ></path>
+            </svg>
+            <h3 class="mb-2 text-2xl font-bold">1278+ Users</h3>
+            <p class="font-light text-gray-500">
+              Trusted by over 1150 real users
+            </p>
+          </div>
+          <div>
+            <svg
+              class="w-10 h-10 mb-2 text-main md:w-12 md:h-12"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10 18a8 8 0 100-16 8 8 0 000 16zM4.332 8.027a6.012 6.012 0 011.912-2.706C6.512 5.73 6.974 6 7.5 6A1.5 1.5 0 019 7.5V8a2 2 0 004 0 2 2 0 011.523-1.943A5.977 5.977 0 0116 10c0 .34-.028.675-.083 1H15a2 2 0 00-2 2v2.197A5.973 5.973 0 0110 16v-2a2 2 0 00-2-2 2 2 0 01-2-2 2 2 0 00-1.668-1.973z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+            <h3 class="mb-2 text-2xl font-bold">4+ Countries</h3>
+            <p class="font-light text-gray-500">
+              Users from 4 different countries
+            </p>
+          </div>
+          <div>
+            <svg
+              class="w-10 h-10 mb-2 text-main md:w-12 md:h-12"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 1a1 1 0 000 2h1.22l.305 1.222a.997.997 0 00.01.042l1.358 5.43-.893.892C3.74 11.846 4.632 14 6.414 14H15a1 1 0 000-2H6.414l1-1H14a1 1 0 00.894-.553l3-6A1 1 0 0017 3H6.28l-.31-1.243A1 1 0 005 1H3zM16 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM6.5 18a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              ></path>
+            </svg>
+            <h3 class="mb-2 text-2xl font-bold">10+</h3>
+            <p class="font-light text-gray-500 dark:text-gray-400">
+              Successful transactions happen in just one day
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-gray-50 lg:bg-white">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
+        <h2
+          class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white"
+        >
+          Not sure about GMAJOR?
+        </h2>
+        <div class="max-w-screen-md mx-auto">
+          <div
+            id="accordion-flush"
+            data-accordion="collapse"
+            data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
+            data-inactive-classes="text-gray-500 dark:text-gray-400"
+          >
+            <!-- Question 1 -->
+            <h3 id="accordion-flush-heading-1">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+                data-accordion-target="#accordion-flush-body-1"
+                aria-expanded="true"
+                aria-controls="accordion-flush-body-1"
+              >
+                <span>Who is GMAJOR?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 rotate-180 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-1"
+              class=""
+              aria-labelledby="accordion-flush-heading-1"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  GMAJOR is a global online B2B connection platform that helps
+                  businesses find business partners, expand markets, and promote
+                  international trade. We provide tools and services to support
+                  businesses in connecting and collaborating effectively.
+                </p>
+                <p class="text-gray-500 dark:text-gray-400">
+                  Tìm hiểu thêm tại trang web chính thức của chúng tôi:
+                  <a
+                    href="https://gmajor.biz"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >https://gmajor.biz</a
+                  >.
+                </p>
+              </div>
+            </div>
+            <!-- Question 2 -->
+            <h3 id="accordion-flush-heading-2">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-2"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-2"
+              >
+                <span>How to register an account on GMAJOR?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-2"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-2"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  To register an account, simply visit the,
+                  <a
+                    href="https://market.gmajor.biz/register"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >Registration page</a
+                  >, fill in the required information, and follow the
+                  instructions. Once completed, you will receive a confirmation
+                  email and can start using our platform.
+                </p>
+              </div>
+            </div>
+            <!-- Question 3 -->
+            <h3 id="accordion-flush-heading-3">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-3"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-3"
+              >
+                <span>Does GMAJOR charge service fees?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-3"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-3"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  All services and features provided by GMAJOR, including
+                  Multilingual Chat, RFQs (Request for Quotations), Bulk
+                  Proposals, and more, are completely
+                  <b class="text-main underline">FREE</b>.
+                </p>
+              </div>
+            </div>
+            <!-- Question 4 -->
+            <h3 id="accordion-flush-heading-4">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-4"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-4"
+              >
+                <span>How to find business partners on GMAJOR?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-4"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-4"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  How to find business partners on GMAJOR?
+                  <a
+                    href="https://gmajor.biz"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >Home Page</a
+                  >,
+                  <a
+                    href="https://market.gmajor.biz"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >the Listing Page</a
+                  >
+                  , or access the Find Partners section in the
+                  <a
+                    href="https://market.gmajor.biz/dashboard"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >Dashboard</a
+                  >
+                  <i
+                    >(note that the Dashboard is only accessible after
+                    registering an account on GMAJOR)</i
+                  >
+                  to filter and search for suitable business partners by
+                  industry, country, budget, or other criteria.
+                </p>
+              </div>
+            </div>
+            <!-- Question 5 -->
+            <h3 id="accordion-flush-heading-5">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-5"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-5"
+              >
+                <span>How does GMAJOR secure user information?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-5"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-5"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  GMAJOR is committed to protecting users' personal and company
+                  information with strict security measures. Your information
+                  will be encrypted and protected from unauthorized access. You
+                  can learn more in our
+                  <a
+                    href="https://gmajor.biz/privacy-policy"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >Privacy Policy</a
+                  >.
+                </p>
+              </div>
+            </div>
+            <!-- Question 6 -->
+            <h3 id="accordion-flush-heading-6">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-6"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-6"
+              >
+                <span>How to upload products/services on GMAJOR?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-6"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-6"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  To upload products/services on GMAJOR, log in to your account,
+                  go to the
+
+                  <a
+                    href="https://market.gmajor.biz/post/product"
+                    class="text-main hover:underline font-bold"
+                    target="_blank"
+                    >Upload Products page</a
+                  >, or click the Post button, and fill in the required
+                  information to describe your products/services accurately and
+                  in detail.
+                </p>
+              </div>
+            </div>
+            <!-- Question 7 -->
+            <h3 id="accordion-flush-heading-7">
+              <button
+                type="button"
+                class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+                data-accordion-target="#accordion-flush-body-7"
+                aria-expanded="false"
+                aria-controls="accordion-flush-body-7"
+              >
+                <span>What are the standout features that GMAJOR offers?</span>
+                <svg
+                  data-accordion-icon=""
+                  class="w-6 h-6 shrink-0"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+            </h3>
+            <div
+              id="accordion-flush-body-7"
+              class="hidden"
+              aria-labelledby="accordion-flush-heading-7"
+            >
+              <div class="py-5 border-b border-gray-200 dark:border-gray-700">
+                <p class="mb-2 text-gray-500 dark:text-gray-400">
+                  GMAJOR offers a range of outstanding features that help B2B
+                  businesses connect and grow effectively, not only in Vietnam
+                  but also globally:
+                </p>
+                <ul
+                  class="pl-5 text-gray-500 list-disc dark:text-gray-400 space-y-5"
+                >
+                  <li>
+                    <strong class="text-main">Multilingual Chat: </strong>This
+                    feature allows users from different countries to communicate
+                    easily without language barriers. The automated translation
+                    system supports multiple languages, enabling international
+                    businesses to connect and exchange information effectively.
+                  </li>
+                  <li>
+                    <strong class="text-main"
+                      >Request for Quotations (RFQs): </strong
+                    >This feature allows businesses to send quotation requests
+                    to multiple suppliers simultaneously, saving time and effort
+                    in finding and selecting suitable partners. It also enhances
+                    negotiation capabilities on pricing and contract terms.
+                  </li>
+                  <li>
+                    <strong class="text-main">Bulk Proposals: </strong>This
+                    feature enables you to send collaboration proposals to
+                    multiple potential partners at once. It saves time and
+                    effort in reaching out to each partner individually while
+                    increasing the chances of receiving responses and
+                    collaborations from many businesses.
+                  </li>
+                  <li>
+                    <strong class="text-main"
+                      >Auto-Matching with Potential Partners: </strong
+                    >GMAJOR uses AI technology to automatically suggest
+                    potential business partners based on your company profile
+                    and business needs. This feature helps increase the chances
+                    of connecting with suitable partners, expanding your
+                    business network quickly and efficiently.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+
+    <!-- Start block -->
+    <section class="bg-white lg:bg-gray-50 dark:bg-gray-800">
+      <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+        <div class="max-w-screen-sm mx-auto text-center">
+          <h2
+            class="mb-4 text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white"
+          >
+            Start your journey to international markets today!
+          </h2>
+          <p
+            class="font-light text-secondary md:text-lg lg:text-xl lg:leading-normal mb-6"
+          >
+            Click the button below to start using GMAJOR's advanced features.
+          </p>
+          <a
+            href="https://market.gmajor.biz/register"
+            target="_blank"
+            class="text-white bg-main hover:bg-main_hover focus:ring-4 focus:ring-main font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none"
+            >Sign Up Now and Get 5000 Free Credits!</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- End block -->
+    <footer class="bg-white dark:bg-gray-800">
+      <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
+        <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
+          <div class="col-span-2">
+            <h3
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              <a href="https://gmajor.biz" target="_blank"
+                ><img
+                  src="../images/gmajor-logo.png"
+                  class="w-[100px] mr-3"
+                  alt="GMAJOR Logo"
+              /></a>
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 text-sm">
+              <li class="mb-4"><b>Company Name:</b> GNF Japan Co., Ltd.</li>
+              <li class="mb-4"><b>Address:</b> Đak Lak, Vietnam</li>
+              <li class="mb-4"><b>Tax Code:</b> 6001750510</li>
+              <li class="mb-4">
+                <b>Business Registration Certificate issued by:</b> Department
+                of Planning and Investment of Đắk Lắk
+              </li>
+              <li class="mb-4"><b>Company Name in Japan:</b> 株式会社GMAJOR</li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              POLICIES
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 text-sm">
+              <li class="mb-4">
+                <a
+                  href="https://gmajor.biz/cookies-policy"
+                  target="_blank"
+                  class="hover:underline"
+                  >Cookie Policy</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://gmajor.biz/privacy-policy"
+                  target="_blank"
+                  class="hover:underline"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://gmajor.biz/privacy-policy"
+                  target="_blank"
+                  class="hover:underline"
+                  >Terms of Service</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              OTHER INFORMATION
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 text-sm">
+              <li class="mb-4">
+                <a
+                  target="_blank"
+                  href="https://gmajor.biz/about-us"
+                  class="hover:underline"
+                  >About GMAJOR</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  target="_blank"
+                  href="https://gmajor.biz/for-ma"
+                  class="hover:underline"
+                  >Related to M&A</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  target="_blank"
+                  href="https://gmajor.biz/for-ps"
+                  class="hover:underline"
+                  >Related to Products or Services</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  target="_blank"
+                  href="https://gmajor.biz/faq"
+                  class="hover:underline"
+                  >FAQs</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  target="_blank"
+                  href="https://gmajor.biz/blog"
+                  class="hover:underline"
+                  >Blog</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3
+              class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+            >
+              Customer Support
+            </h3>
+            <ul class="text-gray-500 dark:text-gray-400 text-sm">
+              <li class="mb-4">
+                <a
+                  href="https://gmajor.biz/payment-policy"
+                  class="hover:underline"
+                  >Payment Policy</a
+                >
+              </li>
+              <li class="mb-4">
+                <a
+                  href="https://gmajor.biz/logistic-credit-support"
+                  class="hover:underline"
+                  >Trade & Credit Support</a
+                >
+              </li>
+              <li class="mb-4">
+                <a href="https://gmajor.biz/contact-us" class="hover:underline"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr
+          class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8"
+        />
+        <div class="text-center">
+          <a
+            href="https://gmajor.biz"
+            target="_blank"
+            class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white"
+          >
+            <img
+              src="favicon.ico"
+              class="h-6 mr-3 sm:h-9"
+              alt="GMAJOR Favicon"
+            />
+            <img
+              src="../images/gmajor-logo.png"
+              alt="GMAJOR logo"
+              class="w-[100px]"
+            />
+          </a>
+          <span
+            class="block text-sm text-center text-gray-500 dark:text-gray-400"
+            >© 2024-2025 GMAJOR. All Rights Reserved. Website designed and
+            operated by
+            <a
+              href="https://gmajor.biz"
+              target="_blank"
+              class="text-main hover:underline font-bold"
+              >GMAJOR</a
+            >
+          </span>
+          <ul class="flex justify-center mt-5 space-x-5">
+            <li>
+              <a
+                href="https://www.facebook.com/gmajorvietnam/"
+                target="_blank"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://twitter.com/gmajorglobal"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.tiktok.com/@phieucungsepnhat"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-tiktok"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M16.083 2h-4.083a1 1 0 0 0 -1 1v11.5a1.5 1.5 0 1 1 -2.519 -1.1l.12 -.1a1 1 0 0 0 .399 -.8v-4.326a1 1 0 0 0 -1.23 -.974a7.5 7.5 0 0 0 1.73 14.8l.243 -.005a7.5 7.5 0 0 0 7.257 -7.495v-2.7l.311 .153c1.122 .53 2.333 .868 3.59 .993a1 1 0 0 0 1.099 -.996v-4.033a1 1 0 0 0 -.834 -.986a5.005 5.005 0 0 1 -4.097 -4.096a1 1 0 0 0 -.986 -.835z"
+                  />
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://www.youtube.com/@phieucungsepNhat"
+                class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400"
+              >
+                <svg
+                  class="w-5 h-5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube"
+                >
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                  <path
+                    d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z"
+                  />
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('lang-button');
+        const dropdown = document.getElementById('lang-dropdown');
+        const currentLang = document.getElementById('current-lang');
+        const currentFlag = document.getElementById('current-flag');
+    
+        const isEnglish = window.location.href.includes('en');
+        if (!isEnglish) {
+          currentLang.textContent = 'Tiếng Việt';
+          currentFlag.src = 'https://flagcdn.com/vn.svg';
+        }
+    
+        button.addEventListener('click', () => {
+          dropdown.classList.toggle('hidden');
+        });
+    
+        dropdown.querySelectorAll('li').forEach(item => {
+          item.addEventListener('click', () => {
+            const targetUrl = item.getAttribute('data-url');
+            window.location.href = targetUrl;
+          });
+        });
+    
+        document.addEventListener('click', (e) => {
+          if (!button.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add('hidden');
+          }
+        });
+      });
+    </script>
+    
+    <script>
+      $(document).ready(function () {
+        var duration = 15000;
+        if (window.innerWidth <= 768) {
+          duration = 8000;
+        }
+        $(".marquee").marquee({
+          duration: duration,
+          gap: 50,
+          delayBeforeStart: 0,
+          direction: "right",
+          duplicated: true,
+        });
+      });
+    </script>
+  </body>
+</html>

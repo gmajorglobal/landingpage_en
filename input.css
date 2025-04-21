@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Cabin", sans-serif;
+}
+
+.swiper-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  cursor: grab;
+  width: 100%;
+}
+.swiper-wrapper.dragging {
+  transition: none;
+  cursor: grabbing;
+}
+.swiper-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.swiper-pagination-dot {
+  width: 10px;
+  height: 10px;
+  background-color: gray;
+  border-radius: 50%;
+  margin: 0 5px;
+  transition: background-color 0.3s;
+}
+.swiper-pagination-dot.active {
+  background-color: #1d7595;
+}
