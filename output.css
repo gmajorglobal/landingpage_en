@@ -1231,6 +1231,10 @@ input:checked + .toggle-bg {
   height: 100%;
 }
 
+.h-5 {
+  height: 1.5rem;
+}
+
 .h-10 {
   height: 2.5rem;
 }
@@ -1309,6 +1313,10 @@ input:checked + .toggle-bg {
 
 .w-\[90\%\] {
   width: 90%;
+}
+
+.w-5 {
+  width: 1.5rem;
 }
 
 .w-10 {
@@ -1653,8 +1661,18 @@ input:checked + .toggle-bg {
 }
 
 .bg-main {
+  /* your existing opacity var */
   --tw-bg-opacity: 1;
-  background-color: rgb(29 117 149 / var(--tw-bg-opacity));
+
+  /* fallback for very old browsers */
+  background-color: rgb(93 224 230 / var(--tw-bg-opacity));
+
+  /* the gradient itself */
+  background-image: linear-gradient(
+    to right,
+    rgb(93 224 230 / var(--tw-bg-opacity)) 0%,
+    rgb(0 74 173 / var(--tw-bg-opacity)) 100%
+  );
 }
 
 .bg-gray-50 {
@@ -1834,6 +1852,15 @@ input:checked + .toggle-bg {
 .text-3xl {
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+
+.text-4xl {
+  font-size: 2.475rem;
+  line-height: 2.875rem;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .text-xl {
@@ -2121,8 +2148,18 @@ body {
 }
 
 .hover\:bg-main_hover:hover {
+  /* preserve Tailwind’s opacity variable */
   --tw-bg-opacity: 1;
+
+  /* fallback solid */
   background-color: rgb(39 104 128 / var(--tw-bg-opacity));
+
+  /* gradient from hover-color → main-color */
+  background-image: linear-gradient(
+    to right,
+    rgb(39 104 128 / var(--tw-bg-opacity)) 0%,
+    rgb(29 117 149 / var(--tw-bg-opacity)) 100%
+  );
 }
 
 .hover\:bg-gray-100:hover {
