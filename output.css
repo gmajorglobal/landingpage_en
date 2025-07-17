@@ -1131,6 +1131,10 @@ input:checked + .toggle-bg {
   margin-bottom: 2rem;
 }
 
+.mb-12 {
+  margin-bottom: 2.5rem;
+}
+
 .mt-\[1px\] {
   margin-top: 1px;
 }
@@ -2415,12 +2419,20 @@ body {
     height: 52px;
   }
 
+  .md\:h-\[64px\] {
+    height: 64px;
+  }
+
   .md\:h-12 {
     height: 3rem;
   }
 
   .md\:w-\[52px\] {
     width: 52px;
+  }
+
+  .md\:w-\[64px\] {
+    width: 64px;
   }
 
   .md\:w-12 {
