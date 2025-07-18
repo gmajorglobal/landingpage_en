@@ -2704,4 +2704,696 @@ body {
   .xl\:gap-24 {
     gap: 6rem;
   }
+
+  *::before,*::after{box-sizing:border-box;margin:0;padding:0}
+img{display:block;max-width:100%;height:auto}
+
+/* ====== 2.  Section wrapper & container ====== */
+.section-solutions{
+  background:#fff;
+  padding:3rem 1rem;
 }
+
+.section-solutions .container{
+  max-width:1280px;
+  margin-inline:auto;
+  padding-inline:1rem;
+}
+
+@media (min-width:1024px){
+  .section-solutions .container{padding-inline:1.5rem}
+}
+
+/* ====== 3.  Heading ====== */
+.section-solutions .heading{
+  text-align:center;
+  font-weight:800;
+  letter-spacing:-.015em;
+  color:var(--color-secondary);
+  font-size:1.875rem;      /* 30 px */
+  line-height:2.25rem;     /* 36 px */
+}
+@media (min-width:768px){
+  .section-solutions .heading{
+    font-size:48px;
+    line-height:60px;
+  }
+}
+
+/* ====== 4.  Responsive grid ====== */
+.solutions-grid{
+  display:grid;
+  gap:1.5rem;      /* 24 px */
+  margin-top:3rem; /* 48 px */
+  position: relative; 
+  overflow: hidden;
+  
+}
+@media (min-width:640px){
+  .solutions-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (min-width:1024px){
+  .solutions-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (min-width:1280px){
+  .solutions-grid{gap:2rem}  /* 32 px */
+}
+
+/* ====== 5.  Card ====== */
+.solution-card {
+  background: #fff;
+  padding: 1.5rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  transition: box-shadow .15s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative; /* <-- add this */
+  /* Set gradient colors for the hover effect */
+  --gStart: rgb(93,224,230);
+  --gEnd: rgb(0,74,173);
+}
+
+.solution-card::before{
+  content: "";
+  position: absolute; inset: 0;
+  pointer-events: none;           /* mouse passes through */
+  opacity: 0;                     /* hidden until hover */
+  transition: opacity .25s ease;  /* fade-in, fade-out */
+  background: radial-gradient(
+      circle at var(--x,50%) var(--y,50%),
+      var(--gStart) 0%,
+      var(--gEnd)   100%
+  );
+}
+
+/* Show the gradient (and maybe bump the shadow) on hover */
+.solution-card:hover::before{ opacity: .85; }   /* tweak strength to taste */
+
+.solution-card:hover{
+  box-shadow:
+    0 4px 6px -1px rgb(0 0 0 / 0.1),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.solution-card.gradient-fadeout::before {
+  opacity: 0;
+  transition: opacity .5s cubic-bezier(.4,0,.2,1);
+}
+
+/* Icon */
+.solution-card .icon{
+  width:2.5rem;   /* 40 px */
+  height:2.5rem;
+  margin-bottom:1.25rem; /* 20 px */
+}
+
+/* Title */
+.solution-card .title{
+  font-size:1.25rem;  /* 20 px */
+  font-weight:600;
+  margin-bottom:0.5rem; /* 8 px */
+}
+
+/* Description */
+.solution-card .desc{
+  font-size:0.875rem;   /* 14 px */
+  line-height:1.5rem;   /* 24 px */
+  color:var(--color-text);
+}
+
+.text-shadow-md {
+  text-shadow: 0 4px 12px rgba(0,0,0,0.15), 0 1.5px 3px rgba(0,0,0,0.10);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+.container {
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.heading {
+  font-size: clamp(2rem, 4vw + 1rem, 4rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: clamp(2rem, 6vw, 4rem);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, .35);
+}
+
+.title-heading {
+  font-size: clamp(1rem, 3vw + 1rem, 3rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: clamp(1rem, 3vw, 2rem);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, .35);
+}
+
+/* ====== card-slide BASE ====== */
+.card-slide {
+  position: relative;
+  border: 4px solid #000;
+  border-radius: 22px;
+  padding: clamp(1.2rem, 2vw, 2rem);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, .35);
+}
+
+/* double-border effect */
+.card-slide::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 3px solid #000;
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.card-slide-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 2.8vw + .5rem, 3rem);
+  font-weight: 800;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.card-slide-body {
+  margin-top: 1rem;
+  max-width: 38ch;
+  font-size: clamp(0.95rem, 1.15vw + .6rem, 1.15rem);
+  line-height: 1.35;
+}
+
+.sides-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* ====== GRID POSITIONING ====== */
+.card-slide-support  { grid-column: 1; grid-row: 1; }
+.card-slide-partner  { grid-column: 2; grid-row: 1 / span 2; }
+.card-slide-verified { grid-column: 3; grid-row: 1; }
+.card-slide-custom   { grid-column: 4; grid-row: 1; }
+.card-slide-logistic { grid-column: 1; grid-row: 2; }
+.card-slide-smart    { grid-column: 3 / span 2; grid-row: 2; }
+
+/* ====== SMART TECH FLEX ====== */
+.smart-flex {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+/* quick micro-chip icon */
+.chip {
+  font-weight: 800;
+  font-size: clamp(1.8rem, 4vw + .5rem, 3.2rem);
+  padding: .4em .65em;
+  border: 6px solid #000;
+  border-radius: 12px;
+  position: relative;
+  line-height: 1;
+}
+.chip::before,
+.chip::after {
+  content: "";
+  position: absolute;
+  inset-inline: -18px;
+  height: 6px;
+  background: #000;
+}
+.chip::before { top: 15%; }
+.chip::after  { bottom: 15%; }
+.chip span { display: none; } /* accessibility handled above */
+
+/* ====== RESPONSIVE FALLBACK ====== */
+@media (max-width: 900px) {
+  /* collapse to 2 cols */
+  .solutions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+  }
+
+  .card-slide-partner { grid-column: span 2; grid-row: auto; }
+  .card-slide-smart   { grid-column: span 2; }
+  .card-slide-custom,
+  .card-slide-verified { grid-column: span 1; }
+}
+
+/****************************
+ *  COMPARISON  TABLE  v2
+ ****************************/
+.compare-table-wrapper{
+  width:100%;        /* safe on narrow phones */
+}
+
+/* ---- TABLE ---- */
+.compare-table{
+  width:100%;
+  border-collapse:collapse;
+  font-family:inherit;
+}
+
+.img-logo{
+  width:20%;
+  align-self: center;
+}
+
+.img-checked{
+  width:20%;
+  align-self: center;
+}
+
+.img-cross-icon{
+  width:20%;
+  align-self: center;
+}
+
+
+/* ---- HEADER ---- */
+.compare-table{
+  width:100%;
+  border-collapse:collapse;
+  table-layout:fixed;          /* keeps every data column equal width   */
+  font-family:inherit;
+}
+.compare-table thead th{
+  font-size:1rem;
+  font-weight:700;
+  text-align:left;
+  text-transform:uppercase;
+  padding:.75rem .25rem;
+  border-bottom:3px solid #000;
+  vertical-align:middle;
+}
+.compare-table thead th:first-child{ text-align:left; }
+.compare-table thead th:first-child,
+.compare-table tbody td:first-child{
+  width:210px;                 /* room for the row-labels (“Feature…”)   */
+}
+
+.compare-table thead th:not(:first-child),
+.compare-table tbody td:not(:first-child){
+  width:calc((100% - 210px) / 5);   /* remaining width ÷ 5 competitors   */
+}
+
+/* logo pictures */
+.compare-table thead img{
+  display:block;
+  width:42%;
+  height:42%;
+  margin-inline:auto;
+  object-fit:contain;          /* logos keep proportions                */
+}
+
+/* ---- BODY ---- */
+.compare-table td{
+  font-size:1rem;
+  font-weight:600;
+  padding:.65rem .25rem;
+  text-align:left;
+  vertical-align:middle;
+  white-space:nowrap;
+}
+.compare-table tbody tr{ border-bottom:2px solid #d1d1d1; }
+
+.compare-table tbody img{
+  display:block;
+  width:32px;
+  height:32px;
+  margin-inline:auto;
+  object-fit:contain;
+}
+
+
+/* light grey row-divider */
+.compare-table tbody tr{
+  border-bottom:2px solid #d1d1d1;
+}
+
+/* ---- TICK / CROSS ICONS ---- */
+.yes,
+.no{
+  position:relative;
+  width:40px;                 /* force a perfect circle */
+  height:40px;
+  margin-inline:auto;
+  line-height:0;              /* kill stray whitespace */
+}
+
+.yes::before,
+.no::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  font-weight:900;
+  color:#fff;
+}
+.yes::before{ background:#00a52e; content:"\2713"; }  /* ✓ */
+.no::before { background:#ff0000; content:"\2716"; }  /* ✖ */
+
+/* ---- RESPONSIVE TWEAKS ---- */
+@media (max-width:600px){
+  .compare-table thead img{ width:38px; height:38px; }
+  .compare-table tbody img{ width:26px; height:26px; }
+  .compare-table td:first-child{ font-size:.875rem; }
+}
+/* =====  WRAPPER  ===== */
+.industry-carousel {
+  --col-w: 320px;   /* width of each card column */
+  --col-gap: 24px;  /* gap between columns */
+  --row-gap: 24px;  /* gap between rows */
+  max-width: calc(var(--col-w) * 3 + var(--col-gap) * 2);
+  margin-inline: auto;
+  position: relative;
+}
+
+.carousel-flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* =====  VIEWPORT  ===== */
+.viewport {
+  width: calc(var(--col-w) * 3 + var(--col-gap) * 2);
+  overflow: hidden;
+  scroll-behavior: smooth;
+  flex: 0 0 auto;
+}
+/* =====  GRID  (3 rows × 4 cols) ===== */
+.industry-grid {
+  display: grid;
+  grid-template-columns: repeat(4, var(--col-w));
+  grid-template-rows: repeat(3, 64px);
+  gap: var(--row-gap) var(--col-gap);
+  padding: 20px;
+  margin: 0;
+  list-style: none;
+}
+/* =====  CARD  ===== */
+.card{
+  position:relative;display:flex;align-items:center;
+  height:64px;padding-left:60px;
+  background:#009aaa;color:#fff;border-radius:12px;
+  font:700 14px/1.2 "Poppins",sans-serif;text-transform:uppercase;
+  box-shadow:0 2px 4px rgba(0,0,0,.18);
+}
+.card img{
+  position:absolute;left:-20px;top:50%;transform:translateY(-50%);
+  width:70px;height:70px;border-radius:50%;padding:16px;
+  background:var(--clr);object-fit:contain;
+  box-shadow:inset 0 0 0 100vmax var(--clr);
+}
+
+/* =====  NAV BUTTONS  ===== */
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  background: #009aaa;
+  color: #fff;
+  font-size: 32px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.nav:hover {
+  background: #007a85;
+}
+.nav[disabled] {
+  opacity: .25;
+  pointer-events: none;
+}
+
+.nav.prev {
+  left: -64px;
+}
+
+.nav.next {
+  right: -64px;
+}
+
+@media (max-width: 900px) {
+  .nav { display: none; }
+}
+
+/* =====  MOBILE FALLBACK  ===== */
+@media(max-width:767px){
+  .nav{display:none}
+  .industry-carousel{flex-direction:column;max-width:480px}
+  .viewport{width:100%;overflow:visible}
+  .industry-grid{
+    grid-template-columns:1fr;
+    gap:12px;margin-top:4px;
+  }
+  .card{padding-left:58px;height:58px;font-size:12px}
+  .card img{left:-18px;width:60px;height:60px;padding:14px}
+}
+
+/* =========  Base resets (optional)  ========= */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body  { font-family: "Inter", Arial, sans-serif; }
+
+/* =========  Layout  ========= */
+.promo-banner {
+  padding: 4rem 0rem 20rem 0rem;     
+  /* background-color: #007a85;    */
+  display: flex;
+  justify-content: center;    /* ⟵ center the card horizontally */
+  /* align-items: center;     /* uncomment if you also want vertical centering */
+}
+
+
+/* =========  Card  ========= */
+.promo-card {
+  position: relative;
+  background: linear-gradient(180deg, #a5acb9 0%, #303643 100%);
+  border-radius: 16px;
+  padding: 3.75rem 2.5rem 3.75rem; /* extra bottom padding for over-hanging photo */
+  color: #ffffff;
+  width: 740px;                    /* matches the mock-up width */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+  overflow: visible;               /* allows the sparkle + photo to poke out */
+}
+
+/* =========  Sparkle  ========= */
+.sparkle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  top: -25px;    
+  right: -42px;
+  color: #ffe666;                  /* bright yellow */
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(7deg);         /* tiny angle for a more “hand-placed” feel */
+}
+
+/* =========  Heading  ========= */
+.promo-card h2 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.35);
+  margin-bottom: 2.25rem;
+}
+
+/* =========  Button  ========= */
+.cta {
+  display: inline-block;
+  background: #ffffff;
+  color: #000000;
+  padding: 0.85rem 1.5rem;
+  font-size: 1.85rem;
+  font-weight: 800;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.30);
+}
+
+/* =========  Photo  ========= */
+.team-photo {
+  position: absolute;
+  width: 780px;
+  right: -405px;                    /* pushes photo outside the card */
+  bottom: -260px;                   /* hangs below the card */
+  border-radius: 10px;
+}
+
+.support-banner{
+  /* full-width horizontal bar with subtle L->R gradient               */
+  background: linear-gradient(90deg, #d6d6d6 0%, #e8e8e8 50%, #f6f6f6 100%);
+  padding: 2.75rem 1rem;            /* top / bottom breathing room     */
+  text-align: center;
+}
+
+.support-content{
+  max-width: 1100px;                /* keep text from stretching too   */
+  margin: 0 auto;                   /* centred in the bar              */
+}
+
+.support-banner h2{
+  font: 800 2rem/1.3 "Inter", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+  color: #000;
+  text-shadow: 2px 2px 4px rgba(0,0,0,.35);   /* same punchy shadow      */
+  margin-bottom: 1.5rem;
+}
+
+/* -------- Call-to-action button ---------------------------------- */
+.support-btn{
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  font: 800 1.35rem/1 "Inter", Arial, sans-serif;
+  text-transform: uppercase;
+  padding: .6rem 2.5rem;
+  border-radius: 30px;              /* pill shape                      */
+  text-decoration: none;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+.support-btn:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,.30);
+}
+
+/* === Optional mobile fine-tuning (text shrinks a bit) ============ */
+@media (max-width: 600px){
+  .support-banner h2   { font-size: 1.55rem; }
+  .support-btn         { font-size: 1.15rem; }
+}
+
+/* ===== Base reset (optional) ====================================== */
+* { box-sizing:border-box; margin:0; padding:0; }
+body{ font-family:"Inter",Arial,sans-serif; }
+
+/* ===== Outer banner ============================================== */
+.contact-form{
+  background: linear-gradient(135deg,#d2fad3 0%,#b6d3f4 100%);
+  padding: 4rem 1rem;
+  overflow:hidden;                    /* hides any overflow on small screens */
+}
+.contact-inner{
+  max-width: 1100px;
+  margin:0 auto;
+  display:flex;
+  gap:3rem;
+  align-items:flex-start;
+  flex-wrap:wrap;                     /* stacks on phones */
+}
+
+/* ===== Left side: form card ====================================== */
+.form-card{
+  background:#fff;
+  border-radius:12px;
+  padding:2.5rem 2.25rem;
+  box-shadow:0 8px 24px rgba(0,0,0,.12);
+  flex:1 1 340px;                     /* grows but never smaller than 340px */
+}
+.form-card h2{
+  font: 700 1.75rem/1.3 "Inter", Arial, sans-serif;
+  text-align:center;
+  margin-bottom:2rem;
+}
+form input{
+  width:100%;
+  border:2px solid #ececec;
+  border-radius:6px;
+  padding:.85rem 1rem;
+  font-size:1rem;
+  margin-bottom:1.25rem;
+  transition:border-color .15s;
+}
+form input:focus{
+  outline:none;
+  border-color:#0077ff;
+}
+.legal{
+  font-size:.78rem;
+  line-height:1.35;
+  margin: -0.25rem 0 1.75rem;
+}
+.legal a{ color:#0077ff; text-decoration:underline; }
+
+/* ---- Submit button ---- */
+.btn-submit{
+  display:block;
+  width:100%;
+  background:linear-gradient(90deg,#0095ff 0%,#004b9b 100%);
+  color:#fff;
+  font: 700 1.1rem "Inter", Arial, sans-serif;
+  padding:.9rem 1rem;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  transition:transform .18s, box-shadow .18s;
+}
+.btn-submit:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 14px rgba(0,0,0,.25);
+}
+
+/* ===== Right side: text + image ================================== */
+.visual{
+  flex:1 1 320px;
+  text-align:center;
+  position:relative;
+}
+.visual h3{
+  font:800 2rem/1.25 "Inter", Arial, sans-serif;
+  color:#fff;
+  text-shadow:3px 3px 6px rgba(0,0,0,.35);
+  margin-bottom:1.5rem;
+}
+.visual img{
+  width:100%;
+  max-width:310px;
+  height:auto;
+}
+
+/* ===== Mobile tweaks ============================================= */
+@media(max-width: 780px){
+  .visual h3{ font-size:1.6rem; }
+  .contact-inner{ justify-content:center; }   /* center stack */
+}
+
+
+}
+
+
