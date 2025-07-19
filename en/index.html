@@ -46,7 +46,8 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
-  <link href="../output.css" rel="stylesheet" />
+  <!-- <link href="../output.css" rel="stylesheet" /> -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
 <body class="transition">
@@ -263,92 +264,230 @@
     </div>
   </section>
   <!-- End block -->
+  
+  <!-- ======== SOLUTION FOR YOUR BUSINESS – start ======== -->
+  <section class="bg-white py-12 px-4">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+      <!-- heading -->
+      <h1
+        class="text-center font-extrabold tracking-tight text-secondary
+              text-3xl md:text-5xl mb-12 drop-shadow-md">
+        SOLUTION FOR YOUR BUSINESS!
+      </h1>
 
-  <!-- ********* SOLUTION FOR YOUR BUSINESS –– start ********* -->
-  <section class="section-solutions">
-    <div class="container">
-      <h1 class="title-heading text-shadow-md">SOLUTION FOR YOUR BUSINESS!</h1>
+      <!-- responsive grid -->
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
+        <!-- ❶ Card #1 -->
+        <article
+          class="relative flex flex-col items-start p-6 bg-white border
+                border-gray-200 rounded-lg shadow-sm overflow-hidden 
+                transition-shadow group">
+          <!-- gradient overlay (ẩn tới khi hover) -->
+          <div
+            class="absolute inset-0 pointer-events-none opacity-0
+                  transition-opacity duration-300 group-hover:opacity-85"
+            style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
+                                              rgb(93,224,230) 0%,
+                                              rgb(0,74,173) 100%);">
+          </div>
 
-      <div class="solutions-grid">
-        <article class="solution-card">
-          <img src="../images/marketplace-icon.png" alt="Marketplace icon" class="icon">
-          <h3 class="title">Marketplace</h3>
-          <p class="desc">
-            B2B Market for wholesale traders. Discover products, connect with businesses
-            worldwide, and grow your business with ease and confidence.
+          <img src="../images/marketplace-icon.png"
+              alt="Marketplace icon" class="w-10 h-10 mb-5">
+          <h3 class="text-lg font-semibold mb-2">Marketplace</h3>
+          <p class="text-sm leading-6 text-gray-700">
+            B2B Market for wholesale traders. Discover products, connect with
+            businesses worldwide, and grow your business with ease and confidence.
           </p>
         </article>
 
-        <article class="solution-card">
-          <img src="../images/chat-icon.png" alt="Multilingual Chat icon" class="icon">
-          <h3 class="title">Multilingual Chat</h3>
-          <p class="desc">
-            Check your “Chat&nbsp;Box” for messaging with your customers with multi-language
-            support&nbsp;(VN, EN, JP).
+        <!-- ❷ Card #2 -->
+        <article
+          class="relative flex flex-col items-start p-6 bg-white border
+                border-gray-200 rounded-lg shadow-sm overflow-hidden
+                transition-shadow group">
+          <div class="absolute inset-0 pointer-events-none opacity-0
+                      transition-opacity duration-300 group-hover:opacity-85"
+              style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
+                                                  rgb(93,224,230) 0%,
+                                                  rgb(0,74,173) 100%);">
+          </div>
+
+          <img src="../images/chat-icon.png"
+              alt="Multilingual Chat icon" class="w-10 h-10 mb-5">
+          <h3 class="text-lg font-semibold mb-2">Multilingual Chat</h3>
+          <p class="text-sm leading-6 text-gray-700">
+            Check your “Chat Box” for messaging with your customers with
+            multi-language support&nbsp;(VN, EN, JP).
           </p>
         </article>
 
-        <article class="solution-card">
-          <img src="../images/rfq-icon.png" alt="RFQ Auto icon" class="icon">
-          <h3 class="title">RFQ Auto</h3>
-          <p class="desc">
-            GMAJOR supports sending auto RFQs for your customers based on the information
-            you provided.
+        <!-- ❸ Card #3 -->
+        <article
+          class="relative flex flex-col items-start p-6 bg-white border
+                border-gray-200 rounded-lg shadow-sm overflow-hidden
+                transition-shadow group">
+          <div class="absolute inset-0 pointer-events-none opacity-0
+                      transition-opacity duration-300 group-hover:opacity-85"
+              style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
+                                                  rgb(93,224,230) 0%,
+                                                  rgb(0,74,173) 100%);">
+          </div>
+
+          <img src="../images/rfq-icon.png"
+              alt="RFQ Auto icon" class="w-10 h-10 mb-5">
+          <h3 class="text-lg font-semibold mb-2">RFQ Auto</h3>
+          <p class="text-sm leading-6 text-gray-700">
+            GMAJOR supports sending auto RFQs for your customers based
+            on the information you provided.
           </p>
         </article>
       </div>
     </div>
   </section>
+  <!-- ======== SOLUTION – end ======== -->
+
 
   <!-- ********* SOLUTION FOR YOUR BUSINESS –– end ********* -->
-  <section class="section-solutions">
-    <div class="container">
-      <h1 class="title-heading text-shadow-md">
+  <!-- ========= BY YOUR SIDE – start ========= -->
+  <section class="bg-white py-12 px-4">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+
+      <!-- heading -->
+      <h1
+        class="text-center font-extrabold uppercase tracking-tight
+              drop-shadow-md text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
-      <div class="sides-grid">
-        <!-- Col-1 / Row-1 -->
-        <article class="card-slide card-slide-support">
-          <h2 class="card-slide-title">CUSTOMER<br>SUPPORT<br>24/7</h2>
+
+      <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
+      <div
+        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
+
+        <!-- ❶ CUSTOMER SUPPORT (col-1 / row-1) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8
+                drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-1 lg:row-start-1
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <h2
+            class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+                  uppercase text-center">
+            CUSTOMER<br>SUPPORT<br>24/7
+          </h2>
         </article>
-        <!-- Col-2 / Rows-1-2 (spans 2) -->
-        <article class="card-slide card-slide-partner">
-          <h2 class="card-slide-title">YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER</h2>
-          <p class="card-slide-body">
+
+        <!-- ❷ GLOBAL PARTNER (col-2 / row-1–2 span 2) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-2 lg:row-start-1 lg:row-span-2
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <h2
+            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+                  uppercase text-center">
+            YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER
+          </h2>
+          <p class="text-sm md:text-base leading-6 max-w-prose">
             We empower your trade journey with seamless solutions, from sourcing
             to after-sales support. Trust, transparency, and growth. All in one
             place.
           </p>
         </article>
-        <!-- Col-3 / Row-1 -->
-        <article class="card-slide card-slide-verified">
-          <h2 class="card-slide-title">VERIFIED<br>USER</h2>
-          <p class="card-slide-body">
+
+        <!-- ❸ VERIFIED (col-3 / row-1) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-3 lg:row-start-1
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <h2
+            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+                  uppercase text-center">
+            VERIFIED<br>USER
+          </h2>
+          <p class="text-sm md:text-base leading-6 max-w-prose">
             Connect only with trusted and verified wholesale partners.
           </p>
         </article>
-        <!-- Col-4 / Row-1 -->
-        <article class="card-slide card-slide-custom">
-          <h2 class="card-slide-title">CUSTOM<br>SOLUTION</h2>
-          <p class="card-slide-body">
+
+        <!-- ❹ CUSTOM SOLUTION (col-4 / row-1) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-4 lg:row-start-1
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <h2
+            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+                  uppercase text-center">
+            CUSTOM<br>SOLUTION
+          </h2>
+          <p class="text-sm md:text-base leading-6 max-w-prose">
             Tailored strategies and services to fit your unique business goals.
           </p>
         </article>
-        <!-- Col-1 / Row-2 -->
-        <article class="card-slide card-slide-logistic">
-          <h2 class="card-slide-title">LOGISTIC<br>&amp; DELIVERY</h2>
+
+        <!-- ❺ LOGISTIC (col-1 / row-2) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-1 lg:row-start-2
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <h2
+            class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+                  uppercase text-center">
+            LOGISTIC<br>&amp; DELIVERY
+          </h2>
         </article>
-        <!-- Col-3-4 / Row-2 (spans 2 columns) -->
-        <article class="card-slide card-slide-smart">
-          <div class="smart-flex">
-            <h2 class="card-slide-title">SMART<br>TECH</h2>
-            <span class="chip" aria-hidden="true">AI</span>
+
+        <!-- ❻ SMART TECH (col-3–4 span 2 / row-2) -->
+        <article
+          class="relative flex flex-col justify-center
+                border-4 border-black rounded-[22px] bg-white
+                p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
+                lg:col-start-3 lg:col-span-2 lg:row-start-2
+                after:content-[''] after:absolute after:inset-3
+                after:border-[3px] after:border-black
+                after:rounded-[18px] after:pointer-events-none">
+          <div class="flex items-center justify-between h-full gap-8">
+            <h2
+              class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+                    uppercase">
+              SMART<br>TECH
+            </h2>
+
+            <!-- “AI” chip -->
+            <span
+              class="relative font-extrabold text-4xl md:text-5xl
+                    px-3 py-2 border-[6px] border-black rounded-[12px]
+                    leading-none">
+              AI
+              <span class="absolute inset-x-[-18px] top-[15%] h-[6px] bg-black"></span>
+              <span class="absolute inset-x-[-18px] bottom-[15%] h-[6px] bg-black"></span>
+            </span>
           </div>
         </article>
+
       </div>
     </div>
   </section>
-  <!-- ********* end ********* -->
+  <!-- ========= BY YOUR SIDE – end ========= -->
+
 
   <!-- ********* START ********* -->
   <section class="section-solutions">
