@@ -451,44 +451,45 @@
   <!-- ********* END ********* -->
 
   <!-- ********* START ********* -->
-  <section class="section-side">
-
-    <h1 class="heading text-shadow-md">
-      WE SUPPORT ANY INDUSTRY FIELDS
-    </h1>
-    <div class="industry-carousel">
-
-      <div class="carousel-flex">
-        <button class="nav prev" aria-label="previous column">&lsaquo;</button>
-        <div class="viewport">
-
-          <ul class="industry-grid">
-            <!-- COLUMN 1 -->
-            <li class="card" style="--clr:#c97b28"><img src="icons/wheat.svg"><span>AGRICULTURAL</span></li>
-            <li class="card" style="--clr:#f3c24b"><img src="icons/tractor.svg"><span>AGRICULTURAL<br>TRACTOR</span>
-            </li>
-            <li class="card" style="--clr:#c786d5"><img src="icons/bolt.svg"><span>CONSUMER<br>ELECTRONIC</span></li>
-
-            <!-- COLUMN 2 -->
-            <li class="card" style="--clr:#b4e24e"><img src="icons/machine.svg"><span>INDUSTRY<br>MACHINE</span></li>
-            <li class="card" style="--clr:#76c4d3"><img src="icons/health.svg"><span>HEALTHCARE<br>SERVICE</span></li>
-            <li class="card" style="--clr:#ffb000"><img src="icons/steering.svg"><span>VEHICLE<br>PARTS</span></li>
-
-            <!-- COLUMN 3 -->
-            <li class="card" style="--clr:#b655b8"><img src="icons/burger.svg"><span>FOOD &<br>BEVERAGE</span></li>
-            <li class="card" style="--clr:#ffa33b"><img src="icons/dumbbell.svg"><span>SPORTS ITEM</span></li>
-            <li class="card" style="--clr:#8cca39"><img src="icons/sofa.svg"><span>HOME<br>FURNITURE</span></li>
-
-            <!-- COLUMN 4 -->
-            <li class="card" style="--clr:#9cc48f"><img src="icons/clothes.svg"><span>CLOTHES</span></li>
-            <li class="card" style="--clr:#0f2e3d"><img src="icons/chip.svg"><span>SEMI<br>CONDUCTOR</span></li>
-            <li class="card" style="--clr:#ff4da3"><img src="icons/banana.svg"><span>FRESH FRUITS</span></li>
-          </ul>
+  <section class="section-solutions">
+    <div class="container">
+      <h1 class="title-heading text-shadow-md">
+        WE SUPPORT ANY INDUSTRY FIELDS
+      </h1>
+      <div class="industry-carousel">
+  
+        <div class="carousel-flex">
+          <button class="nav prev" aria-label="previous column">&lsaquo;</button>
+          <div class="viewport">
+  
+            <ul class="industry-grid">
+              <!-- COLUMN 1 -->
+              <li class="card" style="--clr:#c97b28"><img src="icons/wheat.png"><span>AGRICULTURAL</span></li>
+              <li class="card" style="--clr:#f3c24b"><img src="icons/tractor.png"><span>AGRICULTURAL<br>TRACTOR</span>
+              </li>
+              <li class="card" style="--clr:#c786d5"><img src="icons/bolt.png"><span>CONSUMER<br>ELECTRONIC</span></li>
+  
+              <!-- COLUMN 2 -->
+              <li class="card" style="--clr:#b4e24e"><img src="icons/machine.png"><span>INDUSTRY<br>MACHINE</span></li>
+              <li class="card" style="--clr:#76c4d3"><img src="icons/health.png"><span>HEALTHCARE<br>SERVICE</span></li>
+              <li class="card" style="--clr:#ffb000"><img src="icons/steering.png"><span>VEHICLE<br>PARTS</span></li>
+  
+              <!-- COLUMN 3 -->
+              <li class="card" style="--clr:#b655b8"><img src="icons/burger.png"><span>FOOD &<br>BEVERAGE</span></li>
+              <li class="card" style="--clr:#ffa33b"><img src="icons/dumbbell.png"><span>SPORTS ITEM</span></li>
+              <li class="card" style="--clr:#8cca39"><img src="icons/sofa.png"><span>HOME<br>FURNITURE</span></li>
+  
+              <!-- COLUMN 4 -->
+              <li class="card" style="--clr:#9cc48f"><img src="icons/clothes.png"><span>CLOTHES</span></li>
+              <li class="card" style="--clr:#0f2e3d"><img src="icons/chip.png"><span>SEMI<br>CONDUCTOR</span></li>
+              <li class="card" style="--clr:#ff4da3"><img src="icons/banana.png"><span>FRESH FRUITS</span></li>
+            </ul>
+          </div>
+          <button class="nav next" aria-label="next column">&rsaquo;</button>
         </div>
-        <button class="nav next" aria-label="next column">&rsaquo;</button>
       </div>
     </div>
-
+  
     </div>
   </section>
   <!-- ********* END ********* -->
@@ -546,7 +547,7 @@
         white-space:nowrap; box-shadow:0 2px 8px rgba(0,0,0,0.18); top:0; left:0;">
       </div>
 
-    </div>
+  </div>
   </section>
 
   <!-- Promo Banner  -->
@@ -1021,7 +1022,7 @@
     const grid = document.querySelector('.industry-carousel .industry-grid');
     const prevBtn = document.querySelector('.industry-carousel .nav.prev');
     const nextBtn = document.querySelector('.industry-carousel .nav.next');
-    const colW = 320 + 24; // card width + gap
+    const colW = 380 + 44; // card width + gap
     let col = 0;
     const maxCol = 4 - 3; // 4 columns, show 3 at a time
 

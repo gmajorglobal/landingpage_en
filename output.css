@@ -3001,6 +3001,10 @@ img{display:block;max-width:100%;height:auto}
 .compare-table thead th:first-child{ text-align:left; }
 .compare-table thead th:first-child,
 .compare-table tbody td:first-child{
+  font-size:1.2rem;              /* room for the row-labels (“Feature…”)   */
+}
+
+.compare-table tbody th{
   width:210px;                 /* room for the row-labels (“Feature…”)   */
 }
 
@@ -3077,9 +3081,9 @@ img{display:block;max-width:100%;height:auto}
 }
 /* =====  WRAPPER  ===== */
 .industry-carousel {
-  --col-w: 320px;   /* width of each card column */
-  --col-gap: 24px;  /* gap between columns */
-  --row-gap: 24px;  /* gap between rows */
+  --col-w: 380px;   /* width of each card column */
+  --col-gap: 44px;  /* gap between columns */
+  --row-gap: 44px;  /* gap between rows */
   max-width: calc(var(--col-w) * 3 + var(--col-gap) * 2);
   margin-inline: auto;
   position: relative;
@@ -3112,7 +3116,7 @@ img{display:block;max-width:100%;height:auto}
 /* =====  CARD  ===== */
 .card{
   position:relative;display:flex;align-items:center;
-  height:64px;padding-left:60px;
+  height:64px;
   background:#009aaa;color:#fff;border-radius:12px;
   font:700 14px/1.2 "Poppins",sans-serif;text-transform:uppercase;
   box-shadow:0 2px 4px rgba(0,0,0,.18);
