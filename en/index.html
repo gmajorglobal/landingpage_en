@@ -9,16 +9,10 @@
   <title>GMAJOR - Global online B2B matching service</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery.marquee/jquery.marquee.min.js"></script>
-  <style>
-    @import url("https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=block");
-  </style>
-  <style>
-    .marquee {
-      white-space: nowrap;
-      overflow: hidden;
-      box-sizing: border-box;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
   <meta name="title" content="GMAJOR - Global online B2B matching service" />
   <meta name="description"
     content="GMAJOR is a global online B2B matching service that enables businesses from around the world to easily find partners, expand markets, and grow their business. With a user-friendly interface, smart search features, and high security, GMAJOR provides a comprehensive solution for businesses to find reliable partners and build sustainable partnerships. Join today to experience the difference!" />
@@ -46,14 +40,463 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
-  <!-- <link href="../output.css" rel="stylesheet" /> -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Complete Tailwind config with all custom styles
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            main: '#004AAD',
+            main_hover: '#003a8a', 
+            secondary: '#1a1a1a',
+            text: '#666666'
+          },
+          fontFamily: {
+            'cabin': ['Cabin', 'sans-serif'],
+          },
+          dropShadow: {
+            'md': '2px 2px 5px rgba(0, 0, 0, 0.35)',
+            'sm': '0 4px 16px rgba(0, 0, 0, 0.04)',
+            'text': '2px 2px 8px rgba(0, 0, 0, 0.13)'
+          },
+          backgroundImage: {
+            'gradient-radial': 'radial-gradient(circle at var(--x,50%) var(--y,50%), rgb(93,224,230) 0%, rgb(0,74,173) 100%)',
+            'gradient-cyan-blue': 'linear-gradient(90deg, #caffd7 0%, #a3caff 100%)'
+          },
+          textShadow: {
+            'sm': '2px 2px 8px rgba(0, 0, 0, 0.13)',
+            'md': '2px 2px 5px rgba(0, 0, 0, 0.35)',
+          },
+          maxWidth: {
+            'screen-xl': '1280px',
+          }
+        },
+      },
+      plugins: [
+        function({ addUtilities, addComponents }) {
+          // Custom utilities
+          addUtilities({
+            '.text-shadow-sm': {
+              textShadow: '2px 2px 8px rgba(0, 0, 0, 0.13)',
+            },
+            '.text-shadow-md': {
+              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.35)',
+            },
+            '.drop-shadow-text': {
+              filter: 'drop-shadow(2px 2px 8px rgba(0, 0, 0, 0.13))',
+            },
+            '.bg-gradient-radial': {
+              background: 'radial-gradient(circle at var(--x,50%) var(--y,50%), rgb(93,224,230) 0%, rgb(0,74,173) 100%)',
+            },
+            '.bg-gradient-cyan-blue': {
+              background: 'linear-gradient(90deg, #caffd7 0%, #a3caff 100%)',
+            },
+          })
+          
+          // Custom components
+          addComponents({
+            '.section-solutions': {
+              padding: '3rem 1rem',
+              '@screen lg': {
+                padding: '4rem 1.5rem',
+              }
+            },
+            '.section-solutions .container': {
+              maxWidth: '1280px',
+              margin: '0 auto',
+              padding: '0 1rem',
+              '@screen lg': {
+                padding: '0 1.5rem',
+              }
+            },
+            '.section-solutions .heading': {
+              fontSize: '2.25rem',
+              fontWeight: '800',
+              textAlign: 'center',
+              marginBottom: '3rem',
+              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.35)',
+              '@screen md': {
+                fontSize: '3rem',
+              }
+            },
+            '.title-heading': {
+              fontSize: '2.25rem',
+              fontWeight: '800',
+              textAlign: 'center',
+              marginBottom: '3rem',
+              textShadow: '2px 2px 5px rgba(0, 0, 0, 0.35)',
+              '@screen md': {
+                fontSize: '3rem',
+              }
+            },
+            '.solutions-grid': {
+              display: 'grid',
+              gridTemplateColumns: 'repeat(1, minmax(0, 1fr))',
+              gap: '1.5rem',
+              '@screen sm': {
+                gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
+              },
+              '@screen lg': {
+                gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
+              },
+              '@screen xl': {
+                gap: '2rem',
+              }
+            },
+            '.solution-card': {
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-start',
+              padding: '1.5rem',
+              backgroundColor: 'white',
+              border: '1px solid #e5e7eb',
+              borderRadius: '0.5rem',
+              boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.1)',
+              overflow: 'hidden',
+              transition: 'box-shadow 0.3s ease',
+              '&::before': {
+                content: '""',
+                position: 'absolute',
+                inset: '0',
+                background: 'radial-gradient(circle at var(--x,50%) var(--y,50%), rgb(93,224,230) 0%, rgb(0,74,173) 100%)',
+                opacity: '0',
+                transition: 'opacity 0.3s ease',
+                pointerEvents: 'none',
+              },
+              '&:hover::before': {
+                opacity: '0.85',
+              },
+              '&:hover': {
+                boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1)',
+              }
+            },
+            '.compare-table-wrapper': {
+              overflowX: 'auto',
+              marginTop: '2rem',
+            },
+            '.compare-table': {
+              width: '100%',
+              borderCollapse: 'collapse',
+              borderSpacing: '0',
+            },
+            '.img-logo': {
+              width: '60px',
+              height: 'auto',
+              objectFit: 'contain',
+            },
+            '.img-checked': {
+              width: '32px',
+              height: '32px',
+            },
+            '.img-cross-icon': {
+              width: '32px',
+              height: '32px',
+            },
+            '.industry-carousel': {
+              marginTop: '3rem',
+              position: 'relative',
+              maxWidth: '100%',
+              overflow: 'hidden',
+            },
+            '.carousel-flex': {
+              display: 'flex',
+              alignItems: 'center',
+              gap: '1rem',
+              position: 'relative',
+            },
+            '.viewport': {
+              flex: '1',
+              overflow: 'hidden',
+              position: 'relative',
+            },
+            '.industry-grid': {
+              display: 'grid',
+              gridTemplateColumns: 'repeat(4, 1fr)',
+              gap: '1rem',
+              width: 'fit-content',
+            },
+            '.card': {
+              position: 'relative',
+              padding: '1rem',
+              backgroundColor: 'white',
+              borderRadius: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '0.5rem',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                transform: 'translateY(-2px)',
+                boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1)',
+              }
+            },
+            '.nav': {
+              width: '40px',
+              height: '40px',
+              border: 'none',
+              borderRadius: '50%',
+              backgroundColor: 'white',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+              cursor: 'pointer',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              fontSize: '1.25rem',
+              fontWeight: 'bold',
+              transition: 'all 0.3s ease',
+              '&:hover': {
+                backgroundColor: '#f3f4f6',
+                transform: 'scale(1.1)',
+              },
+              '&[disabled]': {
+                opacity: '0.5',
+                cursor: 'not-allowed',
+              }
+            },
+            '.promo-banner': {
+              background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+              padding: '3rem 1rem',
+              textAlign: 'center',
+              color: 'white',
+              position: 'relative',
+              overflow: 'hidden',
+            },
+            '.promo-card': {
+              maxWidth: '1200px',
+              margin: '0 auto',
+              position: 'relative',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+              gap: '1.5rem',
+            },
+            '.sparkle': {
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              fontSize: '2rem',
+              animation: 'spin 2s linear infinite',
+            },
+            '.support-banner': {
+              background: 'linear-gradient(90deg, #caffd7 0%, #a3caff 100%)',
+              padding: '3rem 1rem',
+              textAlign: 'center',
+            },
+            '.support-content': {
+              maxWidth: '800px',
+              margin: '0 auto',
+            },
+            '.contact-form': {
+              background: '#f8fafc',
+              padding: '3rem 1rem',
+            },
+            '.contact-inner': {
+              maxWidth: '1200px',
+              margin: '0 auto',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+              gap: '3rem',
+              alignItems: 'center',
+            },
+            '.form-card': {
+              background: 'white',
+              padding: '2rem',
+              borderRadius: '0.5rem',
+              boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
+            },
+            '.visual': {
+              textAlign: 'center',
+            }
+          })
+        }
+      ]
+    }
+  </script>
+  <style>
+    /* Additional styles for special components */
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    
+    .compare-table thead th {
+      background: #f8fafc;
+      padding: 1rem;
+      text-align: center;
+      font-weight: 600;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .compare-table thead th:first-child {
+      text-align: left;
+    }
+    
+    .compare-table tbody td {
+      padding: 1rem;
+      text-align: center;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    
+    .compare-table tbody td:first-child {
+      text-align: left;
+      font-weight: 500;
+    }
+    
+    .card img {
+      width: 40px;
+      height: 40px;
+      object-fit: contain;
+    }
+    
+    .card span {
+      font-weight: 600;
+      font-size: 0.875rem;
+      text-align: center;
+    }
+    
+    .promo-card h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0;
+      line-height: 1.2;
+    }
+    
+    .cta {
+      display: inline-block;
+      background: white;
+      color: #667eea;
+      padding: 0.75rem 2rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    
+    .team-photo {
+      width: 200px;
+      height: auto;
+      border-radius: 1rem;
+    }
+    
+    .support-banner h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+    }
+    
+    .support-btn {
+      display: inline-block;
+      background: #004AAD;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .support-btn:hover {
+      background: #003a8a;
+      transform: translateY(-2px);
+    }
+    
+    .form-card h2 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      color: #1a1a1a;
+    }
+    
+    form input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+    
+    form input:focus {
+      outline: none;
+      border-color: #004AAD;
+      box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
+    }
+    
+    .legal {
+      font-size: 0.875rem;
+      color: #6b7280;
+      margin-bottom: 1rem;
+    }
+    
+    .legal a {
+      color: #004AAD;
+      text-decoration: underline;
+    }
+    
+    .btn-submit {
+      width: 100%;
+      background: #004AAD;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.375rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .btn-submit:hover {
+      background: #003a8a;
+    }
+    
+    .visual h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1a1a1a;
+    }
+    
+    .visual img {
+      max-width: 300px;
+      height: auto;
+      border-radius: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .visual h3 {
+        font-size: 1.6rem;
+      }
+      
+      .support-banner h2 {
+        font-size: 1.55rem;
+      }
+      
+      .support-btn {
+        font-size: 1.15rem;
+      }
+    }
+  </style>
 </head>
 
 <body class="transition">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N5MP5Z8M" height="0" width="0"
-      style="display: none; visibility: hidden"></iframe></noscript>
+      class="hidden invisible"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <header class="fixed w-full z-50">
     <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 shadow-md">
@@ -227,7 +670,7 @@
         (These are just a few “featured partners” – many other small
         businesses are not listed yet.)
       </p>
-      <div class="marquee">
+      <div class="whitespace-nowrap overflow-hidden box-border">
         <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
           <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
             <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
@@ -285,10 +728,7 @@
           <!-- gradient overlay (ẩn tới khi hover) -->
           <div
             class="absolute inset-0 pointer-events-none opacity-0
-                  transition-opacity duration-300 group-hover:opacity-85"
-            style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
-                                              rgb(93,224,230) 0%,
-                                              rgb(0,74,173) 100%);">
+                  transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
           <img src="../images/marketplace-icon.png"
@@ -306,10 +746,7 @@
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
           <div class="absolute inset-0 pointer-events-none opacity-0
-                      transition-opacity duration-300 group-hover:opacity-85"
-              style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
-                                                  rgb(93,224,230) 0%,
-                                                  rgb(0,74,173) 100%);">
+                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
           <img src="../images/chat-icon.png"
@@ -327,10 +764,7 @@
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
           <div class="absolute inset-0 pointer-events-none opacity-0
-                      transition-opacity duration-300 group-hover:opacity-85"
-              style="background:radial-gradient(circle at var(--x,50%) var(--y,50%),
-                                                  rgb(93,224,230) 0%,
-                                                  rgb(0,74,173) 100%);">
+                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
           <img src="../images/rfq-icon.png"
@@ -633,57 +1067,41 @@
   </section>
   <!-- ********* END ********* -->
   <!-- ********* START ********* -->
-  <section class="section-side" style="position:relative; background:#fff;">
-    <div class="container" style="position:relative; max-width:1200px; margin:auto; padding:2rem 0;">
-      <h1 class="heading text-shadow-md" style="margin-bottom:2.5rem;">
+  <section class="section-side relative bg-white">
+    <div class="container relative max-w-[1200px] mx-auto py-8">
+      <h1 class="heading text-shadow-md mb-10">
         GMAJOR IN GLOBAL MARKET
       </h1>
-      <div style="display:flex; align-items:center; justify-content:flex-start; gap:2rem;">
+      <div class="flex items-center justify-start gap-8">
         <!-- Left stats -->
-        <div style="display:flex; flex-direction:column; gap:2rem;">
-          <div class="market-stat"
-            style="background:linear-gradient(90deg,#caffd7 0%,#a3caff 100%); border-radius:10px; padding:1.5rem 2.5rem; min-width:260px; box-shadow:0 4px 16px rgba(0,0,0,0.10); text-align:left;">
-            <span
-              style="font-size:2rem; font-weight:800; color:#222; text-shadow:2px 2px 8px rgba(0,0,0,0.13); display:block;">+30,000<br>GLOBAL
+        <div class="flex flex-col gap-8">
+          <div class="market-stat bg-gradient-cyan-blue rounded-xl px-10 py-6 min-w-[260px] shadow-lg text-left">
+            <span class="text-3xl font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>GLOBAL
               USER</span>
           </div>
-          <div class="market-stat"
-            style="background:linear-gradient(90deg,#caffd7 0%,#a3caff 100%); border-radius:10px; padding:1.5rem 2.5rem; min-width:260px; box-shadow:0 4px 16px rgba(0,0,0,0.10); text-align:left;">
-            <span
-              style="font-size:2rem; font-weight:800; color:#222; text-shadow:2px 2px 8px rgba(0,0,0,0.13); display:block;">+50,000<br>PRODUCTS</span>
+          <div class="market-stat bg-gradient-cyan-blue rounded-xl px-10 py-6 min-w-[260px] shadow-lg text-left">
+            <span class="text-3xl font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>PRODUCTS</span>
           </div>
         </div>
         <!-- Map and markers -->
-        <div style="position:relative; flex:1; min-width:600px; min-height:400px;">
+        <div class="relative flex-1 min-w-[600px] min-h-[400px]">
           <img src="../images/world-map.png" alt="World Map"
-            style="width:100%; max-width:2000px; min-width:400px; display:block; filter:drop-shadow(0 4px 16px rgba(0,0,0,0.04));" />
+            class="w-full max-w-[2000px] min-w-[400px] block drop-shadow-sm" />
           <!-- Markers (adjust left/top for each location) -->
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="USA"
-            style="position:absolute; left:18%; top:38%; width:38px; cursor:pointer;" alt="USA" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Brazil"
-            style="position:absolute; left:32%; top:68%; width:38px; cursor:pointer;" alt="Brazil" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="UK"
-            style="position:absolute; left:41%; top:28%; width:38px; cursor:pointer;" alt="UK" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Europe"
-            style="position:absolute; left:48%; top:32%; width:38px; cursor:pointer;" alt="Europe" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Africa"
-            style="position:absolute; left:50%; top:58%; width:38px; cursor:pointer;" alt="Africa" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="India"
-            style="position:absolute; left:62%; top:48%; width:38px; cursor:pointer;" alt="India" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="China"
-            style="position:absolute; left:70%; top:36%; width:38px; cursor:pointer;" alt="China" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Japan"
-            style="position:absolute; left:80%; top:32%; width:38px; cursor:pointer;" alt="Japan" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Vietnam"
-            style="position:absolute; left:75%; top:48%; width:38px; cursor:pointer;" alt="Vietnam" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker" data-location="Australia"
-            style="position:absolute; left:85%; top:78%; width:38px; cursor:pointer;" alt="Australia" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[18%] top-[38%] w-[38px] cursor-pointer" data-location="USA" alt="USA" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[32%] top-[68%] w-[38px] cursor-pointer" data-location="Brazil" alt="Brazil" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[41%] top-[28%] w-[38px] cursor-pointer" data-location="UK" alt="UK" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[48%] top-[32%] w-[38px] cursor-pointer" data-location="Europe" alt="Europe" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[50%] top-[58%] w-[38px] cursor-pointer" data-location="Africa" alt="Africa" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[62%] top-[48%] w-[38px] cursor-pointer" data-location="India" alt="India" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[70%] top-[36%] w-[38px] cursor-pointer" data-location="China" alt="China" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[80%] top-[32%] w-[38px] cursor-pointer" data-location="Japan" alt="Japan" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[75%] top-[48%] w-[38px] cursor-pointer" data-location="Vietnam" alt="Vietnam" />
+          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[85%] top-[78%] w-[38px] cursor-pointer" data-location="Australia" alt="Australia" />
         </div>
       </div>
       <!-- Tooltip -->
-      <div id="marker-tooltip" style="display:none; position:fixed; pointer-events:none; background:rgba(0,0,0,0.85); color:#fff;
-        padding:6px 16px; border-radius:6px; font-size:1rem; font-weight:600; z-index:999999; 
-        white-space:nowrap; box-shadow:0 2px 8px rgba(0,0,0,0.18); top:0; left:0;">
+      <div id="marker-tooltip" class="hidden fixed pointer-events-none bg-black/85 text-white px-4 py-1.5 rounded-md text-base font-semibold z-50 whitespace-nowrap shadow-lg top-0 left-0">
       </div>
 
   </div>

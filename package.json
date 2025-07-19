@@ -1,0 +1,12 @@
+{
+  "name": "gmajor-landing-page",
+  "version": "1.0.0",
+  "description": "GMAJOR Landing Page with Tailwind CSS CDN",
+  "scripts": {
+    "serve": "python3 -m http.server 8000",
+    "dev": "live-server --port=8000"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+} 
