@@ -50,7 +50,9 @@
             main: '#004AAD',
             main_hover: '#003a8a', 
             secondary: '#1a1a1a',
-            text: '#666666'
+            text: '#666666',
+            blue_light: '#3F5EFB',
+            pink_light: '#FC466B'
           },
           fontFamily: {
             'cabin': ['Cabin', 'sans-serif'],
@@ -70,7 +72,17 @@
           },
           maxWidth: {
             'screen-xl': '1280px',
-          }
+          },
+          animation: {
+            'gradient-move-x': 'gradient-move-x 3s ease-in-out infinite',
+          },
+          keyframes: {
+            'gradient-move-x': {
+              '0%': { 'background-position': '0% 50%' },
+              '50%': { 'background-position': '100% 50%' },
+              '100%': { 'background-position': '0% 50%' },
+            },
+          },
         },
       },
       plugins: [
@@ -774,7 +786,7 @@
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
       <!-- heading -->
       <h1
-        class="text-center font-extrabold tracking-tight text-secondary
+        class="font-extrabold tracking-tight text-secondary
               text-3xl md:text-5xl mb-12 [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]">
         SOLUTION FOR YOUR BUSINESS!
       </h1>
@@ -784,18 +796,16 @@
         <!-- ❶ Card #1 -->
         <article
           class="relative flex flex-col items-start p-6 bg-white border
-                border-gray-200 rounded-lg shadow-sm overflow-hidden 
+                border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <!-- gradient overlay (ẩn tới khi hover) -->
-          <div
-            class="absolute inset-0 pointer-events-none opacity-0
-                  transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
+          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-[#EEAECA] to-[#94BBE9] bg-[length:200%] animate-gradient-move-x">
           </div>
 
           <img src="../images/marketplace-icon.png"
-              alt="Marketplace icon" class="w-10 h-10 mb-5">
-          <h3 class="text-lg font-semibold mb-2">Marketplace</h3>
-          <p class="text-sm leading-6 text-gray-700">
+              alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
+          <h3 class="text-xl font-semibold mb-2 z-10">Marketplace</h3>
+          <p class="text-base leading-6 text-gray-900 z-10">
             B2B Market for wholesale traders. Discover products, connect with
             businesses worldwide, and grow your business with ease and confidence.
           </p>
@@ -806,15 +816,15 @@
           class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute inset-0 pointer-events-none opacity-0
-                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
+          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-[#EEAECA] to-[#94BBE9] bg-[length:200%] animate-gradient-move-x">
           </div>
 
           <img src="../images/chat-icon.png"
-              alt="Multilingual Chat icon" class="w-10 h-10 mb-5">
-          <h3 class="text-lg font-semibold mb-2">Multilingual Chat</h3>
-          <p class="text-sm leading-6 text-gray-700">
-            Check your "Chat Box" for messaging with your customers with
+              alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
+          <h3 class="text-xl font-semibold mb-2 z-10">Multilingual Chat</h3>
+          <p class="text-base leading-6 text-gray-900 z-10">
+            Check your “Chat Box” for messaging with your customers with
             multi-language support&nbsp;(VN, EN, JP).
           </p>
         </article>
@@ -824,14 +834,14 @@
           class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute inset-0 pointer-events-none opacity-0
-                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
+          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+                      transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-[#EEAECA] to-[#94BBE9] bg-[length:200%] animate-gradient-move-x">
           </div>
 
           <img src="../images/rfq-icon.png"
-              alt="RFQ Auto icon" class="w-10 h-10 mb-5">
-          <h3 class="text-lg font-semibold mb-2">RFQ Auto</h3>
-          <p class="text-sm leading-6 text-gray-700">
+              alt="RFQ Auto icon" class="w-10 h-10 mb-5 z-10">
+          <h3 class="text-xl font-semibold mb-2 z-10">RFQ Auto</h3>
+          <p class="text-base leading-6 text-gray-900 z-10">
             GMAJOR supports sending auto RFQs for your customers based
             on the information you provided.
           </p>
@@ -849,14 +859,14 @@
 
       <!-- heading -->
       <h1
-        class="text-center font-extrabold uppercase tracking-tight
+        class="font-extrabold uppercase tracking-tight
               [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
 
       <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
       <div
-        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
 
         <!-- ❶ CUSTOMER SUPPORT (col-1 / row-1) -->
         <article
@@ -870,7 +880,7 @@
                 after:rounded-[18px] after:pointer-events-none">
           <h2
             class="m-0 text-xl md:text-3xl font-extrabold leading-tight
-                  uppercase text-center">
+                  uppercase">
             CUSTOMER<br>SUPPORT<br>24/7
           </h2>
         </article>
@@ -886,7 +896,7 @@
                 after:rounded-[18px] after:pointer-events-none">
           <h2
             class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
-                  uppercase text-center">
+                  uppercase">
             YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -907,7 +917,7 @@
                 after:rounded-[18px] after:pointer-events-none">
           <h2
             class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
-                  uppercase text-center">
+                  uppercase">
             VERIFIED<br>USER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -926,7 +936,7 @@
                 after:rounded-[18px] after:pointer-events-none">
           <h2
             class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
-                  uppercase text-center">
+                  uppercase">
             CUSTOM<br>SOLUTION
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -945,7 +955,7 @@
                 after:rounded-[18px] after:pointer-events-none">
           <h2
             class="m-0 text-xl md:text-3xl font-extrabold leading-tight
-                  uppercase text-center">
+                  uppercase">
             LOGISTIC<br>&amp; DELIVERY
           </h2>
         </article>
@@ -959,22 +969,14 @@
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <div class="flex items-center justify-between h-full gap-8">
+          <div class="flex items-center justify-between h-full">
             <h2
-              class="m-0 text-xl md:text-3xl font-extrabold leading-tight
-                    uppercase">
-              SMART<br>TECH
+              class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
+              SMART <br /> TECH
             </h2>
 
-            <!-- "AI" chip -->
-            <span
-              class="relative font-extrabold text-4xl md:text-5xl
-                    px-3 py-2 border-[6px] border-black rounded-[12px]
-                    leading-none">
-              AI
-              <span class="absolute inset-x-[-18px] top-[15%] h-[6px] bg-black"></span>
-              <span class="absolute inset-x-[-18px] bottom-[15%] h-[6px] bg-black"></span>
-            </span>
+            <!-- “AI” chip -->
+             <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="../images/ai-chip.png" alt="AI Chip" />
           </div>
         </article>
 
