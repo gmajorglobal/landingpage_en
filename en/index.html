@@ -502,6 +502,67 @@
         font-size: 1.15rem;
       }
     }
+
+    .testimonial-card-item {
+      break-inside: avoid;
+    }
+
+    .testimonials-container {
+      -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    }
+
+    .testimonials-scroller {
+      display: flex;
+      gap: 1.5rem;
+      height: 70vh;
+      max-height: 800px;
+    }
+
+    .testimonial-column {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+
+    .scrolling-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .animate-scroll-down {
+      animation: scroll-down 100s linear infinite;
+    }
+
+    .animate-scroll-up {
+      animation: scroll-up 100s linear infinite;
+    }
+
+    @keyframes scroll-down {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    @keyframes scroll-up {
+      from { transform: translateY(-50%); }
+      to { transform: translateY(0); }
+    }
+
+    .testimonial-card-item > div {
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .testimonial-card-item:hover > div {
+      transform: scale(1.02);
+      background-color: #222;
+    }
+
+    .testimonial-column:hover .scrolling-wrapper {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 
@@ -679,7 +740,7 @@
         Trusted by Businesses Using GMAJOR Services
       </p>
       <p class="text-text text-xs text-center mb-4">
-        (These are just a few “featured partners” – many other small
+        (These are just a few "featured partners" – many other small
         businesses are not listed yet.)
       </p>
       <div class="whitespace-nowrap overflow-hidden box-border">
@@ -726,7 +787,7 @@
       <!-- heading -->
       <h1
         class="text-center font-extrabold tracking-tight text-secondary
-              text-3xl md:text-5xl mb-12 drop-shadow-md">
+              text-3xl md:text-5xl mb-12 [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]">
         SOLUTION FOR YOUR BUSINESS!
       </h1>
 
@@ -800,6 +861,8 @@
       <h1
         class="font-bold uppercase tracking-tight
               drop-shadow-xl text-3xl md:text-5xl mb-12">
+        class="text-center font-extrabold uppercase tracking-tight
+              [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
 
@@ -925,105 +988,171 @@
   <!-- ========= BY YOUR SIDE – end ========= -->
 
 
-  <!-- ********* START ********* -->
-  <section class="section-solutions">
-    <div class="container">
-      <h1 class="title-heading text-shadow-md">
+  <!-- ========= 1. COMPARISON – start ========= -->
+  <section class="bg-white py-12 px-4">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
+  
+      <!-- heading -->
+      <h1 class="text-center font-extrabold uppercase [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]
+               text-3xl md:text-5xl mb-12">
         GMAJOR IS YOUR BEST CHOICE
       </h1>
-
-      <div class="compare-table-wrapper">
-        <table class="compare-table">
+  
+      <!-- scroll-x on mobile -->
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-fixed text-center border-collapse">
+  
+          <!-- ===== THEAD ===== -->
           <thead>
-            <tr>
-              <th>FEATURE</th>
-              <th><img class="img-logo img-logo-gmajor" src="../images/logo-gmajor.png" alt="GMAJOR"/></th>
-              <th><img class="img-logo img-logo-alibaba"  src="../images/logo-alibaba.png" alt="Alibaba" /></th>
-              <th><img class="img-logo img-logo-yellow"  src="../images/logo-yellow.png" alt="Yellow Pages" /></th>
-              <th><img class="img-logo img-logo-globy"  src="../images/logo-globy.png" alt="Globy" /></th>
-              <th><img class="img-logo img-logo-shopify"  src="../images/logo-shopify.png" alt="Shopify" /></th>
+            <tr class="border-b-4 border-black uppercase text-sm font-bold">
+              <th class="w-[210px] p-3 text-left text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Feature</th>
+  
+              <!-- logo cells -->
+              <th class="p-3"><img src="../images/logo-gmajor.png" alt="GMAJOR" class="w-[62%] mx-auto" /></th>
+              <th class="p-3"><img src="../images/logo-alibaba.png" alt="Alibaba" class="w-[40%] mx-auto" /></th>
+              <th class="p-3"><img src="../images/logo-yellow.png" alt="Yellow" class="w-[48%] mx-auto" /></th>
+              <th class="p-3"><img src="../images/logo-globy.png" alt="Globy" class="w-[42%] mx-auto" /></th>
+              <th class="p-3"><img src="../images/logo-shopify.png" alt="Shopify" class="w-[62%] mx-auto" /></th>
             </tr>
           </thead>
-
-          <tbody>
-            <tr>
-              <td>Free to register</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+          <!-- ===== TBODY ===== -->
+          <tbody class="text-base font-semibold">
+  
+            <!-- Helper: class="w-[20%] h-auto mx-auto self-center object-contain" on every PNG ✓/✖ -->
+            <!-- Row • Free to register -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to register</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>Multilingual messaging</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • Multilingual messaging -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Multilingual messaging</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>Business Verification</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • Business Verification -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Business Verification</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>Real-time Chat</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • Real-time Chat -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Real-time Chat</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>SMEs Focus</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • SMEs Focus -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">SMEs Focus</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>Free to post</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • Free to post -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to post</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
-            <tr>
-              <td>Bulk Proposal</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
+  
+            <!-- Row • Bulk Proposal -->
+            <tr class="border-b">
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Bulk Proposal</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
             </tr>
-
+  
+            <!-- Row • AI Matching -->
             <tr>
-              <td>AI Powered Matching</td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-cross-icon" src="../images/cross-icon.png" alt="cross-icon"/></td>
-              <td ><img class="img-checked" src="../images/checked.png" alt="checked"/></td>
+              <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI Powered Matching</td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no"
+                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
           </tbody>
         </table>
       </div>
-
     </div>
   </section>
-  <!-- ********* END ********* -->
+  <!-- ========= 1. COMPARISON – end ========= -->
+  
+  <!-- utility for png tick / cross -->
+  <style>
+    .icon {
+      @apply w-8 h-8 mx-auto object-contain;
+    }
+  
+    .status-icon {
+      @apply w-2 h-2 mx-auto;
+    }
+  
+    </style>
+
 
   <!-- ********* START ********* -->
   <section class="section-solutions">
@@ -1039,25 +1168,25 @@
   
             <ul class="industry-grid">
               <!-- COLUMN 1 -->
-              <li class="card" style="--clr:#c97b28"><img src="icons/wheat.png"><span>AGRICULTURAL</span></li>
-              <li class="card" style="--clr:#f3c24b"><img src="icons/tractor.png"><span>AGRICULTURAL<br>TRACTOR</span>
+              <li class="card" style="--clr:#c97b28"><img src="../images/wheat.png"><span>AGRICULTURAL</span></li>
+              <li class="card" style="--clr:#f3c24b"><img src="../images/tractor.png"><span>AGRICULTURAL<br>TRACTOR</span>
               </li>
-              <li class="card" style="--clr:#c786d5"><img src="icons/bolt.png"><span>CONSUMER<br>ELECTRONIC</span></li>
+              <li class="card" style="--clr:#c786d5"><img src="../images/bolt.png"><span>CONSUMER<br>ELECTRONIC</span></li>
   
               <!-- COLUMN 2 -->
-              <li class="card" style="--clr:#b4e24e"><img src="icons/machine.png"><span>INDUSTRY<br>MACHINE</span></li>
-              <li class="card" style="--clr:#76c4d3"><img src="icons/health.png"><span>HEALTHCARE<br>SERVICE</span></li>
-              <li class="card" style="--clr:#ffb000"><img src="icons/steering.png"><span>VEHICLE<br>PARTS</span></li>
+              <li class="card" style="--clr:#b4e24e"><img src="../images/machine.png"><span>INDUSTRY<br>MACHINE</span></li>
+              <li class="card" style="--clr:#76c4d3"><img src="../images/health.png"><span>HEALTHCARE<br>SERVICE</span></li>
+              <li class="card" style="--clr:#ffb000"><img src="../images/steering.png"><span>VEHICLE<br>PARTS</span></li>
   
               <!-- COLUMN 3 -->
-              <li class="card" style="--clr:#b655b8"><img src="icons/burger.png"><span>FOOD &<br>BEVERAGE</span></li>
-              <li class="card" style="--clr:#ffa33b"><img src="icons/dumbbell.png"><span>SPORTS ITEM</span></li>
-              <li class="card" style="--clr:#8cca39"><img src="icons/sofa.png"><span>HOME<br>FURNITURE</span></li>
+              <li class="card" style="--clr:#b655b8"><img src="../images/burger.png"><span>FOOD &<br>BEVERAGE</span></li>
+              <li class="card" style="--clr:#ffa33b"><img src="../images/dumbbell.png"><span>SPORTS ITEM</span></li>
+              <li class="card" style="--clr:#8cca39"><img src="../images/sofa.png"><span>HOME<br>FURNITURE</span></li>
   
               <!-- COLUMN 4 -->
-              <li class="card" style="--clr:#9cc48f"><img src="icons/clothes.png"><span>CLOTHES</span></li>
-              <li class="card" style="--clr:#0f2e3d"><img src="icons/chip.png"><span>SEMI<br>CONDUCTOR</span></li>
-              <li class="card" style="--clr:#ff4da3"><img src="icons/banana.png"><span>FRESH FRUITS</span></li>
+              <li class="card" style="--clr:#9cc48f"><img src="../images/clothes.png"><span>CLOTHES</span></li>
+              <li class="card" style="--clr:#0f2e3d"><img src="../images/chip.png"><span>SEMI<br>CONDUCTOR</span></li>
+              <li class="card" style="--clr:#ff4da3"><img src="../images/banana.png"><span>FRESH FRUITS</span></li>
             </ul>
           </div>
           <button class="nav next" aria-label="next column">&rsaquo;</button>
@@ -1132,7 +1261,7 @@
 
   <section class="support-banner">
     <div class="support-content">
-      <h2>YOU’RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
+      <h2>YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
       <a href="#" class="support-btn">START NOW</a>
     </div>
   </section>
@@ -1154,7 +1283,7 @@
 
           <p class="legal">
             By clicking the <strong>Get Free Consultation</strong> button, you agree to
-            <a href="/privacy-policy" target="_blank">GMAJOR’s Privacy Policy</a>
+            <a href="/privacy-policy" target="_blank">GMAJOR's Privacy Policy</a>
           </p>
 
           <button type="submit" class="btn-submit">Get free consultation</button>
@@ -1205,7 +1334,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
-                between Vietnam, Japan, the U.S., and ASEAN. Whether you’re a manufacturer, importer, trading company,
+                between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
                 or startup, GMAJOR helps you expand your network without language or high-cost barriers.
               </p>
 
@@ -1241,7 +1370,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
-              <span>I’m not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
+              <span>I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1254,7 +1383,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
-                will automatically translate to your partner’s language. No translators or long emails needed — just
+                will automatically translate to your partner's language. No translators or long emails needed — just
                 type and send.
               </p>
             </div>
@@ -1265,7 +1394,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
-              <span>I’m looking for suppliers or buyers. How does GMAJOR help?</span>
+              <span>I'm looking for suppliers or buyers. How does GMAJOR help?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1315,7 +1444,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
-                can also apply for a Verification Badge to enhance trust and visibility. It’s a secure environment for
+                can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
                 serious B2B users.
               </p>
             </div>
@@ -1338,7 +1467,7 @@
           <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Compared to Alibaba: GMAJOR is completely free, doesn’t rely on ads, and is easier for SMEs.
+                Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
                 Compared to Facebook groups: GMAJOR offers verified users, structured features, and zero spam — with
                 real B2B tools like multilingual chat, RFQs, and matching.
@@ -1351,7 +1480,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
-              <span> I’m just starting my business and don’t have any clients yet. Should I use GMAJOR?</span>
+              <span> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1363,7 +1492,7 @@
           <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don’t need a network
+                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
                 international buyers quickly.
               </p>
@@ -1375,6 +1504,8 @@
   </section>
   <!-- End block -->
 
+  <div id="testimonials-placeholder"></div>
+  
   <footer class="bg-white dark:bg-gray-800">
     <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
@@ -1664,5 +1795,12 @@
   });
 </script>
 
+<script>
+  fetch('testimonials.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('testimonials-placeholder').innerHTML = html;
+    });
+</script>
 
 </html>
