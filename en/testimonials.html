@@ -1,0 +1,594 @@
+<style>
+  .testimonial-card-item {
+    break-inside: avoid;
+  }
+
+  .testimonials-container {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+  }
+
+  .testimonials-scroller {
+    display: flex;
+    gap: 1.5rem;
+    height: 70vh;
+    max-height: 800px;
+  }
+
+  .testimonial-column {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  }
+
+  .scrolling-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 45s linear infinite;
+  }
+
+  .animate-scroll-up {
+    animation: scroll-up 45s linear infinite;
+  }
+
+  @keyframes scroll-down {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+
+  @keyframes scroll-up {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+  }
+
+  .testimonial-card-item > div {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .testimonial-card-item:hover > div {
+    transform: scale(1.02);
+    background-color: #222;
+  }
+
+  .testimonial-column:hover .scrolling-wrapper {
+    animation-play-state: paused;
+  }
+</style>
+<section class="bg-black">
+  <div class="py-8 mx-auto lg:py-24">
+    <h2 class="mb-12 text-4xl font-extrabold tracking-tight text-center text-white px-4">
+      Loved by developers
+    </h2>
+    <div class="testimonials-container">
+      <div class="testimonials-scroller">
+        
+        <!-- Column 1: Scrolls Down -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-down">
+            <!-- Original Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"This is a game-changer. The AI-powered features are incredibly intuitive and have boosted my productivity tenfold."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Jane Doe avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Jane Doe</p>
+                    <p class="text-sm text-gray-500">Innovate Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"After many recommendations, I finally switched from VSC to Cursor and ... wow! It's absolutely incredible. If you like Copilot (or if you don't), you'll be blown away by Cursor. There is no going back. 🤯"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Johannes Schickling avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Johannes Schickling</p>
+                    <p class="text-sm text-gray-500">Prisma</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is 🐐-ed for real."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Reflect avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Alex MacCaw</p>
+                    <p class="text-sm text-gray-500">Reflect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Amazing tool for developers. The AI is spot on."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Dev Team Lead avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Dev Team Lead</p>
+                    <p class="text-sm text-gray-500">StartupX</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"This is a game-changer. The AI-powered features are incredibly intuitive and have boosted my productivity tenfold."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Jane Doe avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Jane Doe</p>
+                    <p class="text-sm text-gray-500">Innovate Inc.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"After many recommendations, I finally switched from VSC to Cursor and ... wow! It's absolutely incredible. If you like Copilot (or if you don't), you'll be blown away by Cursor. There is no going back. 🤯"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Johannes Schickling avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Johannes Schickling</p>
+                    <p class="text-sm text-gray-500">Prisma</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is 🐐-ed for real."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Reflect avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Alex MacCaw</p>
+                    <p class="text-sm text-gray-500">Reflect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Amazing tool for developers. The AI is spot on."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Dev Team Lead avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Dev Team Lead</p>
+                    <p class="text-sm text-gray-500">StartupX</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Scrolls Up -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-up">
+            <!-- Original Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Someone finally put GPT into a seamless way. It's so elegant and I'm an already hooked."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Milich avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Milich</p>
+                    <p class="text-sm text-gray-500">Tech Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The Cursor tab completion while coding is occasionally so magic it defies reality - about ~25% of the time it is anticipating exactly what I want to do. It is enough to make you believe that eventually you'll be able to code at the speed of thought."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Kevin Whinnery avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Kevin Whinnery</p>
+                    <p class="text-sm text-gray-500">OpenAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The best product I've used in a while - it's an AI enabled editor. I just asked it to write a README for a project I've been working on - analyzed the code-base and worked first time."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Alex MacCaw Reflect avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Alex MacCaw</p>
+                    <p class="text-sm text-gray-500">Reflect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I was skeptical at first, but now I can't code without it."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Freelancer avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Freelancer</p>
+                    <p class="text-sm text-gray-500">Self-Employed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Someone finally put GPT into a seamless way. It's so elegant and I'm an already hooked."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Milich avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Milich</p>
+                    <p class="text-sm text-gray-500">Tech Solutions</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The Cursor tab completion while coding is occasionally so magic it defies reality - about ~25% of the time it is anticipating exactly what I want to do. It is enough to make you believe that eventually you'll be able to code at the speed of thought."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Kevin Whinnery avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Kevin Whinnery</p>
+                    <p class="text-sm text-gray-500">OpenAI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The best product I've used in a while - it's an AI enabled editor. I just asked it to write a README for a project I've been working on - analyzed the code-base and worked first time."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Alex MacCaw Reflect avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Alex MacCaw</p>
+                    <p class="text-sm text-gray-500">Reflect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I was skeptical at first, but now I can't code without it."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Freelancer avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Freelancer</p>
+                    <p class="text-sm text-gray-500">Self-Employed</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Scrolls Down -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-down">
+            <!-- Original Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is the best AI developer tool right now, avoid it at your own peril"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Logan Kilpatrick avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Logan Kilpatrick</p>
+                    <p class="text-sm text-gray-500">Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I really like how Cursor suggests code. I noticed I was inconsistent markup and popped up this suggestion that matched my other items!"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Wes Bos avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Wes Bos</p>
+                    <p class="text-sm text-gray-500">Internet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor's auto-complete is insane. I no longer need to prompt it."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Marc Kohlbrugge WIP avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Marc Köhlbrugge</p>
+                    <p class="text-sm text-gray-500">WIP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"This has streamlined our workflow significantly."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Project Manager avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Project Manager</p>
+                    <p class="text-sm text-gray-500">Enterprise Corp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is the best AI developer tool right now, avoid it at your own peril"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Logan Kilpatrick avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Logan Kilpatrick</p>
+                    <p class="text-sm text-gray-500">Google</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I really like how Cursor suggests code. I noticed I was inconsistent markup and popped up this suggestion that matched my other items!"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Wes Bos avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Wes Bos</p>
+                    <p class="text-sm text-gray-500">Internet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor's auto-complete is insane. I no longer need to prompt it."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Marc Kohlbrugge WIP avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Marc Köhlbrugge</p>
+                    <p class="text-sm text-gray-500">WIP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"This has streamlined our workflow significantly."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Project Manager avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Project Manager</p>
+                    <p class="text-sm text-gray-500">Enterprise Corp</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Scrolls Up -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-up">
+            <!-- Original Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Started using Cursor yesterday & I'm blown away. it's how Copilot should feel. I'm completely off VSCode now."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sam Whitmore avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Sam Whitmore</p>
+                    <p class="text-sm text-gray-500">New Computer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I installed Cursor ... oh"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Kent C. Dodds avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Kent C. Dodds</p>
+                    <p class="text-sm text-gray-500">Internet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I'm blown away. It's how Copilot should feel."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sam Whitmore avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Sam Whitmore</p>
+                    <p class="text-sm text-gray-500">New Computer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The future of coding is here. Simply brilliant."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Senior Engineer avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Senior Engineer</p>
+                    <p class="text-sm text-gray-500">Future Systems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Started using Cursor yesterday & I'm blown away. it's how Copilot should feel. I'm completely off VSCode now."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sam Whitmore avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Sam Whitmore</p>
+                    <p class="text-sm text-gray-500">New Computer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I installed Cursor ... oh"</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Kent C. Dodds avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Kent C. Dodds</p>
+                    <p class="text-sm text-gray-500">Internet</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"I'm blown away. It's how Copilot should feel."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sam Whitmore avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Sam Whitmore</p>
+                    <p class="text-sm text-gray-500">New Computer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"The future of coding is here. Simply brilliant."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Senior Engineer avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Senior Engineer</p>
+                    <p class="text-sm text-gray-500">Future Systems</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 5: Scrolls Down -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-down">
+            <!-- Original Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is at least a 2x improvement over Copilot. It's amazing having an AI pair programmer, and is an incredible accelerator for me and my team."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Andrew McCalip avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Andrew McCalip</p>
+                    <p class="text-sm text-gray-500">Varda</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor's new auto-complete is insane. I no longer need to prompt it. It predicts what you want based on what you're doing."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Marc Köhlbrugge avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Marc Köhlbrugge</p>
+                    <p class="text-sm text-gray-500">WIP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"It's absolutely incredible. If you like Copilot, you'll be blown away by Cursor."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Johannes Schickling avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Johannes Schickling</p>
+                    <p class="text-sm text-gray-500">Prisma</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"It's like having a senior dev pair programming with you 24/7."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Junior Dev avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Junior Dev</p>
+                    <p class="text-sm text-gray-500">Code Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Duplicated Content -->
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor is at least a 2x improvement over Copilot. It's amazing having an AI pair programmer, and is an incredible accelerator for me and my team."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Andrew McCalip avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Andrew McCalip</p>
+                    <p class="text-sm text-gray-500">Varda</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"Cursor's new auto-complete is insane. I no longer need to prompt it. It predicts what you want based on what you're doing."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Marc Köhlbrugge avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Marc Köhlbrugge</p>
+                    <p class="text-sm text-gray-500">WIP</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"It's absolutely incredible. If you like Copilot, you'll be blown away by Cursor."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Johannes Schickling avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Johannes Schickling</p>
+                    <p class="text-sm text-gray-500">Prisma</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 bg-[#181818] rounded-lg">
+                <p class="mb-5 text-gray-400">"It's like having a senior dev pair programming with you 24/7."</p>
+                <div class="flex items-center">
+                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Junior Dev avatar">
+                  <div class="ml-4">
+                    <p class="font-bold text-white">Junior Dev</p>
+                    <p class="text-sm text-gray-500">Code Academy</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> 

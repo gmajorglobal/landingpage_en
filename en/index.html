@@ -490,6 +490,67 @@
         font-size: 1.15rem;
       }
     }
+
+    .testimonial-card-item {
+      break-inside: avoid;
+    }
+
+    .testimonials-container {
+      -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+      mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    }
+
+    .testimonials-scroller {
+      display: flex;
+      gap: 1.5rem;
+      height: 70vh;
+      max-height: 800px;
+    }
+
+    .testimonial-column {
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+      mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    }
+
+    .scrolling-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .animate-scroll-down {
+      animation: scroll-down 100s linear infinite;
+    }
+
+    .animate-scroll-up {
+      animation: scroll-up 100s linear infinite;
+    }
+
+    @keyframes scroll-down {
+      from { transform: translateY(0); }
+      to { transform: translateY(-50%); }
+    }
+
+    @keyframes scroll-up {
+      from { transform: translateY(-50%); }
+      to { transform: translateY(0); }
+    }
+
+    .testimonial-card-item > div {
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .testimonial-card-item:hover > div {
+      transform: scale(1.02);
+      background-color: #222;
+    }
+
+    .testimonial-column:hover .scrolling-wrapper {
+      animation-play-state: paused;
+    }
   </style>
 </head>
 
@@ -667,7 +728,7 @@
         Trusted by Businesses Using GMAJOR Services
       </p>
       <p class="text-text text-xs text-center mb-4">
-        (These are just a few “featured partners” – many other small
+        (These are just a few "featured partners" – many other small
         businesses are not listed yet.)
       </p>
       <div class="whitespace-nowrap overflow-hidden box-border">
@@ -753,7 +814,7 @@
               alt="Multilingual Chat icon" class="w-10 h-10 mb-5">
           <h3 class="text-lg font-semibold mb-2">Multilingual Chat</h3>
           <p class="text-sm leading-6 text-gray-700">
-            Check your “Chat Box” for messaging with your customers with
+            Check your "Chat Box" for messaging with your customers with
             multi-language support&nbsp;(VN, EN, JP).
           </p>
         </article>
@@ -905,7 +966,7 @@
               SMART<br>TECH
             </h2>
 
-            <!-- “AI” chip -->
+            <!-- "AI" chip -->
             <span
               class="relative font-extrabold text-4xl md:text-5xl
                     px-3 py-2 border-[6px] border-black rounded-[12px]
@@ -1196,7 +1257,7 @@
 
   <section class="support-banner">
     <div class="support-content">
-      <h2>YOU’RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
+      <h2>YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
       <a href="#" class="support-btn">START NOW</a>
     </div>
   </section>
@@ -1218,7 +1279,7 @@
 
           <p class="legal">
             By clicking the <strong>Get Free Consultation</strong> button, you agree to
-            <a href="/privacy-policy" target="_blank">GMAJOR’s Privacy Policy</a>
+            <a href="/privacy-policy" target="_blank">GMAJOR's Privacy Policy</a>
           </p>
 
           <button type="submit" class="btn-submit">Get free consultation</button>
@@ -1269,7 +1330,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
-                between Vietnam, Japan, the U.S., and ASEAN. Whether you’re a manufacturer, importer, trading company,
+                between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
                 or startup, GMAJOR helps you expand your network without language or high-cost barriers.
               </p>
 
@@ -1305,7 +1366,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
-              <span>I’m not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
+              <span>I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1318,7 +1379,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
-                will automatically translate to your partner’s language. No translators or long emails needed — just
+                will automatically translate to your partner's language. No translators or long emails needed — just
                 type and send.
               </p>
             </div>
@@ -1329,7 +1390,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
-              <span>I’m looking for suppliers or buyers. How does GMAJOR help?</span>
+              <span>I'm looking for suppliers or buyers. How does GMAJOR help?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1379,7 +1440,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
-                can also apply for a Verification Badge to enhance trust and visibility. It’s a secure environment for
+                can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
                 serious B2B users.
               </p>
             </div>
@@ -1402,7 +1463,7 @@
           <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Compared to Alibaba: GMAJOR is completely free, doesn’t rely on ads, and is easier for SMEs.
+                Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
                 Compared to Facebook groups: GMAJOR offers verified users, structured features, and zero spam — with
                 real B2B tools like multilingual chat, RFQs, and matching.
@@ -1415,7 +1476,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
-              <span> I’m just starting my business and don’t have any clients yet. Should I use GMAJOR?</span>
+              <span> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1427,7 +1488,7 @@
           <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don’t need a network
+                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
                 international buyers quickly.
               </p>
@@ -1439,6 +1500,8 @@
   </section>
   <!-- End block -->
 
+  <div id="testimonials-placeholder"></div>
+  
   <footer class="bg-white dark:bg-gray-800">
     <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
       <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
@@ -1728,5 +1791,12 @@
   });
 </script>
 
+<script>
+  fetch('testimonials.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('testimonials-placeholder').innerHTML = html;
+    });
+</script>
 
 </html>
