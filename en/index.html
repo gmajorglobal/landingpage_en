@@ -11,7 +11,8 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery.marquee/jquery.marquee.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
 
   <meta name="title" content="GMAJOR - Global online B2B matching service" />
   <meta name="description"
@@ -40,6 +41,42 @@
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="msapplication-TileColor" content="#da532c" />
   <meta name="theme-color" content="#ffffff" />
+  <style>
+    /* --- Asymmetric transition for Agricultural button --- */
+
+    /* --- Default state & HOVER-OUT transitions (all 300ms) --- */
+    #agri-icon {
+      transition: all 300ms ease-out;
+    }
+
+    #agri-sweep::after {
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 320ms ease-out;
+    }
+
+    #agri-label {
+      opacity: 0;
+      transform: translateX(-1rem);
+      /* Start slid to the left */
+      transition: all 100ms ease-out;
+    }
+
+
+    /* --- HOVER-IN transitions (sequential) --- */
+    #agri-button:hover #agri-sweep::after {
+      transform: scaleX(1);
+      transform-origin: left;
+      transition-delay: 300ms;
+    }
+
+    #agri-button:hover #agri-label {
+      opacity: 1;
+      transform: translateX(0);
+      /* End at original position */
+      transition-delay: 300ms;
+    }
+  </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // Complete Tailwind config with all custom styles
@@ -48,7 +85,7 @@
         extend: {
           colors: {
             main: '#004AAD',
-            main_hover: '#003a8a', 
+            main_hover: '#003a8a',
             secondary: '#1a1a1a',
             text: '#666666'
           },
@@ -74,7 +111,7 @@
         },
       },
       plugins: [
-        function({ addUtilities, addComponents }) {
+        function ({ addUtilities, addComponents }) {
           // Custom utilities
           addUtilities({
             '.text-shadow-sm': {
@@ -93,7 +130,7 @@
               background: 'linear-gradient(90deg, #caffd7 0%, #a3caff 100%)',
             },
           })
-          
+
           // Custom components
           addComponents({
             '.section-solutions': {
@@ -318,10 +355,15 @@
   <style>
     /* Additional styles for special components */
     @keyframes spin {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
+      from {
+        transform: rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg);
+      }
     }
-    
+
     .compare-table thead th {
       background: #f8fafc;
       padding: 1rem;
@@ -329,41 +371,41 @@
       font-weight: 600;
       border-bottom: 2px solid #e5e7eb;
     }
-    
+
     .compare-table thead th:first-child {
       text-align: left;
     }
-    
+
     .compare-table tbody td {
       padding: 1rem;
       text-align: center;
       border-bottom: 1px solid #e5e7eb;
     }
-    
+
     .compare-table tbody td:first-child {
       text-align: left;
       font-weight: 500;
     }
-    
+
     .card img {
       width: 40px;
       height: 40px;
       object-fit: contain;
     }
-    
+
     .card span {
       font-weight: 600;
       font-size: 0.875rem;
       text-align: center;
     }
-    
+
     .promo-card h2 {
       font-size: 2rem;
       font-weight: 700;
       margin: 0;
       line-height: 1.2;
     }
-    
+
     .cta {
       display: inline-block;
       background: white;
@@ -374,25 +416,25 @@
       font-weight: 600;
       transition: all 0.3s ease;
     }
-    
+
     .cta:hover {
       transform: translateY(-2px);
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
-    
+
     .team-photo {
       width: 200px;
       height: auto;
       border-radius: 1rem;
     }
-    
+
     .support-banner h2 {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       color: #1a1a1a;
     }
-    
+
     .support-btn {
       display: inline-block;
       background: #004AAD;
@@ -403,19 +445,19 @@
       font-weight: 600;
       transition: all 0.3s ease;
     }
-    
+
     .support-btn:hover {
       background: #003a8a;
       transform: translateY(-2px);
     }
-    
+
     .form-card h2 {
       font-size: 1.5rem;
       font-weight: 600;
       margin-bottom: 1.5rem;
       color: #1a1a1a;
     }
-    
+
     form input {
       width: 100%;
       padding: 0.75rem;
@@ -424,24 +466,24 @@
       margin-bottom: 1rem;
       font-size: 1rem;
     }
-    
+
     form input:focus {
       outline: none;
       border-color: #004AAD;
       box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
     }
-    
+
     .legal {
       font-size: 0.875rem;
       color: #6b7280;
       margin-bottom: 1rem;
     }
-    
+
     .legal a {
       color: #004AAD;
       text-decoration: underline;
     }
-    
+
     .btn-submit {
       width: 100%;
       background: #004AAD;
@@ -454,38 +496,38 @@
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    
+
     .btn-submit:hover {
       background: #003a8a;
     }
-    
+
     .visual h3 {
       font-size: 2rem;
       font-weight: 700;
       margin-bottom: 1rem;
       color: #1a1a1a;
     }
-    
+
     .visual img {
       max-width: 300px;
       height: auto;
       border-radius: 0.5rem;
     }
-    
+
     @media (max-width: 768px) {
       .contact-inner {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
-      
+
       .visual h3 {
         font-size: 1.6rem;
       }
-      
+
       .support-banner h2 {
         font-size: 1.55rem;
       }
-      
+
       .support-btn {
         font-size: 1.15rem;
       }
@@ -667,7 +709,7 @@
         Trusted by Businesses Using GMAJOR Services
       </p>
       <p class="text-text text-xs text-center mb-4">
-        (These are just a few “featured partners” – many other small
+        (These are just a few "featured partners" – many other small
         businesses are not listed yet.)
       </p>
       <div class="whitespace-nowrap overflow-hidden box-border">
@@ -707,13 +749,12 @@
     </div>
   </section>
   <!-- End block -->
-  
+
   <!-- ======== SOLUTION FOR YOUR BUSINESS – start ======== -->
   <section class="bg-white py-12 px-4">
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
       <!-- heading -->
-      <h1
-        class="text-center font-extrabold tracking-tight text-secondary
+      <h1 class="text-center font-extrabold tracking-tight text-secondary
               text-3xl md:text-5xl mb-12 [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]">
         SOLUTION FOR YOUR BUSINESS!
       </h1>
@@ -721,18 +762,15 @@
       <!-- responsive grid -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
         <!-- ❶ Card #1 -->
-        <article
-          class="relative flex flex-col items-start p-6 bg-white border
+        <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden 
                 transition-shadow group">
           <!-- gradient overlay (ẩn tới khi hover) -->
-          <div
-            class="absolute inset-0 pointer-events-none opacity-0
+          <div class="absolute inset-0 pointer-events-none opacity-0
                   transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
-          <img src="../images/marketplace-icon.png"
-              alt="Marketplace icon" class="w-10 h-10 mb-5">
+          <img src="../images/marketplace-icon.png" alt="Marketplace icon" class="w-10 h-10 mb-5">
           <h3 class="text-lg font-semibold mb-2">Marketplace</h3>
           <p class="text-sm leading-6 text-gray-700">
             B2B Market for wholesale traders. Discover products, connect with
@@ -741,34 +779,30 @@
         </article>
 
         <!-- ❷ Card #2 -->
-        <article
-          class="relative flex flex-col items-start p-6 bg-white border
+        <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
           <div class="absolute inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
-          <img src="../images/chat-icon.png"
-              alt="Multilingual Chat icon" class="w-10 h-10 mb-5">
+          <img src="../images/chat-icon.png" alt="Multilingual Chat icon" class="w-10 h-10 mb-5">
           <h3 class="text-lg font-semibold mb-2">Multilingual Chat</h3>
           <p class="text-sm leading-6 text-gray-700">
-            Check your “Chat Box” for messaging with your customers with
+            Check your "Chat Box" for messaging with your customers with
             multi-language support&nbsp;(VN, EN, JP).
           </p>
         </article>
 
         <!-- ❸ Card #3 -->
-        <article
-          class="relative flex flex-col items-start p-6 bg-white border
+        <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
           <div class="absolute inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-radial">
           </div>
 
-          <img src="../images/rfq-icon.png"
-              alt="RFQ Auto icon" class="w-10 h-10 mb-5">
+          <img src="../images/rfq-icon.png" alt="RFQ Auto icon" class="w-10 h-10 mb-5">
           <h3 class="text-lg font-semibold mb-2">RFQ Auto</h3>
           <p class="text-sm leading-6 text-gray-700">
             GMAJOR supports sending auto RFQs for your customers based
@@ -787,19 +821,16 @@
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
 
       <!-- heading -->
-      <h1
-        class="text-center font-extrabold uppercase tracking-tight
+      <h1 class="text-center font-extrabold uppercase tracking-tight
               [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
 
       <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
-      <div
-        class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
+      <div class="grid grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
 
         <!-- ❶ CUSTOMER SUPPORT (col-1 / row-1) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8
                 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
@@ -807,24 +838,21 @@
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight
                   uppercase text-center">
             CUSTOMER<br>SUPPORT<br>24/7
           </h2>
         </article>
 
         <!-- ❷ GLOBAL PARTNER (col-2 / row-1–2 span 2) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
                 lg:col-start-2 lg:row-start-1 lg:row-span-2
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
                   uppercase text-center">
             YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER
           </h2>
@@ -836,16 +864,14 @@
         </article>
 
         <!-- ❸ VERIFIED (col-3 / row-1) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
                 lg:col-start-3 lg:row-start-1
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
                   uppercase text-center">
             VERIFIED<br>USER
           </h2>
@@ -855,16 +881,14 @@
         </article>
 
         <!-- ❹ CUSTOM SOLUTION (col-4 / row-1) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
                 lg:col-start-4 lg:row-start-1
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight
                   uppercase text-center">
             CUSTOM<br>SOLUTION
           </h2>
@@ -874,24 +898,21 @@
         </article>
 
         <!-- ❺ LOGISTIC (col-1 / row-2) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
                 lg:col-start-1 lg:row-start-2
                 after:content-[''] after:absolute after:inset-3
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight
                   uppercase text-center">
             LOGISTIC<br>&amp; DELIVERY
           </h2>
         </article>
 
         <!-- ❻ SMART TECH (col-3–4 span 2 / row-2) -->
-        <article
-          class="relative flex flex-col justify-center
+        <article class="relative flex flex-col justify-center
                 border-4 border-black rounded-[22px] bg-white
                 p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)]
                 lg:col-start-3 lg:col-span-2 lg:row-start-2
@@ -899,15 +920,13 @@
                 after:border-[3px] after:border-black
                 after:rounded-[18px] after:pointer-events-none">
           <div class="flex items-center justify-between h-full gap-8">
-            <h2
-              class="m-0 text-xl md:text-3xl font-extrabold leading-tight
+            <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight
                     uppercase">
               SMART<br>TECH
             </h2>
 
-            <!-- “AI” chip -->
-            <span
-              class="relative font-extrabold text-4xl md:text-5xl
+            <!-- "AI" chip -->
+            <span class="relative font-extrabold text-4xl md:text-5xl
                     px-3 py-2 border-[6px] border-black rounded-[12px]
                     leading-none">
               AI
@@ -926,22 +945,22 @@
   <!-- ========= 1. COMPARISON – start ========= -->
   <section class="bg-white py-12 px-4">
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
-  
+
       <!-- heading -->
       <h1 class="text-center font-extrabold uppercase [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]
                text-3xl md:text-5xl mb-12">
         GMAJOR IS YOUR BEST CHOICE
       </h1>
-  
+
       <!-- scroll-x on mobile -->
       <div class="overflow-x-auto">
         <table class="min-w-full table-fixed text-center border-collapse">
-  
+
           <!-- ===== THEAD ===== -->
           <thead>
             <tr class="border-b-4 border-black uppercase text-sm font-bold">
               <th class="w-[210px] p-3 text-left text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Feature</th>
-  
+
               <!-- logo cells -->
               <th class="p-3"><img src="../images/logo-gmajor.png" alt="GMAJOR" class="w-[62%] mx-auto" /></th>
               <th class="p-3"><img src="../images/logo-alibaba.png" alt="Alibaba" class="w-[40%] mx-auto" /></th>
@@ -950,122 +969,127 @@
               <th class="p-3"><img src="../images/logo-shopify.png" alt="Shopify" class="w-[62%] mx-auto" /></th>
             </tr>
           </thead>
-  
+
           <!-- ===== TBODY ===== -->
           <tbody class="text-base font-semibold">
-  
+
             <!-- Helper: class="w-[20%] h-auto mx-auto self-center object-contain" on every PNG ✓/✖ -->
             <!-- Row • Free to register -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to register</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • Multilingual messaging -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Multilingual messaging</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • Business Verification -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Business Verification</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • Real-time Chat -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Real-time Chat</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • SMEs Focus -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">SMEs Focus</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • Free to post -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to post</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • Bulk Proposal -->
             <tr class="border-b">
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Bulk Proposal</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
             </tr>
-  
+
             <!-- Row • AI Matching -->
             <tr>
               <td class="py-6 text-left text-lg [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI Powered Matching</td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
-              <td><img src="../images/cross-icon.png" alt="no"
-                  class="w-10 h-10 mx-auto self-center object-contain" /></td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
+              <td><img src="../images/cross-icon.png" alt="no" class="w-10 h-10 mx-auto self-center object-contain" />
+              </td>
               <td><img src="../images/checked.png" alt="yes" class="w-10 h-10 mx-auto self-center object-contain" />
               </td>
             </tr>
@@ -1075,62 +1099,360 @@
     </div>
   </section>
   <!-- ========= 1. COMPARISON – end ========= -->
-  
-  <!-- utility for png tick / cross -->
-  <style>
-    .icon {
-      @apply w-8 h-8 mx-auto object-contain;
-    }
-  
-    .status-icon {
-      @apply w-2 h-2 mx-auto;
-    }
-  
-    </style>
-
 
   <!-- ********* START ********* -->
-  <section class="section-solutions">
-    <div class="container">
-      <h1 class="title-heading text-shadow-md">
+  <!-- ********* START ********* -->
+  <section class="py-12 px-4 lg:py-16 lg:px-6">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 h-full">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-center uppercase mb-14
+                [text-shadow:2px_2px_5px_rgba(0,0,0,.35)]">
         WE SUPPORT ANY INDUSTRY FIELDS
       </h1>
-      <div class="industry-carousel">
-  
-        <div class="carousel-flex">
-          <button class="nav prev" aria-label="previous column">&lsaquo;</button>
-          <div class="viewport">
-  
-            <ul class="industry-grid">
-              <!-- COLUMN 1 -->
-              <li class="card" style="--clr:#c97b28"><img src="../images/wheat.png"><span>AGRICULTURAL</span></li>
-              <li class="card" style="--clr:#f3c24b"><img src="../images/tractor.png"><span>AGRICULTURAL<br>TRACTOR</span>
+
+      <div class="relative overflow-hidden">
+
+        <div class="flex items-center gap-4 justify-center">
+
+          <!-- ‹ button -->
+          <button id="ic-prev" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-400
+                        shadow-md text-2xl font-bold transition text-white
+                        hover:bg-gray-100 hover:scale-110 disabled:opacity-50" aria-label="previous column">
+            &lsaquo;
+          </button>
+
+
+          <!-- viewport fixed at 3 columns (3×300 + 2×24 gap = 948 px) -->
+          <div id="ic-viewport" class="overflow-hidden w-full max-w-[948px]">
+            <ul id="ic-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+              <!-- each <li> is one column – width 300 px to match mock-up -->
+              <li class="flex flex-col gap-10 shrink-0 w-[300px] ">
+                <!-- CARD -->
+                <!-- === SINGLE CARD; copy-paste the bold section to every other card === -->
+                <!-- ONE CARD — duplicate & just swap --clr, icon src and label text -->
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/wheat.png" class="w-24 h-24" alt="Agricultural Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    AGRICULTURAL
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/machine.png" class="w-24 h-24" alt="Industry Machine Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    <span>INDUSTRY<br>MACHINE</span>
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/burger.png" class="w-24 h-24" alt="Food & Beverage Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    <span>FOOD &amp;<br>BEVERAGE</span>
+                  </span>
+                </div>
+
               </li>
-              <li class="card" style="--clr:#c786d5"><img src="../images/bolt.png"><span>CONSUMER<br>ELECTRONIC</span></li>
-  
+
               <!-- COLUMN 2 -->
-              <li class="card" style="--clr:#b4e24e"><img src="../images/machine.png"><span>INDUSTRY<br>MACHINE</span></li>
-              <li class="card" style="--clr:#76c4d3"><img src="../images/health.png"><span>HEALTHCARE<br>SERVICE</span></li>
-              <li class="card" style="--clr:#ffb000"><img src="../images/steering.png"><span>VEHICLE<br>PARTS</span></li>
-  
+              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                                bg-transparent 
+                                rounded-full flex items-center justify-center overflow-hidden z-10
+                                group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/clothes.png" class="w-24 h-24" alt="Clothes Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                              pl-4
+                             text-xl
+                              opacity-0 z-20
+                              group-hover:opacity-100">
+                    <span>CLOTHES</span>
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                                bg-transparent 
+                                rounded-full flex items-center justify-center overflow-hidden z-10
+                                group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/health.png" class="w-24 h-24" alt="Healthcare Service Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                              pl-4
+                             text-xl
+                              opacity-0 z-20
+                              group-hover:opacity-100">
+                    <span>HEALTHCARE<br>SERVICE</span>
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                                bg-transparent 
+                                rounded-full flex items-center justify-center overflow-hidden z-10
+                                group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/dumbbell.png" class="w-24 h-24" alt="Sports Item Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                              pl-4
+                             text-xl
+                              opacity-0 z-20
+                              group-hover:opacity-100">
+                    <span>SPORTS ITEM</span>
+                  </span>
+                </div>
+
+
+              </li>
+
               <!-- COLUMN 3 -->
-              <li class="card" style="--clr:#b655b8"><img src="../images/burger.png"><span>FOOD &<br>BEVERAGE</span></li>
-              <li class="card" style="--clr:#ffa33b"><img src="../images/dumbbell.png"><span>SPORTS ITEM</span></li>
-              <li class="card" style="--clr:#8cca39"><img src="../images/sofa.png"><span>HOME<br>FURNITURE</span></li>
-  
+              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/tractor.png" class="w-24 h-24" alt="Agricultural Tractor Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>AGRICULTURAL<br>TRACTOR</span>
+                  </span>
+                </div>
+
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/chip.png" class="w-24 h-24" alt="Semiconductor Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>SEMI<br>CONDUCTOR</span>
+                  </span>
+                </div>
+
+
+
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/sofa.png" class="w-24 h-24" alt="Home Furniture Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>HOME<br>FURNITURE</span>
+                  </span>
+                </div>
+              </li>
+
               <!-- COLUMN 4 -->
-              <li class="card" style="--clr:#9cc48f"><img src="../images/clothes.png"><span>CLOTHES</span></li>
-              <li class="card" style="--clr:#0f2e3d"><img src="../images/chip.png"><span>SEMI<br>CONDUCTOR</span></li>
-              <li class="card" style="--clr:#ff4da3"><img src="../images/banana.png"><span>FRESH FRUITS</span></li>
+              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/steering.png" class="w-24 h-24" alt="Vehicle Parts Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>VEHICLE<br>PARTS</span>
+                  </span>
+                </div>
+
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/banana.png" class="w-24 h-24" alt="Fresh Fruits Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>FRESH FRUITS</span>
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                            after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                            after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/bolt.png" class="w-24 h-24" alt="Consumer Electronic Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                            pl-4
+                             text-xl
+                            opacity-0 z-20
+                            group-hover:opacity-100">
+                    <span>CONSUMER<br>ELECTRONIC</span>
+                  </span>
+                </div>
+              </li>
+
             </ul>
           </div>
-          <button class="nav next" aria-label="next column">&rsaquo;</button>
+
+          <!-- › button -->
+          <button id="ic-next" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-400
+                        shadow-md text-2xl font-bold transition text-white
+                        hover:bg-gray-100 hover:scale-110 disabled:opacity-50" aria-label="next column">
+            &rsaquo;
+          </button>
         </div>
       </div>
     </div>
-  
-    </div>
   </section>
+
+
   <!-- ********* END ********* -->
   <!-- ********* START ********* -->
   <section class="section-side relative bg-white">
@@ -1154,24 +1476,44 @@
           <img src="../images/world-map.png" alt="World Map"
             class="w-full max-w-[2000px] min-w-[400px] block drop-shadow-sm" />
           <!-- Markers (adjust left/top for each location) -->
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[18%] top-[38%] w-[38px] cursor-pointer" data-location="USA" alt="USA" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[32%] top-[68%] w-[38px] cursor-pointer" data-location="Brazil" alt="Brazil" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[41%] top-[28%] w-[38px] cursor-pointer" data-location="UK" alt="UK" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[48%] top-[32%] w-[38px] cursor-pointer" data-location="Europe" alt="Europe" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[50%] top-[58%] w-[38px] cursor-pointer" data-location="Africa" alt="Africa" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[62%] top-[48%] w-[38px] cursor-pointer" data-location="India" alt="India" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[70%] top-[36%] w-[38px] cursor-pointer" data-location="China" alt="China" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[80%] top-[32%] w-[38px] cursor-pointer" data-location="Japan" alt="Japan" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[75%] top-[48%] w-[38px] cursor-pointer" data-location="Vietnam" alt="Vietnam" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[85%] top-[78%] w-[38px] cursor-pointer" data-location="Australia" alt="Australia" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[18%] top-[38%] w-[38px] cursor-pointer" data-location="USA" alt="USA" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[32%] top-[68%] w-[38px] cursor-pointer" data-location="Brazil"
+            alt="Brazil" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[41%] top-[28%] w-[38px] cursor-pointer" data-location="UK" alt="UK" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[48%] top-[32%] w-[38px] cursor-pointer" data-location="Europe"
+            alt="Europe" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[50%] top-[58%] w-[38px] cursor-pointer" data-location="Africa"
+            alt="Africa" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[62%] top-[48%] w-[38px] cursor-pointer" data-location="India"
+            alt="India" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[70%] top-[36%] w-[38px] cursor-pointer" data-location="China"
+            alt="China" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[80%] top-[32%] w-[38px] cursor-pointer" data-location="Japan"
+            alt="Japan" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[75%] top-[48%] w-[38px] cursor-pointer" data-location="Vietnam"
+            alt="Vietnam" />
+          <img src="../images/gmajor-logo-map.png"
+            class="map-marker absolute left-[85%] top-[78%] w-[38px] cursor-pointer" data-location="Australia"
+            alt="Australia" />
         </div>
       </div>
       <!-- Tooltip -->
-      <div id="marker-tooltip" class="hidden fixed pointer-events-none bg-black/85 text-white px-4 py-1.5 rounded-md text-base font-semibold z-50 whitespace-nowrap shadow-lg top-0 left-0">
+      <div id="marker-tooltip"
+        class="hidden fixed pointer-events-none bg-black/85 text-white px-4 py-1.5 rounded-md text-base font-semibold z-50 whitespace-nowrap shadow-lg top-0 left-0">
       </div>
 
-  </div>
+    </div>
   </section>
+
 
   <!-- Promo Banner  -->
   <section class="promo-banner">
@@ -1196,8 +1538,8 @@
 
   <section class="support-banner">
     <div class="support-content">
-      <h2>YOU’RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
-      <a href="#" class="support-btn">START NOW</a>
+      <h2>YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU</h2>
+      <a href="#" class="inline-block rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 bg-[length:200%_auto] bg-[left_center] px-8 py-3 text-lg font-semibold text-white shadow-lg transition-[background-position] duration-500 hover:bg-[right_center] active:scale-95">START NOW</a>
     </div>
   </section>
 
@@ -1218,7 +1560,7 @@
 
           <p class="legal">
             By clicking the <strong>Get Free Consultation</strong> button, you agree to
-            <a href="/privacy-policy" target="_blank">GMAJOR’s Privacy Policy</a>
+            <a href="/privacy-policy" target="_blank">GMAJOR's Privacy Policy</a>
           </p>
 
           <button type="submit" class="btn-submit">Get free consultation</button>
@@ -1269,7 +1611,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
-                between Vietnam, Japan, the U.S., and ASEAN. Whether you’re a manufacturer, importer, trading company,
+                between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
                 or startup, GMAJOR helps you expand your network without language or high-cost barriers.
               </p>
 
@@ -1305,7 +1647,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
-              <span>I’m not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
+              <span>I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1318,7 +1660,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
-                will automatically translate to your partner’s language. No translators or long emails needed — just
+                will automatically translate to your partner's language. No translators or long emails needed — just
                 type and send.
               </p>
             </div>
@@ -1329,7 +1671,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
-              <span>I’m looking for suppliers or buyers. How does GMAJOR help?</span>
+              <span>I'm looking for suppliers or buyers. How does GMAJOR help?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1379,7 +1721,7 @@
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
-                can also apply for a Verification Badge to enhance trust and visibility. It’s a secure environment for
+                can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
                 serious B2B users.
               </p>
             </div>
@@ -1402,7 +1744,7 @@
           <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Compared to Alibaba: GMAJOR is completely free, doesn’t rely on ads, and is easier for SMEs.
+                Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
                 Compared to Facebook groups: GMAJOR offers verified users, structured features, and zero spam — with
                 real B2B tools like multilingual chat, RFQs, and matching.
@@ -1415,7 +1757,7 @@
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
-              <span> I’m just starting my business and don’t have any clients yet. Should I use GMAJOR?</span>
+              <span> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
               <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
@@ -1427,7 +1769,7 @@
           <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
             <div class="py-5 border-b border-gray-200 dark:border-gray-700">
               <p class="mb-2 text-gray-500 dark:text-gray-400">
-                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don’t need a network
+                Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
                 international buyers quickly.
               </p>
@@ -1533,7 +1875,7 @@
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path fill-rule="evenodd"
                   d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clip-rule="evenodd" />
+                  clip-rule="evenodd"></path>
               </svg>
             </a>
           </li>
@@ -1640,40 +1982,35 @@
   });
 </script>
 <script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const viewport = document.querySelector('.industry-carousel .viewport');
-    const grid = document.querySelector('.industry-carousel .industry-grid');
-    const prevBtn = document.querySelector('.industry-carousel .nav.prev');
-    const nextBtn = document.querySelector('.industry-carousel .nav.next');
-    const colW = 380 + 44; // card width + gap
-    let col = 0;
-    const maxCol = 4 - 3; // 4 columns, show 3 at a time
+  document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('ic-track');
+    const prevBtn = document.getElementById('ic-prev');
+    const nextBtn = document.getElementById('ic-next');
+    const viewport = document.getElementById('ic-viewport');
 
-    function updateButtons() {
+    let col = 0;                     // active column
+    const tot = track.children.length; // total columns
+    let gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
+    let colW = track.children[0].offsetWidth + gap;
+    let show = 3;                     // always 3 visible
+
+    const move = (instant = false) => {
+      track.style.transitionDuration = instant ? '0ms' : '500ms';
+      track.style.transform = `translateX(${-col * colW}px)`;
       prevBtn.disabled = col === 0;
-      nextBtn.disabled = col === maxCol;
-    }
+      nextBtn.disabled = col >= tot - show;
+    };
 
-    prevBtn.addEventListener('click', () => {
-      if (col > 0) col--;
-      viewport.scrollTo({ left: col * colW, behavior: 'smooth' });
-      updateButtons();
-    });
+    prevBtn.addEventListener('click', () => { if (col) { col--; move(); } });
+    nextBtn.addEventListener('click', () => { if (col < tot - show) { col++; move(); } });
 
-    nextBtn.addEventListener('click', () => {
-      if (col < maxCol) col++;
-      viewport.scrollTo({ left: col * colW, behavior: 'smooth' });
-      updateButtons();
-    });
-
-    // Reset on resize
     window.addEventListener('resize', () => {
-      viewport.scrollTo({ left: col * colW, behavior: 'auto' });
-      updateButtons();
+      gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
+      colW = track.children[0].offsetWidth + gap;
+      move(true);            // snap to new size
     });
 
-    // Initial state
-    updateButtons();
+    move(true);              // initial position
   });
 </script>
 
