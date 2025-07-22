@@ -6,6 +6,8 @@
   .testimonials-container {
     -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
     mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    width: 100%;
+    overflow-x: auto;
   }
 
   .testimonials-scroller {
@@ -13,6 +15,7 @@
     gap: 1.5rem;
     height: 70vh;
     max-height: 800px;
+    width: 100%;
   }
 
   .testimonial-column {
@@ -48,21 +51,131 @@
   }
 
   .testimonial-card-item > div {
-    transition: transform 0.2s ease, background-color 0.2s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f3f3f3;
+    color: #111;
+    transition: transform 0.2s, background-color 0.2s;
   }
-
+  .testimonial-content {
+    position: relative;
+    z-index: 10;
+  }
+  .testimonial-hover-overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: linear-gradient(to right, #b9fbc0, #a0c4ff);
+    background-size: 200%;
+    animation: gradient-move-x 2s linear infinite;
+    border-radius: inherit;
+  }
+  .testimonial-card-item:hover > div .testimonial-hover-overlay {
+    opacity: 0.85;
+  }
+  @keyframes gradient-move-x {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+  }
   .testimonial-card-item:hover > div {
-    transform: scale(1.02);
-    background-color: #222;
+    transform: scale(1.01);
+    background-color: #e0e0e0;
   }
 
   .testimonial-column:hover .scrolling-wrapper {
     animation-play-state: paused;
   }
+
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .testimonials-scroller {
+      gap: 1rem;
+    }
+    .testimonial-column {
+      flex: 1 1 33%;
+      min-width: 0;
+      display: block;
+    }
+    .testimonial-column:nth-child(n+4) {
+      display: none;
+    }
+    .testimonial-card-item > div {
+      padding: 1.25rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .testimonials-scroller {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: auto;
+      max-height: none;
+    }
+    .testimonial-column {
+      flex: 1 1 50%;
+      min-width: 250px;
+      max-width: 100%;
+      overflow: visible;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .scrolling-wrapper {
+      gap: 1rem;
+      animation: none !important;
+    }
+    .testimonial-card-item > div {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .testimonials-container {
+      -webkit-mask-image: none;
+      mask-image: none;
+      padding: 0 0.5rem;
+    }
+    .testimonials-scroller {
+      flex-direction: column;
+      gap: 0.5rem;
+      height: auto;
+      max-height: none;
+    }
+    .testimonial-column {
+      flex: 1 1 100%;
+      min-width: 0;
+      max-width: 100%;
+      overflow: visible;
+      -webkit-mask-image: none;
+      mask-image: none;
+      margin-bottom: 1rem;
+    }
+    .testimonial-column:not(:first-child) {
+      display: none;
+    }
+    .scrolling-wrapper {
+      gap: 0.5rem;
+      animation: none !important;
+    }
+    .testimonial-card-item > div {
+      padding: 0.75rem;
+      font-size: 0.92rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+    .testimonial-card-item:nth-child(n+6) {
+      display: none;
+    }
+  }
 </style>
-<section class="bg-black">
+<section class="bg-black" style="background:#fff;">
   <div class="py-8 mx-auto lg:py-24">
-    <h2 class="mb-12 text-4xl font-extrabold tracking-tight text-center text-white px-4">
+    <h2 class="mb-12 text-4xl font-extrabold tracking-tight text-center text-black px-4">
       Trusted by Global Businesses
     </h2>
     <div class="testimonials-container">
@@ -73,103 +186,127 @@
           <div class="scrolling-wrapper animate-scroll-down">
             <!-- Card 1 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Van Hung</p>
-                    <p class="text-sm text-gray-500">Dak Lak Coffee Export Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Van Hung</p>
+                      <p class="text-sm" style="color:#555;">Dak Lak Coffee Export Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 2 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Sato Kenji</p>
-                    <p class="text-sm text-gray-500">Osaka Food Trading Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Sato Kenji</p>
+                      <p class="text-sm" style="color:#555;">Osaka Food Trading Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 3 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Tran Thi My Linh</p>
-                    <p class="text-sm text-gray-500">VietHerb Organic Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Tran Thi My Linh</p>
+                      <p class="text-sm" style="color:#555;">VietHerb Organic Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 4 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">James Walker</p>
-                    <p class="text-sm text-gray-500">PureLeaf Distributors – Texas, USA</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">James Walker</p>
+                      <p class="text-sm" style="color:#555;">PureLeaf Distributors – Texas, USA</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Duplicated -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Van Hung</p>
-                    <p class="text-sm text-gray-500">Dak Lak Coffee Export Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Van Hung</p>
+                      <p class="text-sm" style="color:#555;">Dak Lak Coffee Export Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Sato Kenji</p>
-                    <p class="text-sm text-gray-500">Osaka Food Trading Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Sato Kenji</p>
+                      <p class="text-sm" style="color:#555;">Osaka Food Trading Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Tran Thi My Linh</p>
-                    <p class="text-sm text-gray-500">VietHerb Organic Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Tran Thi My Linh</p>
+                      <p class="text-sm" style="color:#555;">VietHerb Organic Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">James Walker</p>
-                    <p class="text-sm text-gray-500">PureLeaf Distributors – Texas, USA</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">James Walker</p>
+                      <p class="text-sm" style="color:#555;">PureLeaf Distributors – Texas, USA</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
           </div>
@@ -180,103 +317,127 @@
           <div class="scrolling-wrapper animate-scroll-up">
             <!-- Card 5 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Thanh Loc</p>
-                    <p class="text-sm text-gray-500">Quang Loc Mechanical Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Thanh Loc</p>
+                      <p class="text-sm" style="color:#555;">Quang Loc Mechanical Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 6 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Lee Min-Jae</p>
-                    <p class="text-sm text-gray-500">Korea BizSource Inc.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Lee Min-Jae</p>
+                      <p class="text-sm" style="color:#555;">Korea BizSource Inc.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 7 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Khanh Vy</p>
-                    <p class="text-sm text-gray-500">VFresh Farm Startup – Can Tho</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Khanh Vy</p>
+                      <p class="text-sm" style="color:#555;">VFresh Farm Startup – Can Tho</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 8 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Minh Khoa</p>
-                    <p class="text-sm text-gray-500">Minh Khoa Vegan Foods Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Minh Khoa</p>
+                      <p class="text-sm" style="color:#555;">Minh Khoa Vegan Foods Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Duplicated -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Thanh Loc</p>
-                    <p class="text-sm text-gray-500">Quang Loc Mechanical Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Thanh Loc</p>
+                      <p class="text-sm" style="color:#555;">Quang Loc Mechanical Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Lee Min-Jae</p>
-                    <p class="text-sm text-gray-500">Korea BizSource Inc.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Lee Min-Jae</p>
+                      <p class="text-sm" style="color:#555;">Korea BizSource Inc.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Khanh Vy</p>
-                    <p class="text-sm text-gray-500">VFresh Farm Startup – Can Tho</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Khanh Vy</p>
+                      <p class="text-sm" style="color:#555;">VFresh Farm Startup – Can Tho</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Minh Khoa</p>
-                    <p class="text-sm text-gray-500">Minh Khoa Vegan Foods Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Minh Khoa</p>
+                      <p class="text-sm" style="color:#555;">Minh Khoa Vegan Foods Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
           </div>
@@ -287,103 +448,127 @@
           <div class="scrolling-wrapper animate-scroll-down">
             <!-- Card 9 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Le Quoc Phong</p>
-                    <p class="text-sm text-gray-500">An Nhien Garment Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Le Quoc Phong</p>
+                      <p class="text-sm" style="color:#555;">An Nhien Garment Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 10 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Daniel Okeke</p>
-                    <p class="text-sm text-gray-500">GreenPro Trading (Nigeria)</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Daniel Okeke</p>
+                      <p class="text-sm" style="color:#555;">GreenPro Trading (Nigeria)</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 11 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Chen Jiawei</p>
-                    <p class="text-sm text-gray-500">Shanghai Aroma Goods Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Chen Jiawei</p>
+                      <p class="text-sm" style="color:#555;">Shanghai Aroma Goods Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 12 -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Ngoc Bao Tran</p>
-                    <p class="text-sm text-gray-500">Sales Leader – Viet Xanh Wood Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Ngoc Bao Tran</p>
+                      <p class="text-sm" style="color:#555;">Sales Leader – Viet Xanh Wood Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Duplicated -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Le Quoc Phong</p>
-                    <p class="text-sm text-gray-500">An Nhien Garment Co., Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Le Quoc Phong</p>
+                      <p class="text-sm" style="color:#555;">An Nhien Garment Co., Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Daniel Okeke</p>
-                    <p class="text-sm text-gray-500">GreenPro Trading (Nigeria)</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Daniel Okeke</p>
+                      <p class="text-sm" style="color:#555;">GreenPro Trading (Nigeria)</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Chen Jiawei</p>
-                    <p class="text-sm text-gray-500">Shanghai Aroma Goods Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Chen Jiawei</p>
+                      <p class="text-sm" style="color:#555;">Shanghai Aroma Goods Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Nguyen Ngoc Bao Tran</p>
-                    <p class="text-sm text-gray-500">Sales Leader – Viet Xanh Wood Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Nguyen Ngoc Bao Tran</p>
+                      <p class="text-sm" style="color:#555;">Sales Leader – Viet Xanh Wood Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
           </div>
@@ -394,103 +579,127 @@
           <div class="scrolling-wrapper animate-scroll-up">
             <!-- Card 1 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Michael Tran</p>
-                    <p class="text-sm text-gray-500">Global Exports</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Michael Tran</p>
+                      <p class="text-sm" style="color:#555;">Global Exports</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 2 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">David Chen</p>
-                    <p class="text-sm text-gray-500">Asia Imports Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">David Chen</p>
+                      <p class="text-sm" style="color:#555;">Asia Imports Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 3 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Sophia Nguyen</p>
-                    <p class="text-sm text-gray-500">Authentic Goods LLC</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Sophia Nguyen</p>
+                      <p class="text-sm" style="color:#555;">Authentic Goods LLC</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 4 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Liam O'Connell</p>
-                    <p class="text-sm text-gray-500">Euro Foods Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Liam O'Connell</p>
+                      <p class="text-sm" style="color:#555;">Euro Foods Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Duplicated -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Michael Tran</p>
-                    <p class="text-sm text-gray-500">Global Exports</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Michael Tran</p>
+                      <p class="text-sm" style="color:#555;">Global Exports</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">David Chen</p>
-                    <p class="text-sm text-gray-500">Asia Imports Co.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">David Chen</p>
+                      <p class="text-sm" style="color:#555;">Asia Imports Co.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Sophia Nguyen</p>
-                    <p class="text-sm text-gray-500">Authentic Goods LLC</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Sophia Nguyen</p>
+                      <p class="text-sm" style="color:#555;">Authentic Goods LLC</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Liam O'Connell</p>
-                    <p class="text-sm text-gray-500">Euro Foods Ltd.</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Liam O'Connell</p>
+                      <p class="text-sm" style="color:#555;">Euro Foods Ltd.</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
           </div>
@@ -501,103 +710,127 @@
           <div class="scrolling-wrapper animate-scroll-down">
             <!-- Card 5 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Tran Van Binh</p>
-                    <p class="text-sm text-gray-500">Binh Minh Handicrafts</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Tran Van Binh</p>
+                      <p class="text-sm" style="color:#555;">Binh Minh Handicrafts</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 6 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Park Seo-joon</p>
-                    <p class="text-sm text-gray-500">Seoul Sourcing Partners</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Park Seo-joon</p>
+                      <p class="text-sm" style="color:#555;">Seoul Sourcing Partners</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 7 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Le Thi Mai</p>
-                    <p class="text-sm text-gray-500">Mai's Organic Snacks</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Le Thi Mai</p>
+                      <p class="text-sm" style="color:#555;">Mai's Organic Snacks</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Card 8 (repeated) -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Pham Van Duc</p>
-                    <p class="text-sm text-gray-500">Duc Phat Food Export</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Pham Van Duc</p>
+                      <p class="text-sm" style="color:#555;">Duc Phat Food Export</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <!-- Duplicated -->
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Tran Van Binh</p>
-                    <p class="text-sm text-gray-500">Binh Minh Handicrafts</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Tran Van Binh</p>
+                      <p class="text-sm" style="color:#555;">Binh Minh Handicrafts</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Park Seo-joon</p>
-                    <p class="text-sm text-gray-500">Seoul Sourcing Partners</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Park Seo-joon</p>
+                      <p class="text-sm" style="color:#555;">Seoul Sourcing Partners</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Le Thi Mai</p>
-                    <p class="text-sm text-gray-500">Mai's Organic Snacks</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Le Thi Mai</p>
+                      <p class="text-sm" style="color:#555;">Mai's Organic Snacks</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
             <div class="testimonial-card-item">
-              <div class="p-6 bg-[#181818] rounded-lg">
-                <p class="mb-5 text-gray-400">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
-                <div class="flex items-center">
-                  <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
-                  <div class="ml-4">
-                    <p class="font-bold text-white">Pham Van Duc</p>
-                    <p class="text-sm text-gray-500">Duc Phat Food Export</p>
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">Pham Van Duc</p>
+                      <p class="text-sm" style="color:#555;">Duc Phat Food Export</p>
+                    </div>
                   </div>
                 </div>
+                <div class="testimonial-hover-overlay"></div>
               </div>
             </div>
           </div>
