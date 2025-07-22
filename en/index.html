@@ -620,21 +620,106 @@
 
 
   <!-- ********* START ********* -->
-  <section class="section-solutions">
-    <div class="container">
-      <h1 class="title-heading text-shadow-md">
+  <section class="py-12 px-4 lg:py-16 lg:px-6">
+    <div class="max-w-[1280px] mx-auto px-4 lg:px-6 h-full">
+      <h1 class="text-3xl md:text-5xl font-extrabold text-center uppercase mb-14
+                [text-shadow:2px_2px_5px_rgba(0,0,0,.35)]">
         WE SUPPORT ANY INDUSTRY FIELDS
       </h1>
-      <div class="industry-carousel">
-  
-        <div class="carousel-flex">
-          <button class="nav prev" aria-label="previous column">&lsaquo;</button>
-          <div class="viewport">
-  
-            <ul class="industry-grid">
-              <!-- COLUMN 1 -->
-              <li class="card" style="--clr:#c97b28"><img src="../images/wheat.png"><span>AGRICULTURAL</span></li>
-              <li class="card" style="--clr:#f3c24b"><img src="../images/tractor.png"><span>AGRICULTURAL<br>TRACTOR</span>
+
+      <div class="relative overflow-hidden">
+
+        <div class="flex items-center gap-4 justify-center">
+
+          <!-- ‹ button -->
+          <button id="ic-prev" class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-blue-500 to-cyan-400
+                        shadow-md text-2xl font-bold transition text-white
+                        hover:bg-gray-100 hover:scale-110 disabled:opacity-50" aria-label="previous column">
+            &lsaquo;
+          </button>
+
+
+          <!-- viewport fixed at 3 columns (3×300 + 2×24 gap = 948 px) -->
+          <div id="ic-viewport" class="overflow-hidden w-full max-w-[948px]">
+            <ul id="ic-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
+
+              <!-- each <li> is one column – width 300 px to match mock-up -->
+              <li class="flex flex-col gap-10 shrink-0 w-[300px] ">
+                <!-- CARD -->
+                <!-- === SINGLE CARD; copy-paste the bold section to every other card === -->
+                <!-- ONE CARD — duplicate & just swap --clr, icon src and label text -->
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/wheat.png" class="w-24 h-24" alt="Agricultural Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    AGRICULTURAL
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/machine.png" class="w-24 h-24" alt="Industry Machine Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    <span>INDUSTRY<br>MACHINE</span>
+                  </span>
+                </div>
+
+                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+
+                  <!-- Teal background sweep, clipped by rounded corners -->
+                  <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
+                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
+                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
+
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                              bg-transparent 
+                              rounded-full flex items-center justify-center overflow-hidden z-10
+                              group-hover:left-0 group-hover:translate-x-0">
+                    <img src="../images/burger.png" class="w-24 h-24" alt="Food & Beverage Icon" />
+                  </div>
+
+                  <!-- label, fades in -->
+                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
+                             pl-4
+                             text-xl
+                             opacity-0 z-20
+                             group-hover:opacity-100">
+                    <span>FOOD &amp;<br>BEVERAGE</span>
+                  </span>
+                </div>
+
               </li>
 
               <!-- COLUMN 2 -->
