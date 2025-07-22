@@ -6,8 +6,8 @@ tailwind.config = {
         main_hover: '#003a8a', 
         secondary: '#1a1a1a',
         text: '#666666',
-        blue_light: '#3F5EFB',
-        pink_light: '#FC466B'
+        blue_light: '#94b9ff',
+        green_light: '#cdffd8',
       },
       fontFamily: {
         'cabin': ['Cabin', 'sans-serif'],
