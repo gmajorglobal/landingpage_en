@@ -113,56 +113,8 @@ form input:focus {
   box-shadow: 0 0 0 3px rgba(0, 74, 173, 0.1);
 }
 
-.legal {
-  font-size: 0.875rem;
-  color: #6b7280;
-  margin-bottom: 1rem;
-}
-
-.legal a {
-  color: #004AAD;
-  text-decoration: underline;
-}
-
-.btn-submit {
-  width: 100%;
-  background: #004AAD;
-  color: white;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 0.375rem;
-  font-size: 1rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background: #003a8a;
-}
-
-.visual h3 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a1a1a;
-}
-
-.visual img {
-  max-width: 300px;
-  height: auto;
-  border-radius: 0.5rem;
-}
 
 @media (max-width: 768px) {
-  .contact-inner {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-  
-  .visual h3 {
-    font-size: 1.6rem;
-  }
   
   .support-banner h2 {
     font-size: 1.55rem;
