@@ -6,8 +6,8 @@ tailwind.config = {
         main_hover: '#003a8a', 
         secondary: '#1a1a1a',
         text: '#666666',
-        blue_light: '#3F5EFB',
-        pink_light: '#FC466B'
+        blue_light: '#94b9ff',
+        green_light: '#cdffd8',
       },
       fontFamily: {
         'cabin': ['Cabin', 'sans-serif'],
@@ -19,6 +19,8 @@ tailwind.config = {
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(circle at var(--x,50%) var(--y,50%), rgb(93,224,230) 0%, rgb(0,74,173) 100%)',
+        'gradient-radial-gray': 'radial-gradient(circle at var(--x,50%) var(--y,50%), #a6a6a6 0%, white 100%)',
+        'gradient-linear-gray': 'linear-gradient(0deg, #303643 0%, #a5acb9 100%)',
         'gradient-cyan-blue': 'linear-gradient(90deg, #caffd7 0%, #a3caff 100%)'
       },
       textShadow: {
@@ -255,10 +257,6 @@ tailwind.config = {
           maxWidth: '800px',
           margin: '0 auto',
         },
-        '.contact-form': {
-          background: '#f8fafc',
-          padding: '3rem 1rem',
-        },
         '.contact-inner': {
           maxWidth: '1200px',
           margin: '0 auto',
@@ -266,12 +264,6 @@ tailwind.config = {
           gridTemplateColumns: '1fr 1fr',
           gap: '3rem',
           alignItems: 'center',
-        },
-        '.form-card': {
-          background: 'white',
-          padding: '2rem',
-          borderRadius: '0.5rem',
-          boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1)',
         },
         '.visual': {
           textAlign: 'center',
