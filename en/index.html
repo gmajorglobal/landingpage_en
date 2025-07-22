@@ -76,6 +76,22 @@
       /* End at original position */
       transition-delay: 300ms;
     }
+
+    .logo-marquee-outer {
+      overflow: hidden;
+      width: 100%;
+      background: #fff;
+    }
+    .logo-marquee-inner {
+      display: flex;
+      gap: 2rem;
+      animation: marquee-left 30s linear infinite;
+      width: max-content;
+    }
+    @keyframes marquee-left {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="../tailwind.config.js"></script>
@@ -262,37 +278,73 @@
         (These are just a few "featured partners" – many other small
         businesses are not listed yet.)
       </p>
-      <div class="whitespace-nowrap overflow-hidden box-border">
-        <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
-          <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
-            <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
+      <div class="logo-marquee-outer">
+        <div class="logo-marquee-inner">
+          <!-- logo list lần 1 -->
+          <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
+            <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
+              <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[100px]">
+              <img class="w-full" src="../images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[80px]">
+              <img class="w-full" src="../images/eufeed-logo.png" alt="EU Feed JSC logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/mhb-logo.jpeg" alt="MHB Energy logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[140px]">
+              <img class="w-full" src="../images/logo-namtrung.png" alt="Nam Trung Construction logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[90px]">
+              <img class="w-full" src="../images/sao-mai-logo.png" alt="Sao Mai logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[60px]">
+              <img class="w-full" src="../images/logo-aeroco.png" alt="Aeroco logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[40px]">
+              <img class="w-full" src="../images/3-sach-logo.webp" alt="3 Sạch logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/megarico-logo.jpeg" alt="Megarico logo" />
+            </div>
           </div>
-          <div class="flex items-center lg:justify-center w-[100px]">
-            <img class="w-full" src="../images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[80px]">
-            <img class="w-full" src="../images/eufeed-logo.png" alt="EU Feed JSC logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[120px]">
-            <img class="w-full" src="../images/mhb-logo.jpeg" alt="MHB Energy logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[120px]">
-            <img class="w-full" src="../images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[140px]">
-            <img class="w-full" src="../images/logo-namtrung.png" alt="Nam Trung Construction logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[90px]">
-            <img class="w-full" src="../images/sao-mai-logo.png" alt="Sao Mai logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[60px]">
-            <img class="w-full" src="../images/logo-aeroco.png" alt="Aeroco logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[40px]">
-            <img class="w-full" src="../images/3-sach-logo.webp" alt="3 Sạch logo" />
-          </div>
-          <div class="flex items-center lg:justify-center w-[120px]">
-            <img class="w-full" src="../images/megarico-logo.jpeg" alt="Megarico logo" />
+          <!-- logo list lần 2 (lặp lại) -->
+          <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
+            <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
+              <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[100px]">
+              <img class="w-full" src="../images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[80px]">
+              <img class="w-full" src="../images/eufeed-logo.png" alt="EU Feed JSC logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/mhb-logo.jpeg" alt="MHB Energy logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[140px]">
+              <img class="w-full" src="../images/logo-namtrung.png" alt="Nam Trung Construction logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[90px]">
+              <img class="w-full" src="../images/sao-mai-logo.png" alt="Sao Mai logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[60px]">
+              <img class="w-full" src="../images/logo-aeroco.png" alt="Aeroco logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[40px]">
+              <img class="w-full" src="../images/3-sach-logo.webp" alt="3 Sạch logo" />
+            </div>
+            <div class="flex items-center lg:justify-center w-[120px]">
+              <img class="w-full" src="../images/megarico-logo.jpeg" alt="Megarico logo" />
+            </div>
           </div>
         </div>
       </div>
@@ -972,6 +1024,8 @@
 
 
   <!-- ********* END ********* -->
+  <div id="faq-placeholder"></div>
+
   <!-- ********* START ********* -->
   <section class="section-side relative bg-whitem px-4">
     <div class="container relative max-w-[1200px] mx-auto py-8 px-4">
@@ -1525,6 +1579,12 @@
     .then(html => {
       document.getElementById('contact-form').innerHTML = html;
     });
+  
+  fetch('faq.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('faq-placeholder').innerHTML = html;
+  });
 </script>
 
 <!-- handle submit contact form -->
@@ -1558,4 +1618,6 @@
   }
 </script>
 
-</html>
+
+
+
