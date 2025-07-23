@@ -82,15 +82,22 @@
       width: 100%;
       background: #fff;
     }
+
     .logo-marquee-inner {
       display: flex;
       gap: 2rem;
       animation: marquee-left 30s linear infinite;
       width: max-content;
     }
+
     @keyframes marquee-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -98,7 +105,7 @@
   <link rel="stylesheet" href="./en/custom.css">
 
 
-  
+
 </head>
 
 <body class="transition">
@@ -356,8 +363,7 @@
   <section class="bg-white py-12 px-4">
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
       <!-- heading -->
-      <h1
-        class="font-extrabold tracking-tight text-secondary
+      <h1 class="font-extrabold tracking-tight text-secondary
               text-3xl md:text-5xl mb-12 [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]">
         SOLUTION FOR YOUR BUSINESS!
       </h1>
@@ -365,16 +371,15 @@
       <!-- responsive grid -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
         <!-- ❶ Card #1 -->
-        <article
-          class="relative flex flex-col items-start p-6 bg-white border
+        <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="./images/marketplace-icon.png"
-              alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/marketplace-icon.png" alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Marketplace</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             B2B Market for wholesale traders. Discover products, connect with
@@ -386,12 +391,12 @@
         <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="./images/chat-icon.png"
-              alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/chat-icon.png" alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Multilingual Chat</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             Check your "Chat Box" for messaging with your customers with
@@ -403,12 +408,12 @@
         <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="./images/rfq-icon.png"
-              alt="RFQ Auto icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/rfq-icon.png" alt="RFQ Auto icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">RFQ Auto</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             GMAJOR supports sending auto RFQs for your customers based
@@ -425,21 +430,18 @@
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
 
       <!-- heading -->
-      <h1
-        class="font-extrabold uppercase tracking-tight
+      <h1 class="font-extrabold uppercase tracking-tight
               [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
 
       <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
 
         <!-- ❶ CUSTOMER SUPPORT (col-1 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-1 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             CUSTOMER<br>SUPPORT<br>24/7
           </h2>
         </article>
@@ -447,8 +449,7 @@
         <!-- ❷ GLOBAL PARTNER (col-2 / row-1–2 span 2) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-2 lg:row-start-1 lg:row-span-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -461,8 +462,7 @@
         <!-- ❸ VERIFIED (col-3 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             VERIFIED<br>USER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -473,8 +473,7 @@
         <!-- ❹ CUSTOM SOLUTION (col-4 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-4 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             CUSTOM<br>SOLUTION
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -485,8 +484,7 @@
         <!-- ❺ LOGISTIC (col-1 / row-2) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-1 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             LOGISTIC<br>&amp; DELIVERY
           </h2>
         </article>
@@ -495,12 +493,12 @@
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:col-span-2 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
           <div class="flex items-center justify-between h-full">
-            <h2
-              class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
+            <h2 class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
               SMART <br /> TECH
             </h2>
 
-             <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="./images/ai-chip-transparent.png" alt="AI Chip" />
+            <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="./images/ai-chip-transparent.png"
+              alt="AI Chip" />
           </div>
         </article>
 
@@ -530,11 +528,16 @@
               <th class="w-8 sm:w-[210px] text-left text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Feature</th>
 
               <!-- logo cells -->
-              <th class="p-0.5 md:p-3"><img src="./images/logo-gmajor.png" alt="GMAJOR" class="w-10 sm:w-20 md:w-24 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="./images/logo-alibaba.png" alt="Alibaba" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="./images/logo-yellow.png" alt="Yellow" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="./images/logo-globy.png" alt="Globy" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="./images/logo-shopify.png" alt="Shopify" class="w-10 sm:w-24 md:w-32 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-gmajor.png" alt="GMAJOR"
+                  class="w-10 sm:w-20 md:w-24 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-alibaba.png" alt="Alibaba"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-yellow.png" alt="Yellow"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-globy.png" alt="Globy"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-shopify.png" alt="Shopify"
+                  class="w-10 sm:w-24 md:w-32 mx-auto" /></th>
             </tr>
           </thead>
 
@@ -544,121 +547,169 @@
             <!-- Helper: class="w-[20%] h-auto mx-auto self-center object-contain" on every PNG ✓/✖ -->
             <!-- Row • Free to register -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to register</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Free to register</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Multilingual messaging -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Multilingual messaging</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Multilingual messaging</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Business Verification -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Business Verification</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Business Verification</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Real-time Chat -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Real-time Chat</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Real-time Chat</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • SMEs Focus -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">SMEs Focus</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                SMEs Focus</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Free to post -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to post</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Free to post</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Bulk Proposal -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Bulk Proposal</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Bulk Proposal</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • AI Matching -->
             <tr>
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI Powered Matching</td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI
+                Powered Matching</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="./images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
           </tbody>
@@ -667,7 +718,7 @@
     </div>
   </section>
   <!-- ========= 1. COMPARISON – end ========= -->
-  
+
 
 
   <!-- ********* START ********* -->
@@ -699,7 +750,8 @@
                 <!-- CARD -->
                 <!-- === SINGLE CARD; copy-paste the bold section to every other card === -->
                 <!-- ONE CARD — duplicate & just swap --clr, icon src and label text -->
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -723,7 +775,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -747,7 +800,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -774,8 +828,9 @@
               </li>
 
               <!-- COLUMN 2 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -799,7 +854,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -823,7 +879,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -851,9 +908,10 @@
               </li>
 
               <!-- COLUMN 3 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -878,7 +936,8 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -905,7 +964,8 @@
 
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -931,9 +991,10 @@
               </li>
 
               <!-- COLUMN 4 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -958,7 +1019,8 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -982,7 +1044,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -1035,27 +1098,49 @@
       <div class="flex flex-col lg:flex-row items-center justify-start gap-8">
         <!-- Left stats -->
         <div class="flex flex-col sm:flex-row lg:flex-col gap-8">
-          <div class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
-            <span class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>GLOBAL USER</span>
+          <div
+            class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
+            <span
+              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>GLOBAL
+              USER</span>
           </div>
-          <div class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
-            <span class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>PRODUCTS</span>
+          <div
+            class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
+            <span
+              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>PRODUCTS</span>
           </div>
         </div>
         <!-- Map and markers -->
         <div class="relative flex-1">
-          <img src="./images/world-map.png" alt="World Map"
-            class="w-full max-w-[2000px] block drop-shadow-sm" />
+          <img src="./images/world-map.png" alt="World Map" class="w-full max-w-[2000px] block drop-shadow-sm" />
           <!-- Markers (adjust left/top for each location) -->
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="USA" alt="USA" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[32%] top-[68%] w-[20px] md:w-[25px] cursor-pointer" data-location="Brazil" alt="Brazil" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Europe" alt="Europe" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer" data-location="Africa" alt="Africa" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="India" alt="India" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer" data-location="China" alt="China" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer" data-location="Japan" alt="Japan" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer" data-location="Vietnam" alt="Vietnam" />
-          <img src="./images/gmajor-logo-map.png" class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer" data-location="Australia" alt="Australia" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="USA"
+            alt="USA" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[32%] top-[68%] w-[20px] md:w-[25px] cursor-pointer" data-location="Brazil"
+            alt="Brazil" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Europe"
+            alt="Europe" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer" data-location="Africa"
+            alt="Africa" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="India"
+            alt="India" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer" data-location="China"
+            alt="China" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer" data-location="Japan"
+            alt="Japan" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer" data-location="Vietnam"
+            alt="Vietnam" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer"
+            data-location="Australia" alt="Australia" />
         </div>
       </div>
       <!-- Tooltip -->
@@ -1068,25 +1153,30 @@
 
 
   <!-- Promo Banner  -->
-  <section class="relative section-solutions max-w-[1280px] min-h-[500px] mx-auto px-4 lg:px-6 py-6 my-0 md:mt-10 md:mb-20">
+  <section
+    class="relative section-solutions max-w-[1280px] min-h-[500px] mx-auto px-4 lg:px-6 py-6 my-0 md:mt-10 md:mb-20">
     <!-- Decorative sparkle -->
-      <img class="absolute w-12 h-12 lg:w-16 lg:h-16 z-10 top-0 left-[80%] md:left-[60%]" src="./images/sparkle.png" alt="sparkle" />
+    <img class="absolute w-12 h-12 lg:w-16 lg:h-16 z-10 top-0 left-[80%] md:left-[60%]" src="./images/sparkle.png"
+      alt="sparkle" />
 
     <!-- Left block -->
-    <div class="absolute w-[70%] md:w-[50%] h-[200px] md:h-[250px] z-2 top-[5%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[13%] p-5 bg-gradient-linear-gray rounded-2xl">
+    <div
+      class="absolute w-[70%] md:w-[50%] h-[200px] md:h-[250px] z-2 top-[5%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[13%] p-5 bg-gradient-linear-gray rounded-2xl">
       <h2 class="text-white font-bold [text-shadow:2px_2px_0px_rgba(0,0,0,.25)] text-2xl md:text-3xl lg:text-4xl mb-10">
-        <span class="block mb-3"> 2 WEEKS  PROMOTION </span>
+        <span class="block mb-3"> 2 WEEKS PROMOTION </span>
         <span class="block"> FOR NEW REGISTER </span>
       </h2>
 
       <div class="">
-        <a href="https://gmajor.biz/" class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
+        <a href="#"
+          class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           LEARN MORE
         </a>
       </div>
     </div>
     <!-- Right block -->
-    <div class="absolute w-[70%] md:w-[50%] h-[150px] md:h-[250px] z-4 top-[50%] md:top-[40%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[38%] flex justify-center items-center bg-gray-100 rounded-2xl">
+    <div
+      class="absolute w-[70%] md:w-[50%] h-[150px] md:h-[250px] z-4 top-[50%] md:top-[40%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[38%] flex justify-center items-center bg-gray-100 rounded-2xl">
       <img class="w-fit h-[150px] md:h-[250px] object-contain py-3" src="./images/group.png" alt="Group of people" />
     </div>
   </section>
@@ -1099,7 +1189,8 @@
         YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU
       </h2>
       <div class="text-center">
-        <a href="https://gmajor.biz/" class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
+        <a href="#"
+          class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           START NOW
         </a>
       </div>
@@ -1385,33 +1476,61 @@
     const track = document.getElementById('ic-track');
     const prevBtn = document.getElementById('ic-prev');
     const nextBtn = document.getElementById('ic-next');
-    const viewport = document.getElementById('ic-viewport');
 
-    let col = 0;                     // active column
-    const tot = track.children.length; // total columns
-    let gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
-    let colW = track.children[0].offsetWidth + gap;
-    let show = 3;                     // always 3 visible
+    let col = 0;                         // current column (left‑most)
+    const tot = track.children.length;   // total columns
+
+    /* These two are recomputed on every resize --------------------------- */
+    let colW;   // horizontal distance to move one step
+    let show;   // how many columns are visible at the chosen breakpoint
+    /* -------------------------------------------------------------------- */
+
+    /* Decide step width and visible count strictly by media query */
+    const setBreakpointValues = () => {
+      if (matchMedia('(min-width:1280px)').matches) {        // XL → 3 columns
+        show = 3;
+        colW = 324;      // 300‑px card + 24‑px fixed gap
+      } else if (matchMedia('(min-width:640px)').matches) {  // SM/LG → 2 columns
+        show = 2;
+        colW = 324;      // same card + gap
+      } else {                                              // Mobile → 1 column
+        show = 1;
+        colW = 244;      // 220‑px card + 24‑px gap
+      }
+
+      /* Make sure "col" never points past the last possible page */
+      col = Math.min(col, Math.max(0, tot - show));
+    };
 
     const move = (instant = false) => {
       track.style.transitionDuration = instant ? '0ms' : '500ms';
       track.style.transform = `translateX(${-col * colW}px)`;
+
       prevBtn.disabled = col === 0;
       nextBtn.disabled = col >= tot - show;
     };
 
-    prevBtn.addEventListener('click', () => { if (col) { col--; move(); } });
-    nextBtn.addEventListener('click', () => { if (col < tot - show) { col++; move(); } });
-
-    window.addEventListener('resize', () => {
-      gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
-      colW = track.children[0].offsetWidth + gap;
-      move(true);            // snap to new size
+    /* Navigation buttons -------------------------------------------------- */
+    prevBtn.addEventListener('click', () => {
+      if (col > 0) { col--; move(); }
     });
 
-    move(true);              // initial position
+    nextBtn.addEventListener('click', () => {
+      if (col < tot - show) { col++; move(); }
+    });
+
+    /* Recompute on every resize ------------------------------------------ */
+    window.addEventListener('resize', () => {
+      setBreakpointValues();
+      move(true);               // snap instantly to new layout
+    });
+
+    /* Initial run --------------------------------------------------------- */
+    setBreakpointValues();
+    move(true);
   });
 </script>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -1447,30 +1566,27 @@
     .then(html => {
       document.getElementById('contact-form').innerHTML = html;
     });
-  
+
   fetch('./en/faq.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('faq-placeholder').innerHTML = html;
-  });
+    });
 
   fetch('./en/footer.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('footer').innerHTML = html;
-  });
+    });
 </script>
 
 <!-- handle submit contact form -->
 <script>
   async function handleFormSubmit(e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const form = e.target;
     const status = document.getElementById('form-status');
-    const loading = document.getElementById('form-loading');
-
-    loading.style.display = 'flex';
 
     try {
       const res = await fetch(form.action, {
@@ -1492,11 +1608,5 @@
       status.textContent = 'Network error. Please try again.';
       status.style.color = 'red';
     }
-
-    loading.style.display = 'none';
   }
 </script>
-
-
-
-
