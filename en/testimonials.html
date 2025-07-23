@@ -71,15 +71,16 @@
     transition: opacity 0.3s;
     background: linear-gradient(to right, #b9fbc0, #a0c4ff);
     background-size: 200%;
-    animation: gradient-move-x 2s linear infinite;
+    animation: gradient-x-custom 3s ease-in-out infinite;
     border-radius: inherit;
   }
   .testimonial-card-item:hover > div .testimonial-hover-overlay {
     opacity: 0.85;
   }
-  @keyframes gradient-move-x {
+  @keyframes gradient-x-custom {
     0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
   .testimonial-card-item:hover > div {
     transform: scale(1.01);
