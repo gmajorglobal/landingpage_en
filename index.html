@@ -91,19 +91,44 @@
     }
 
     @keyframes marquee-left {
-      0% {
-        transform: translateX(0);
-      }
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
 
-      100% {
-        transform: translateX(-50%);
-      }
+    /* Custom styles for active accordion state */
+    [aria-expanded="true"] {
+      background-color: #dbeafe !important; /* bg-blue-100 */
+      border-color: #93c5fd !important; /* border-blue-300 */
+      color: #1e40af !important; /* text-blue-800 */
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+    }
+
+    /* Active accordion body styling */
+    [aria-expanded="true"] + div {
+      background-color: #eff6ff !important; /* bg-blue-50 */
+    }
+
+    [aria-expanded="true"] + div .py-5 {
+      background-color: #e0f2fe !important; /* lighter blue background */
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="tailwind.config.js"></script>
   <link rel="stylesheet" href="./en/custom.css">
 
+  <style>
+    [data-accordion] [id^="accordion-flush-body-"] {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
+      opacity: 0;
+    }
+    [data-accordion] [id^="accordion-flush-body-"].active {
+      max-height: 800px;
+      opacity: 1;
+      transition-delay: 0s, 0.2s;
+    }
+  </style>
 
 
 </head>
@@ -1086,7 +1111,7 @@
 
 
   <!-- ********* END ********* -->
-  <div id="faq-placeholder"></div>
+  <!-- <div id="faq-placeholder"></div> -->
 
   <!-- ********* START ********* -->
   <section class="section-side relative bg-whitem px-4">
@@ -1201,7 +1226,7 @@
   <div id="contact-form"></div>
 
   <!-- Start block -->
-  <section class="bg-gray-50 lg:bg-white">
+  <section class="bg-gray-50 lg:bg-white transition-all duration-500 ease-in-out">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
       <h2
         class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">
@@ -1209,16 +1234,17 @@
       </h2>
       <div class="max-w-screen-md mx-auto">
         <div id="accordion-flush" data-accordion="collapse"
-          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-          data-inactive-classes="text-gray-500 dark:text-gray-400">
+          data-active-classes="bg-blue-50 border-blue-200 text-blue-900 dark:bg-blue-900 dark:text-blue-100 transition-all duration-300 ease-in-out shadow-md"
+          data-inactive-classes="bg-gray-50 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out">
           <!-- Question 1 -->
-          <h3 id="accordion-flush-heading-1">
+          <h3 id="accordion-flush-heading-1" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
-              data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
+              data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
               aria-controls="accordion-flush-body-1">
-              <span>What is GMAJOR and who should use it?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">What is GMAJOR and who should use it?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1226,9 +1252,9 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-1" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-1">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
                 between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
                 or startup, GMAJOR helps you expand your network without language or high-cost barriers.
@@ -1237,13 +1263,14 @@
             </div>
           </div>
           <!-- Question 2 -->
-          <h3 id="accordion-flush-heading-2">
+          <h3 id="accordion-flush-heading-2" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
               aria-controls="accordion-flush-body-2">
-              <span>Do I have to pay to use GMAJOR?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">Do I have to pay to use GMAJOR?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1251,23 +1278,23 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-2" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-2">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Absolutely not. GMAJOR offers a completely free plan that includes account registration, product
-                posting, RFQ submissions, messaging, and multilingual chat. You also get 5000 free credits to boost your
-                visibility. Paid upgrades like banners or verified badges are optional.
+                posting, RFQ submissions, messaging, and multilingual chat. Paid upgrades like banners or verified badges are optional.
               </p>
             </div>
           </div>
           <!-- Question 3 -->
-          <h3 id="accordion-flush-heading-3">
+          <h3 id="accordion-flush-heading-3" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
-              <span>I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1275,9 +1302,9 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-3" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-3">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
                 will automatically translate to your partner's language. No translators or long emails needed — just
                 type and send.
@@ -1285,13 +1312,14 @@
             </div>
           </div>
           <!-- Question 4 -->
-          <h3 id="accordion-flush-heading-4">
+          <h3 id="accordion-flush-heading-4" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
-              <span>I'm looking for suppliers or buyers. How does GMAJOR help?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">I'm looking for suppliers or buyers. How does GMAJOR help?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1299,36 +1327,37 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-4" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-4">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 You can:
               </p>
-              <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400 space-y-4">
-                <li>
-                  <strong class="text-main">Post products or services for visibility</strong>
+              <ul class="pl-5 text-gray-600 list-disc dark:text-gray-400 space-y-4">
+                <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Post products or services for visibility</strong>
                 </li>
-                <li>
-                  <strong class="text-main">Send RFQs to multiple verified partners at once</strong>
+                <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Send RFQs to multiple verified partners at once</strong>
                 </li>
-                <li>
-                  <strong class="text-main">Use Bulk Proposal tools to save time</strong>
+                <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Use Bulk Proposal tools to save time</strong>
                 </li>
-                <li>
-                  <strong class="text-main">Leverage the smart matching engine to find the most relevant business
+                <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Leverage the smart matching engine to find the most relevant business
                     connections</strong>
                 </li>
               </ul>
             </div>
           </div>
           <!-- Question 5 -->
-          <h3 id="accordion-flush-heading-5">
+          <h3 id="accordion-flush-heading-5" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
               aria-controls="accordion-flush-body-5">
-              <span>Are users on GMAJOR verified? Can I trust them?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">Are users on GMAJOR verified? Can I trust them?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1336,9 +1365,9 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-5" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-5">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
                 can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
                 serious B2B users.
@@ -1346,13 +1375,14 @@
             </div>
           </div>
           <!-- Question 6 -->
-          <h3 id="accordion-flush-heading-6">
+          <h3 id="accordion-flush-heading-6" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-6" aria-expanded="false"
               aria-controls="accordion-flush-body-6">
-              <span>How is GMAJOR different from Alibaba or Facebook groups?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out">How is GMAJOR different from Alibaba or Facebook groups?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1360,9 +1390,9 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-6" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-6">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
                 Compared to Facebook groups: GMAJOR offers verified users, structured features, and zero spam — with
@@ -1371,13 +1401,14 @@
             </div>
           </div>
           <!-- Question 7 -->
-          <h3 id="accordion-flush-heading-7">
+          <h3 id="accordion-flush-heading-7" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400
+                     transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
-              <span> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20"
+              <span class="transition-all duration-300 ease-in-out"> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -1385,9 +1416,9 @@
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+          <div id="accordion-flush-body-7" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-7">
+            <div class="py-5 border-b border-gray-200 dark:border-gray-700 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+              <p class="mb-2 text-gray-600 dark:text-gray-400 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
                 international buyers quickly.
@@ -1566,12 +1597,12 @@
     .then(html => {
       document.getElementById('contact-form').innerHTML = html;
     });
-
-  fetch('./en/faq.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('faq-placeholder').innerHTML = html;
-    });
+  
+  // fetch('./en/faq.html')
+  //   .then(response => response.text())
+  //   .then(html => {
+  //     document.getElementById('faq-placeholder').innerHTML = html;
+  // });
 
   fetch('./en/footer.html')
     .then(response => response.text())
@@ -1610,3 +1641,24 @@
     }
   }
 </script>
+
+<script>
+document.querySelectorAll('[data-accordion-target]').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const targetId = btn.getAttribute('data-accordion-target');
+    const target = document.querySelector(targetId);
+    // Đóng tất cả accordion khác
+    document.querySelectorAll('[id^="accordion-flush-body-"]').forEach(div => {
+      if (div !== target) {
+        div.classList.remove('active');
+      }
+    });
+    // Toggle accordion hiện tại
+    target.classList.toggle('active');
+  });
+});
+</script>
+
+
+
+
