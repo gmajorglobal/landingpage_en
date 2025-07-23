@@ -82,23 +82,30 @@
       width: 100%;
       background: #fff;
     }
+
     .logo-marquee-inner {
       display: flex;
       gap: 2rem;
       animation: marquee-left 30s linear infinite;
       width: max-content;
     }
+
     @keyframes marquee-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
-  <script src="../tailwind.config.js"></script>
-  <link rel="stylesheet" href="custom.css">
+  <script src="tailwind.config.js"></script>
+  <link rel="stylesheet" href="./en/custom.css">
 
 
-  
+
 </head>
 
 <body class="transition">
@@ -107,11 +114,12 @@
       class="hidden invisible"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <header class="fixed w-full z-50">
-    <nav class="bg-white border-gray-200 py-2.5 dark:bg-gray-900 shadow-md">
+    <nav class="bg-white border-gray-200 py-2.5 shadow-md">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
         <a href="https://gmajor.biz" target="_blank" class="flex items-center">
-          <img src="../images/gmajor-logo.png" class="h-6 mr-3 sm:h-9" alt="GMAJOR Logo" />
+          <img src="./images/gmajor-logo.png" class="h-6 mr-3 sm:h-9" alt="GMAJOR Logo" />
         </a>
+
         <div class="flex items-center lg:order-2 lg:gap-x-8">
           <ul class="hidden lg:flex font-medium space-x-8">
             <li>
@@ -151,7 +159,7 @@
           </div>
 
           <button data-collapse-toggle="mobile-menu-2" type="button"
-            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="mobile-menu-2" aria-expanded="false">
             <span class="sr-only">Open main menu</span>
             <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -261,7 +269,7 @@
         </div>
       </div>
       <div class="lg:col-span-6 mt-8 lg:mt-0">
-        <img class="w-full object-contain" src="../images/b2b-marketplace.png"
+        <img class="w-full object-contain" src="./images/b2b-marketplace.png"
           alt="Xuất khẩu sang thị trường Nhật Bản" />
       </div>
     </div>
@@ -281,69 +289,69 @@
       <div class="logo-marquee-outer">
         <div class="logo-marquee-inner">
           <!-- logo list lần 1 -->
-          <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
+          <div class="flex items-center gap-8 text-gray-500 sm:gap-12 h-[100px]">
             <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
-              <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
+              <img class="w-full h-full" src="./images/logo-sohoma.png" alt="Sohoma logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[100px]">
-              <img class="w-full" src="../images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
+              <img class="w-full" src="./images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[80px]">
-              <img class="w-full" src="../images/eufeed-logo.png" alt="EU Feed JSC logo" />
+              <img class="w-full" src="./images/eufeed-logo.png" alt="EU Feed JSC logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/mhb-logo.jpeg" alt="MHB Energy logo" />
+              <img class="w-full" src="./images/mhb-logo.jpeg" alt="MHB Energy logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
+              <img class="w-full" src="./images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[140px]">
-              <img class="w-full" src="../images/logo-namtrung.png" alt="Nam Trung Construction logo" />
+              <img class="w-full" src="./images/logo-namtrung.png" alt="Nam Trung Construction logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[90px]">
-              <img class="w-full" src="../images/sao-mai-logo.png" alt="Sao Mai logo" />
+              <img class="w-full" src="./images/sao-mai-logo.png" alt="Sao Mai logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[60px]">
-              <img class="w-full" src="../images/logo-aeroco.png" alt="Aeroco logo" />
+              <img class="w-full" src="./images/logo-aeroco.png" alt="Aeroco logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[40px]">
-              <img class="w-full" src="../images/3-sach-logo.webp" alt="3 Sạch logo" />
+              <img class="w-full" src="./images/3-sach-logo.webp" alt="3 Sạch logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/megarico-logo.jpeg" alt="Megarico logo" />
+              <img class="w-full" src="./images/megarico-logo.jpeg" alt="Megarico logo" />
             </div>
           </div>
           <!-- logo list lần 2 (lặp lại) -->
-          <div class="flex items-center gap-8 text-gray-500 sm:gap-12 dark:text-gray-400 h-[100px]">
+          <div class="flex items-center gap-8 text-gray-500 sm:gap-12h-[100px]">
             <div class="flex items-center lg:justify-center w-[60px] aspect-[78/85]">
-              <img class="w-full h-full" src="../images/logo-sohoma.png" alt="Sohoma logo" />
+              <img class="w-full h-full" src="./images/logo-sohoma.png" alt="Sohoma logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[100px]">
-              <img class="w-full" src="../images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
+              <img class="w-full" src="./images/tan-tien-phat-logo.png" alt="Tân Tiến Phát logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[80px]">
-              <img class="w-full" src="../images/eufeed-logo.png" alt="EU Feed JSC logo" />
+              <img class="w-full" src="./images/eufeed-logo.png" alt="EU Feed JSC logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/mhb-logo.jpeg" alt="MHB Energy logo" />
+              <img class="w-full" src="./images/mhb-logo.jpeg" alt="MHB Energy logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
+              <img class="w-full" src="./images/hung-phat-logo.jpg" alt="Hưng Phát logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[140px]">
-              <img class="w-full" src="../images/logo-namtrung.png" alt="Nam Trung Construction logo" />
+              <img class="w-full" src="./images/logo-namtrung.png" alt="Nam Trung Construction logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[90px]">
-              <img class="w-full" src="../images/sao-mai-logo.png" alt="Sao Mai logo" />
+              <img class="w-full" src="./images/sao-mai-logo.png" alt="Sao Mai logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[60px]">
-              <img class="w-full" src="../images/logo-aeroco.png" alt="Aeroco logo" />
+              <img class="w-full" src="./images/logo-aeroco.png" alt="Aeroco logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[40px]">
-              <img class="w-full" src="../images/3-sach-logo.webp" alt="3 Sạch logo" />
+              <img class="w-full" src="./images/3-sach-logo.webp" alt="3 Sạch logo" />
             </div>
             <div class="flex items-center lg:justify-center w-[120px]">
-              <img class="w-full" src="../images/megarico-logo.jpeg" alt="Megarico logo" />
+              <img class="w-full" src="./images/megarico-logo.jpeg" alt="Megarico logo" />
             </div>
           </div>
         </div>
@@ -356,8 +364,7 @@
   <section class="bg-white py-12 px-4">
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
       <!-- heading -->
-      <h1
-        class="font-extrabold tracking-tight text-secondary
+      <h1 class="font-extrabold tracking-tight text-secondary
               text-3xl md:text-5xl mb-12 [text-shadow:3px_3px_2px_rgba(0,0,0,.35)]">
         SOLUTION FOR YOUR BUSINESS!
       </h1>
@@ -365,16 +372,15 @@
       <!-- responsive grid -->
       <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:gap-8">
         <!-- ❶ Card #1 -->
-        <article
-          class="relative flex flex-col items-start p-6 bg-white border
+        <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="../images/marketplace-icon.png"
-              alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/marketplace-icon.png" alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Marketplace</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             B2B Market for wholesale traders. Discover products, connect with
@@ -386,12 +392,12 @@
         <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="../images/chat-icon.png"
-              alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/chat-icon.png" alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Multilingual Chat</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             Check your "Chat Box" for messaging with your customers with
@@ -403,12 +409,12 @@
         <article class="relative flex flex-col items-start p-6 bg-white border
                 border-gray-200 rounded-lg shadow-sm overflow-hidden
                 transition-shadow group">
-          <div class="absolute z-5 inset-0 pointer-events-none opacity-0
+          <div
+            class="absolute z-5 inset-0 pointer-events-none opacity-0
                       transition-opacity duration-300 group-hover:opacity-85 bg-gradient-to-r from-green_light to-blue_light bg-[length:200%] animate-gradient-move-x">
           </div>
 
-          <img src="../images/rfq-icon.png"
-              alt="RFQ Auto icon" class="w-10 h-10 mb-5 z-10">
+          <img src="./images/rfq-icon.png" alt="RFQ Auto icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">RFQ Auto</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
             GMAJOR supports sending auto RFQs for your customers based
@@ -425,21 +431,18 @@
     <div class="max-w-[1280px] mx-auto px-4 lg:px-6">
 
       <!-- heading -->
-      <h1
-        class="font-extrabold uppercase tracking-tight
+      <h1 class="font-extrabold uppercase tracking-tight
               [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
         WE WILL ALWAYS BE BY YOUR SIDE&hellip;
       </h1>
 
       <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2 gap-8 mt-8">
 
         <!-- ❶ CUSTOMER SUPPORT (col-1 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-1 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             CUSTOMER<br>SUPPORT<br>24/7
           </h2>
         </article>
@@ -447,8 +450,7 @@
         <!-- ❷ GLOBAL PARTNER (col-2 / row-1–2 span 2) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-2 lg:row-start-1 lg:row-span-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             YOUR<br>GLOBAL<br>BUSINESS<br>PARTNER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -461,8 +463,7 @@
         <!-- ❸ VERIFIED (col-3 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             VERIFIED<br>USER
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -473,8 +474,7 @@
         <!-- ❹ CUSTOM SOLUTION (col-4 / row-1) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-4 lg:row-start-1 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 mb-4 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             CUSTOM<br>SOLUTION
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
@@ -485,8 +485,7 @@
         <!-- ❺ LOGISTIC (col-1 / row-2) -->
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-1 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
-          <h2
-            class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
+          <h2 class="m-0 text-xl md:text-3xl font-extrabold leading-tight uppercase">
             LOGISTIC<br>&amp; DELIVERY
           </h2>
         </article>
@@ -495,13 +494,12 @@
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:col-span-2 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
           <div class="flex items-center justify-between h-full">
-            <h2
-              class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
+            <h2 class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
               SMART <br /> TECH
             </h2>
 
-            <!-- "AI" chip -->
-             <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="../images/ai-chip.png" alt="AI Chip" />
+            <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="./images/ai-chip-transparent.png"
+              alt="AI Chip" />
           </div>
         </article>
 
@@ -531,11 +529,16 @@
               <th class="w-8 sm:w-[210px] text-left text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Feature</th>
 
               <!-- logo cells -->
-              <th class="p-0.5 md:p-3"><img src="../images/logo-gmajor.png" alt="GMAJOR" class="w-10 sm:w-20 md:w-24 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="../images/logo-alibaba.png" alt="Alibaba" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="../images/logo-yellow.png" alt="Yellow" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="../images/logo-globy.png" alt="Globy" class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
-              <th class="p-0.5 md:p-3"><img src="../images/logo-shopify.png" alt="Shopify" class="w-10 sm:w-24 md:w-32 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-gmajor.png" alt="GMAJOR"
+                  class="w-10 sm:w-20 md:w-24 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-alibaba.png" alt="Alibaba"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-yellow.png" alt="Yellow"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-globy.png" alt="Globy"
+                  class="w-10 sm:w-14 md:w-20 mx-auto" /></th>
+              <th class="p-0.5 md:p-3"><img src="./images/logo-shopify.png" alt="Shopify"
+                  class="w-10 sm:w-24 md:w-32 mx-auto" /></th>
             </tr>
           </thead>
 
@@ -545,121 +548,169 @@
             <!-- Helper: class="w-[20%] h-auto mx-auto self-center object-contain" on every PNG ✓/✖ -->
             <!-- Row • Free to register -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to register</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Free to register</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Multilingual messaging -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Multilingual messaging</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Multilingual messaging</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Business Verification -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Business Verification</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Business Verification</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Real-time Chat -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Real-time Chat</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Real-time Chat</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • SMEs Focus -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">SMEs Focus</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                SMEs Focus</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Free to post -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Free to post</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Free to post</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • Bulk Proposal -->
             <tr class="border-b">
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">Bulk Proposal</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">
+                Bulk Proposal</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
 
             <!-- Row • AI Matching -->
             <tr>
-              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI Powered Matching</td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td class="py-6 text-left text-base w-8 sm:w-auto md:text-xl [text-shadow:1px_1px_1px_rgba(0,0,0,.35)]">AI
+                Powered Matching</td>
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/cross-icon.png" alt="no" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/cross-icon.png" alt="no"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
-              <td><img src="../images/checked.png" alt="yes" class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
+              <td><img src="./images/checked.png" alt="yes"
+                  class="w-5 h-5 md:w-8 md:h-8 mx-auto self-center object-contain" />
               </td>
             </tr>
           </tbody>
@@ -668,7 +719,7 @@
     </div>
   </section>
   <!-- ========= 1. COMPARISON – end ========= -->
-  
+
 
 
   <!-- ********* START ********* -->
@@ -693,14 +744,15 @@
 
           <!-- viewport fixed at 3 columns (3×300 + 2×24 gap = 948 px) -->
           <div id="ic-viewport" class="overflow-hidden w-full lg:max-w-[948px]">
-            <ul id="ic-track" class="flex gap-4 lg:gap-6 transition-transform duration-500 ease-in-out">
+            <ul id="ic-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
 
               <!-- each <li> is one column – width 300 px to match mock-up -->
               <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
                 <!-- CARD -->
                 <!-- === SINGLE CARD; copy-paste the bold section to every other card === -->
                 <!-- ONE CARD — duplicate & just swap --clr, icon src and label text -->
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -711,7 +763,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/wheat.png" class="w-20 h-20 sm:w-24 sm:h-24" alt="Agricultural Icon" />
+                    <img src="./images/wheat.png" class="w-20 h-20 sm:w-24 sm:h-24" alt="Agricultural Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -724,7 +776,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -735,7 +788,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/machine.png" class="w-24 h-24" alt="Industry Machine Icon" />
+                    <img src="./images/machine.png" class="w-24 h-24" alt="Industry Machine Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -748,7 +801,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -759,7 +813,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/burger.png" class="w-24 h-24" alt="Food & Beverage Icon" />
+                    <img src="./images/burger.png" class="w-24 h-24" alt="Food & Beverage Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -775,8 +829,9 @@
               </li>
 
               <!-- COLUMN 2 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -787,7 +842,7 @@
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/clothes.png" class="w-24 h-24" alt="Clothes Icon" />
+                    <img src="./images/clothes.png" class="w-24 h-24" alt="Clothes Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -800,7 +855,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -811,7 +867,7 @@
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/health.png" class="w-24 h-24" alt="Healthcare Service Icon" />
+                    <img src="./images/health.png" class="w-24 h-24" alt="Healthcare Service Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -824,7 +880,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -835,7 +892,7 @@
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/dumbbell.png" class="w-24 h-24" alt="Sports Item Icon" />
+                    <img src="./images/dumbbell.png" class="w-24 h-24" alt="Sports Item Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -852,9 +909,10 @@
               </li>
 
               <!-- COLUMN 3 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -865,7 +923,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/tractor.png" class="w-24 h-24" alt="Agricultural Tractor Icon" />
+                    <img src="./images/tractor.png" class="w-24 h-24" alt="Agricultural Tractor Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -879,7 +937,8 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -890,7 +949,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/chip.png" class="w-24 h-24" alt="Semiconductor Icon" />
+                    <img src="./images/chip.png" class="w-24 h-24" alt="Semiconductor Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -906,7 +965,8 @@
 
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -917,7 +977,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/sofa.png" class="w-24 h-24" alt="Home Furniture Icon" />
+                    <img src="./images/sofa.png" class="w-24 h-24" alt="Home Furniture Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -932,9 +992,10 @@
               </li>
 
               <!-- COLUMN 4 -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px]">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -945,7 +1006,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/steering.png" class="w-24 h-24" alt="Vehicle Parts Icon" />
+                    <img src="./images/steering.png" class="w-24 h-24" alt="Vehicle Parts Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -959,7 +1020,8 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -970,7 +1032,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/banana.png" class="w-24 h-24" alt="Fresh Fruits Icon" />
+                    <img src="./images/banana.png" class="w-24 h-24" alt="Fresh Fruits Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -983,7 +1045,8 @@
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button"
+                  class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
@@ -994,7 +1057,7 @@
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/bolt.png" class="w-24 h-24" alt="Consumer Electronic Icon" />
+                    <img src="./images/bolt.png" class="w-24 h-24" alt="Consumer Electronic Icon" />
                   </div>
 
                   <!-- label, fades in -->
@@ -1036,27 +1099,49 @@
       <div class="flex flex-col lg:flex-row items-center justify-start gap-8">
         <!-- Left stats -->
         <div class="flex flex-col sm:flex-row lg:flex-col gap-8">
-          <div class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
-            <span class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>GLOBAL USER</span>
+          <div
+            class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
+            <span
+              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>GLOBAL
+              USER</span>
           </div>
-          <div class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
-            <span class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>PRODUCTS</span>
+          <div
+            class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
+            <span
+              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>PRODUCTS</span>
           </div>
         </div>
         <!-- Map and markers -->
         <div class="relative flex-1">
-          <img src="../images/world-map.png" alt="World Map"
-            class="w-full max-w-[2000px] block drop-shadow-sm" />
+          <img src="./images/world-map.png" alt="World Map" class="w-full max-w-[2000px] block drop-shadow-sm" />
           <!-- Markers (adjust left/top for each location) -->
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="USA" alt="USA" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[32%] top-[68%] w-[20px] md:w-[25px] cursor-pointer" data-location="Brazil" alt="Brazil" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Europe" alt="Europe" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer" data-location="Africa" alt="Africa" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="India" alt="India" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer" data-location="China" alt="China" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer" data-location="Japan" alt="Japan" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer" data-location="Vietnam" alt="Vietnam" />
-          <img src="../images/gmajor-logo-map.png" class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer" data-location="Australia" alt="Australia" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="USA"
+            alt="USA" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[32%] top-[68%] w-[20px] md:w-[25px] cursor-pointer" data-location="Brazil"
+            alt="Brazil" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Europe"
+            alt="Europe" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer" data-location="Africa"
+            alt="Africa" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="India"
+            alt="India" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer" data-location="China"
+            alt="China" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer" data-location="Japan"
+            alt="Japan" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer" data-location="Vietnam"
+            alt="Vietnam" />
+          <img src="./images/gmajor-logo-map.png"
+            class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer"
+            data-location="Australia" alt="Australia" />
         </div>
       </div>
       <!-- Tooltip -->
@@ -1069,26 +1154,31 @@
 
 
   <!-- Promo Banner  -->
-  <section class="relative section-solutions max-w-[1280px] min-h-[500px] mx-auto px-4 lg:px-6 py-6 my-0 md:mt-10 md:mb-20">
+  <section
+    class="relative section-solutions max-w-[1280px] min-h-[500px] mx-auto px-4 lg:px-6 py-6 my-0 md:mt-10 md:mb-20">
     <!-- Decorative sparkle -->
-      <img class="absolute w-12 h-12 lg:w-16 lg:h-16 z-10 top-0 left-[80%] md:left-[60%]" src="../images/sparkle.png" alt="sparkle" />
+    <img class="absolute w-12 h-12 lg:w-16 lg:h-16 z-10 top-0 left-[80%] md:left-[60%]" src="./images/sparkle.png"
+      alt="sparkle" />
 
     <!-- Left block -->
-    <div class="absolute w-[70%] md:w-[50%] h-[200px] md:h-[250px] z-2 top-[5%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[13%] p-5 bg-gradient-linear-gray rounded-2xl">
+    <div
+      class="absolute w-[70%] md:w-[50%] h-[200px] md:h-[250px] z-2 top-[5%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[13%] p-5 bg-gradient-linear-gray rounded-2xl">
       <h2 class="text-white font-bold [text-shadow:2px_2px_0px_rgba(0,0,0,.25)] text-2xl md:text-3xl lg:text-4xl mb-10">
-        <span class="block mb-3"> 2 WEEKS  PROMOTION </span>
+        <span class="block mb-3"> 2 WEEKS PROMOTION </span>
         <span class="block"> FOR NEW REGISTER </span>
       </h2>
 
       <div class="">
-        <a href="#" class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
+        <a href="#"
+          class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           LEARN MORE
         </a>
       </div>
     </div>
     <!-- Right block -->
-    <div class="absolute w-[70%] md:w-[50%] h-[150px] md:h-[250px] z-4 top-[50%] md:top-[40%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[38%] flex justify-center items-center bg-gray-100 rounded-2xl">
-      <img class="w-fit h-[150px] md:h-[250px] object-contain py-3" src="../images/group.png" alt="Group of people" />
+    <div
+      class="absolute w-[70%] md:w-[50%] h-[150px] md:h-[250px] z-4 top-[50%] md:top-[40%] left-1/2 -translate-x-1/2 md:translate-x-0 md:left-[38%] flex justify-center items-center bg-gray-100 rounded-2xl">
+      <img class="w-fit h-[150px] md:h-[250px] object-contain py-3" src="./images/group.png" alt="Group of people" />
     </div>
   </section>
   <!-- ********* END ********* -->
@@ -1100,7 +1190,8 @@
         YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU
       </h2>
       <div class="text-center">
-        <a href="#" class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
+        <a href="#"
+          class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           START NOW
         </a>
       </div>
@@ -1114,17 +1205,17 @@
   <section class="bg-gray-50 lg:bg-white">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
       <h2
-        class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl dark:text-white">
+        class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl ">
         Not sure about GMAJOR?
       </h2>
       <div class="max-w-screen-md mx-auto">
         <div id="accordion-flush" data-accordion="collapse"
-          data-active-classes="bg-white dark:bg-gray-900 text-gray-900 dark:text-white"
-          data-inactive-classes="text-gray-500 dark:text-gray-400">
+          data-active-classes="bg-white text-gray-900"
+          data-inactive-classes="text-gray-500">
           <!-- Question 1 -->
           <h3 id="accordion-flush-heading-1">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200 dark:border-gray-700 dark:bg-gray-900 dark:text-white"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-900 bg-white border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-1" aria-expanded="true"
               aria-controls="accordion-flush-body-1">
               <span>What is GMAJOR and who should use it?</span>
@@ -1137,8 +1228,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-1" class="" aria-labelledby="accordion-flush-heading-1">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
                 between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
                 or startup, GMAJOR helps you expand your network without language or high-cost barriers.
@@ -1149,7 +1240,7 @@
           <!-- Question 2 -->
           <h3 id="accordion-flush-heading-2">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
               aria-controls="accordion-flush-body-2">
               <span>Do I have to pay to use GMAJOR?</span>
@@ -1162,8 +1253,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-2" class="hidden" aria-labelledby="accordion-flush-heading-2">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 Absolutely not. GMAJOR offers a completely free plan that includes account registration, product
                 posting, RFQ submissions, messaging, and multilingual chat. You also get 5000 free credits to boost your
                 visibility. Paid upgrades like banners or verified badges are optional.
@@ -1173,7 +1264,7 @@
           <!-- Question 3 -->
           <h3 id="accordion-flush-heading-3">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
               <span>I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
@@ -1186,8 +1277,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-3" class="hidden" aria-labelledby="accordion-flush-heading-3">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
                 will automatically translate to your partner's language. No translators or long emails needed — just
                 type and send.
@@ -1197,7 +1288,7 @@
           <!-- Question 4 -->
           <h3 id="accordion-flush-heading-4">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
               <span>I'm looking for suppliers or buyers. How does GMAJOR help?</span>
@@ -1210,11 +1301,11 @@
             </button>
           </h3>
           <div id="accordion-flush-body-4" class="hidden" aria-labelledby="accordion-flush-heading-4">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 You can:
               </p>
-              <ul class="pl-5 text-gray-500 list-disc dark:text-gray-400 space-y-4">
+              <ul class="pl-5 text-gray-500 list-discspace-y-4">
                 <li>
                   <strong class="text-main">Post products or services for visibility</strong>
                 </li>
@@ -1234,7 +1325,7 @@
           <!-- Question 5 -->
           <h3 id="accordion-flush-heading-5">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
               aria-controls="accordion-flush-body-5">
               <span>Are users on GMAJOR verified? Can I trust them?</span>
@@ -1247,8 +1338,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-5" class="hidden" aria-labelledby="accordion-flush-heading-5">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
                 can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
                 serious B2B users.
@@ -1258,7 +1349,7 @@
           <!-- Question 6 -->
           <h3 id="accordion-flush-heading-6">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200"
               data-accordion-target="#accordion-flush-body-6" aria-expanded="false"
               aria-controls="accordion-flush-body-6">
               <span>How is GMAJOR different from Alibaba or Facebook groups?</span>
@@ -1271,8 +1362,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-6" class="hidden" aria-labelledby="accordion-flush-heading-6">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
                 Compared to Facebook groups: GMAJOR offers verified users, structured features, and zero spam — with
@@ -1283,7 +1374,7 @@
           <!-- Question 7 -->
           <h3 id="accordion-flush-heading-7">
             <button type="button"
-              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400"
+              class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-500 border-b border-gray-200 "
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
               <span> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
@@ -1296,8 +1387,8 @@
             </button>
           </h3>
           <div id="accordion-flush-body-7" class="hidden" aria-labelledby="accordion-flush-heading-7">
-            <div class="py-5 border-b border-gray-200 dark:border-gray-700">
-              <p class="mb-2 text-gray-500 dark:text-gray-400">
+            <div class="py-5 border-b border-gray-200">
+              <p class="mb-2 text-gray-500">
                 Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
                 international buyers quickly.
@@ -1311,140 +1402,9 @@
   <!-- End block -->
 
   <div id="testimonials-placeholder"></div>
-  
-  <footer class="bg-white dark:bg-gray-800">
-    <div class="max-w-screen-xl p-4 py-6 mx-auto lg:py-16 md:p-8 lg:p-10">
-      <div class="grid grid-cols-2 gap-8 md:grid-cols-3 lg:grid-cols-5">
-        <div class="col-span-2">
-          <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-            <a href="https://gmajor.biz" target="_blank"><img src="../images/gmajor-logo.png" class="w-[100px] mr-3"
-                alt="GMAJOR Logo" /></a>
-          </h3>
-          <ul class="text-gray-500 dark:text-gray-400 text-sm">
-            <li class="mb-4"><b>Company Name:</b> GNF Japan Co., Ltd.</li>
-            <li class="mb-4"><b>Address:</b> Đak Lak, Vietnam</li>
-            <li class="mb-4"><b>Tax Code:</b> 6001750510</li>
-            <li class="mb-4">
-              <b>Business Registration Certificate issued by:</b> Department
-              of Planning and Investment of Đắk Lắk
-            </li>
-            <li class="mb-4"><b>Company Name in Japan:</b> 株式会社GMAJOR</li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-            POLICIES
-          </h3>
-          <ul class="text-gray-500 dark:text-gray-400 text-sm">
-            <li class="mb-4">
-              <a href="https://gmajor.biz/cookies-policy" target="_blank" class="hover:underline">Cookie Policy</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://gmajor.biz/privacy-policy" target="_blank" class="hover:underline">Privacy Policy</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://gmajor.biz/privacy-policy" target="_blank" class="hover:underline">Terms of Service</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-            OTHER INFORMATION
-          </h3>
-          <ul class="text-gray-500 dark:text-gray-400 text-sm">
-            <li class="mb-4">
-              <a target="_blank" href="https://gmajor.biz/about-us" class="hover:underline">About GMAJOR</a>
-            </li>
-            <li class="mb-4">
-              <a target="_blank" href="https://gmajor.biz/for-ma" class="hover:underline">Related to M&A</a>
-            </li>
-            <li class="mb-4">
-              <a target="_blank" href="https://gmajor.biz/for-ps" class="hover:underline">Related to Products or
-                Services</a>
-            </li>
-            <li class="mb-4">
-              <a target="_blank" href="https://gmajor.biz/faq" class="hover:underline">FAQs</a>
-            </li>
-            <li class="mb-4">
-              <a target="_blank" href="https://gmajor.biz/blog" class="hover:underline">Blog</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <h3 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">
-            Customer Support
-          </h3>
-          <ul class="text-gray-500 dark:text-gray-400 text-sm">
-            <li class="mb-4">
-              <a href="https://gmajor.biz/payment-policy" class="hover:underline">Payment Policy</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://gmajor.biz/logistic-credit-support" class="hover:underline">Trade & Credit Support</a>
-            </li>
-            <li class="mb-4">
-              <a href="https://gmajor.biz/contact-us" class="hover:underline">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-      <div class="text-center">
-        <a href="https://gmajor.biz" target="_blank"
-          class="flex items-center justify-center mb-5 text-2xl font-semibold text-gray-900 dark:text-white">
-          <img src="../favicon.ico" class="h-6 mr-3 sm:h-9" alt="GMAJOR Favicon" />
-          <img src="../images/gmajor-logo.png" alt="GMAJOR logo" class="w-[100px]" />
-        </a>
-        <span class="block text-sm text-center text-gray-500 dark:text-gray-400">© 2024-2025 GMAJOR. All Rights
-          Reserved. Website designed and
-          operated by
-          <a href="https://gmajor.biz" target="_blank" class="text-main hover:underline font-bold">GMAJOR</a>
-        </span>
-        <ul class="flex justify-center mt-5 space-x-5">
-          <li>
-            <a href="https://www.facebook.com/gmajorvietnam/" target="_blank"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path fill-rule="evenodd"
-                  d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
-                  clip-rule="evenodd"></path>
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://twitter.com/gmajorglobal"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path
-                  d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.tiktok.com/@phieucungsepnhat"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-tiktok">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M16.083 2h-4.083a1 1 0 0 0 -1 1v11.5a1.5 1.5 0 1 1 -2.519 -1.1l.12 -.1a1 1 0 0 0 .399 -.8v-4.326a1 1 0 0 0 -1.23 -.974a7.5 7.5 0 0 0 1.73 14.8l.243 -.005a7.5 7.5 0 0 0 7.257 -7.495v-2.7l.311 .153c1.122 .53 2.333 .868 3.59 .993a1 1 0 0 0 1.099 -.996v-4.033a1 1 0 0 0 -.834 -.986a5.005 5.005 0 0 1 -4.097 -4.096a1 1 0 0 0 -.986 -.835z" />
-              </svg>
-            </a>
-          </li>
-          <li>
-            <a target="_blank" href="https://www.youtube.com/@phieucungsepNhat"
-              class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
-              <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                fill="currentColor" class="icon icon-tabler icons-tabler-filled icon-tabler-brand-youtube">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                <path
-                  d="M18 3a5 5 0 0 1 5 5v8a5 5 0 0 1 -5 5h-12a5 5 0 0 1 -5 -5v-8a5 5 0 0 1 5 -5zm-9 6v6a1 1 0 0 0 1.514 .857l5 -3a1 1 0 0 0 0 -1.714l-5 -3a1 1 0 0 0 -1.514 .857z" />
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </footer>
+
+  <div id="footer"></div>
+
   <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -1517,33 +1477,61 @@
     const track = document.getElementById('ic-track');
     const prevBtn = document.getElementById('ic-prev');
     const nextBtn = document.getElementById('ic-next');
-    const viewport = document.getElementById('ic-viewport');
 
-    let col = 0;                     // active column
-    const tot = track.children.length; // total columns
-    let gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
-    let colW = track.children[0].offsetWidth + gap;
-    let show = 3;                     // always 3 visible
+    let col = 0;                         // current column (left‑most)
+    const tot = track.children.length;   // total columns
+
+    /* These two are recomputed on every resize --------------------------- */
+    let colW;   // horizontal distance to move one step
+    let show;   // how many columns are visible at the chosen breakpoint
+    /* -------------------------------------------------------------------- */
+
+    /* Decide step width and visible count strictly by media query */
+    const setBreakpointValues = () => {
+      if (matchMedia('(min-width:1280px)').matches) {        // XL → 3 columns
+        show = 3;
+        colW = 324;      // 300‑px card + 24‑px fixed gap
+      } else if (matchMedia('(min-width:640px)').matches) {  // SM/LG → 2 columns
+        show = 2;
+        colW = 324;      // same card + gap
+      } else {                                              // Mobile → 1 column
+        show = 1;
+        colW = 244;      // 220‑px card + 24‑px gap
+      }
+
+      /* Make sure "col" never points past the last possible page */
+      col = Math.min(col, Math.max(0, tot - show));
+    };
 
     const move = (instant = false) => {
       track.style.transitionDuration = instant ? '0ms' : '500ms';
       track.style.transform = `translateX(${-col * colW}px)`;
+
       prevBtn.disabled = col === 0;
       nextBtn.disabled = col >= tot - show;
     };
 
-    prevBtn.addEventListener('click', () => { if (col) { col--; move(); } });
-    nextBtn.addEventListener('click', () => { if (col < tot - show) { col++; move(); } });
-
-    window.addEventListener('resize', () => {
-      gap = parseInt(getComputedStyle(track).columnGap || getComputedStyle(track).gap);
-      colW = track.children[0].offsetWidth + gap;
-      move(true);            // snap to new size
+    /* Navigation buttons -------------------------------------------------- */
+    prevBtn.addEventListener('click', () => {
+      if (col > 0) { col--; move(); }
     });
 
-    move(true);              // initial position
+    nextBtn.addEventListener('click', () => {
+      if (col < tot - show) { col++; move(); }
+    });
+
+    /* Recompute on every resize ------------------------------------------ */
+    window.addEventListener('resize', () => {
+      setBreakpointValues();
+      move(true);               // snap instantly to new layout
+    });
+
+    /* Initial run --------------------------------------------------------- */
+    setBreakpointValues();
+    move(true);
   });
 </script>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
@@ -1568,29 +1556,35 @@
 </script>
 
 <script>
-  fetch('testimonials.html')
+  fetch('./en/testimonials.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('testimonials-placeholder').innerHTML = html;
     });
 
-  fetch('contact-form.html')
+  fetch('./en/contact-form.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('contact-form').innerHTML = html;
     });
-  
-  fetch('faq.html')
+
+  fetch('./en/faq.html')
     .then(response => response.text())
     .then(html => {
       document.getElementById('faq-placeholder').innerHTML = html;
-  });
+    });
+
+  fetch('./en/footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+    });
 </script>
 
 <!-- handle submit contact form -->
 <script>
   async function handleFormSubmit(e) {
-    e.preventDefault(); 
+    e.preventDefault();
 
     const form = e.target;
     const status = document.getElementById('form-status');
@@ -1617,7 +1611,3 @@
     }
   }
 </script>
-
-
-
-
