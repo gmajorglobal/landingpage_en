@@ -681,7 +681,7 @@
 
       <div class="relative overflow-hidden">
 
-        <div class="flex items-center gap-4 justify-center">
+        <div class="flex items-center gap-2 sm:gap-4 justify-center">
 
           <!-- ‹ button -->
           <button id="ic-prev" class="w-12 h-12 flex items-center justify-center rounded-full bg-white
@@ -692,46 +692,46 @@
 
 
           <!-- viewport fixed at 3 columns (3×300 + 2×24 gap = 948 px) -->
-          <div id="ic-viewport" class="overflow-hidden w-full max-w-[948px]">
+          <div id="ic-viewport" class="overflow-hidden w-full lg:max-w-[948px]">
             <ul id="ic-track" class="flex gap-6 transition-transform duration-500 ease-in-out">
 
               <!-- each <li> is one column – width 300 px to match mock-up -->
-              <li class="flex flex-col gap-10 shrink-0 w-[300px] ">
+              <li class="flex flex-col gap-10 shrink-0 w-[220px] sm:w-[300px]">
                 <!-- CARD -->
                 <!-- === SINGLE CARD; copy-paste the bold section to every other card === -->
                 <!-- ONE CARD — duplicate & just swap --clr, icon src and label text -->
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
-                    <img src="../images/wheat.png" class="w-24 h-24" alt="Agricultural Icon" />
+                    <img src="../images/wheat.png" class="w-20 h-20 sm:w-24 sm:h-24" alt="Agricultural Icon" />
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                             pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                             pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                              opacity-0 z-20
                              group-hover:opacity-100">
                     AGRICULTURAL
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -739,23 +739,23 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                             pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                             pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                              opacity-0 z-20
                              group-hover:opacity-100">
                     <span>INDUSTRY<br>MACHINE</span>
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                              after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                              after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -763,9 +763,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                             pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                             pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                              opacity-0 z-20
                              group-hover:opacity-100">
                     <span>FOOD &amp;<br>BEVERAGE</span>
@@ -776,14 +776,14 @@
 
               <!-- COLUMN 2 -->
               <li class="flex flex-col gap-10 shrink-0 w-[300px]">
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                               after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                               after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
@@ -791,23 +791,23 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                              pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                              pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                               opacity-0 z-20
                               group-hover:opacity-100">
                     <span>CLOTHES</span>
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                               after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                               after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
@@ -815,23 +815,23 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                              pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                              pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                               opacity-0 z-20
                               group-hover:opacity-100">
                     <span>HEALTHCARE<br>SERVICE</span>
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                               after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                               after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                                 bg-transparent 
                                 rounded-full flex items-center justify-center overflow-hidden z-10
                                 group-hover:left-0 group-hover:translate-x-0">
@@ -839,9 +839,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                              pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                              pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                               opacity-0 z-20
                               group-hover:opacity-100">
                     <span>SPORTS ITEM</span>
@@ -854,14 +854,14 @@
               <!-- COLUMN 3 -->
               <li class="flex flex-col gap-10 shrink-0 w-[300px]">
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -869,9 +869,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>AGRICULTURAL<br>TRACTOR</span>
@@ -879,14 +879,14 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -894,9 +894,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>SEMI<br>CONDUCTOR</span>
@@ -906,14 +906,14 @@
 
 
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -921,9 +921,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>HOME<br>FURNITURE</span>
@@ -934,14 +934,14 @@
               <!-- COLUMN 4 -->
               <li class="flex flex-col gap-10 shrink-0 w-[300px]">
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -949,9 +949,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>VEHICLE<br>PARTS</span>
@@ -959,14 +959,14 @@
                 </div>
 
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -974,23 +974,23 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>FRESH FRUITS</span>
                   </span>
                 </div>
 
-                <div id="agri-button" class="group relative w-[300px] h-24 rounded-xl cursor-pointer font-semibold">
+                <div id="agri-button" class="group relative w-[220px] sm:w-[300px] h-20 sm:h-24 rounded-xl cursor-pointer font-semibold">
 
                   <!-- Teal background sweep, clipped by rounded corners -->
                   <span id="agri-sweep" class="absolute inset-0 rounded-xl overflow-hidden
                             after:content-[''] after:absolute after:inset-y-0 after:left-[48px] after:w-[calc(100%-48px)] after:bg-[#0097a7]
                             after:origin-left after:scale-x-0 group-hover:after:scale-x-100"></span>
 
-                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-24 h-24 -translate-x-1/2 -translate-y-1/2
+                  <div id="agri-icon" class="absolute top-1/2 left-1/2 w-20 h-20 sm:w-24 sm:h-24 -translate-x-1/2 -translate-y-1/2
                               bg-transparent 
                               rounded-full flex items-center justify-center overflow-hidden z-10
                               group-hover:left-0 group-hover:translate-x-0">
@@ -998,9 +998,9 @@
                   </div>
 
                   <!-- label, fades in -->
-                  <span id="agri-label" class="absolute inset-y-0 left-[96px] flex items-center text-white
-                            pl-4
-                             text-xl
+                  <span id="agri-label" class="absolute inset-y-0 left-[84px] sm:left-[96px] flex items-center text-white
+                            pl-0.5 sm:pl-4
+                             text-base sm:text-xl
                             opacity-0 z-20
                             group-hover:opacity-100">
                     <span>CONSUMER<br>ELECTRONIC</span>
@@ -1095,7 +1095,7 @@
 
   <section class="bg-gradient-radial-gray">
     <div class="section-solutions max-w-[1280px] mx-auto px-4 lg:px-6 py-6 mb-20">
-      <h2 class="font-bold tracking-tight text-center uppercase text-center
+      <h2 class="font-bold tracking-tight text-center uppercase
         [text-shadow:2px_2px_0px_rgba(0,0,0,.25)] text-xl md:text-3xl mb-6">
         YOU'RE NOT ALONE - GMAJOR IS HERE FOR YOU
       </h2>
