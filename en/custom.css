@@ -199,7 +199,7 @@ form input:focus {
   transition: all 0.5s ease;
 }
 .holographic-card h2 {
-  font-size: 2rem;
+  /* font-size: 2rem; */
   position: relative;
   z-index: 2;
 }
@@ -217,7 +217,7 @@ form input:focus {
     rgba(0,255,255,0.3)
   );
   transform: rotate(-45deg);
-  transition: all 0.5s ease;
+  transition: all 0.7s ease;
   opacity: 0;
   pointer-events: none;
   z-index: 0;
@@ -228,7 +228,7 @@ form input:focus {
 }
 .holographic-card:hover::before {
   opacity: 1;
-  transform: rotate(-45deg) translateY(100%);
+  transform: rotate(-45deg) translateY(120%);
 }
 .holographic-card > * {
   position: relative;
