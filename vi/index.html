@@ -91,25 +91,35 @@
     }
 
     @keyframes marquee-left {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
     }
 
     /* Custom styles for active accordion state */
     [aria-expanded="true"] {
-      background-color: #dbeafe !important; /* bg-blue-100 */
-      border-color: #93c5fd !important; /* border-blue-300 */
-      color: #1e40af !important; /* text-blue-800 */
+      background-color: #dbeafe !important;
+      /* bg-blue-100 */
+      border-color: #93c5fd !important;
+      /* border-blue-300 */
+      color: #1e40af !important;
+      /* text-blue-800 */
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
     }
 
     /* Active accordion body styling */
-    [aria-expanded="true"] + div {
-      background-color: #eff6ff !important; /* bg-blue-50 */
+    [aria-expanded="true"]+div {
+      background-color: #eff6ff !important;
+      /* bg-blue-50 */
     }
 
-    [aria-expanded="true"] + div .py-5 {
-      background-color: #e0f2fe !important; /* lighter blue background */
+    [aria-expanded="true"]+div .py-5 {
+      background-color: #e0f2fe !important;
+      /* lighter blue background */
     }
   </style>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -123,6 +133,7 @@
       transition: max-height 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s;
       opacity: 0;
     }
+
     [data-accordion] [id^="accordion-flush-body-"].active {
       max-height: 800px;
       opacity: 1;
@@ -141,52 +152,52 @@
   <header class="fixed w-full z-50">
     <nav class="bg-white border-gray-200 py-2.5 shadow-md">
       <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
-        <a href="https://gmajor.biz" target="_blank" class="flex items-center">
+        <a href="https://gmajor.biz/?lang=vi" target="_blank" class="flex items-center">
           <img src="../images/gmajor-logo.png" class="h-6 mr-3 sm:h-9" alt="GMAJOR Logo" />
         </a>
 
         <div class="flex items-center lg:order-2 lg:gap-x-8">
           <ul class="hidden lg:flex font-medium space-x-8">
             <li>
-              <a href="https://gmajor.biz/about-us" target="_blank"
+              <a href="https://gmajor.biz/about-us/?lang=vi" target="_blank"
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b font-bold border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0">
                 VỀ CHÚNG TÔI</a>
             </li>
           </ul>
-          <a href="https://market.gmajor.biz/register" target="_blank"
+          <a href="https://market.gmajor.biz/register/?lang=vi" target="_blank"
             class="text-white bg-main hover:bg-main_hover focus:ring-4 focus:ring-main font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none hidden sm:block">
             ĐĂNG KÝ</a>
 
-            <div class="relative inline-block text-left z-50">
-              <button id="lang-button" type="button"
-                class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none">
-                <img id="current-flag" src="https://flagcdn.com/vn.svg" alt="flag" class="w-5 h-3 rounded-sm" />
-                <span id="current-lang">Tiếng Việt</span>
-                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-  
-              <ul id="lang-dropdown"
-                class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg">
-                <li data-lang="en" data-url="https://landing.gmajor.biz/en"
-                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                  <img src="https://flagcdn.com/us.svg" alt="English" class="w-5 h-3 mr-3 rounded-sm" />
-                  Tiếng Anh
-                </li>
-                <li data-lang="vi" data-url="https://landing.gmajor.biz/vi"
-                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                  <img src="https://flagcdn.com/vn.svg" alt="Vietnamese" class="w-5 h-3 mr-3 rounded-sm" />
-                  Tiếng Việt
-                </li>
-                <li data-lang="ja" data-url="https://landing.gmajor.biz/ja"
-                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                  <img src="https://flagcdn.com/jp.svg" alt="Japanese" class="w-5 h-3 mr-3 rounded-sm" />
-                  Tiếng Nhật
-                </li>
-              </ul>
-  
-            </div>
+          <div class="relative inline-block text-left z-50">
+            <button id="lang-button" type="button"
+              class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none">
+              <img id="current-flag" src="https://flagcdn.com/vn.svg" alt="flag" class="w-5 h-3 rounded-sm" />
+              <span id="current-lang">Tiếng Việt</span>
+              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <ul id="lang-dropdown"
+              class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg">
+              <li data-lang="en" data-url="https://landing.gmajor.biz/en"
+                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                <img src="https://flagcdn.com/us.svg" alt="English" class="w-5 h-3 mr-3 rounded-sm" />
+                Tiếng Anh
+              </li>
+              <li data-lang="vi" data-url="https://landing.gmajor.biz/vi"
+                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                <img src="https://flagcdn.com/vn.svg" alt="Vietnamese" class="w-5 h-3 mr-3 rounded-sm" />
+                Tiếng Việt
+              </li>
+              <li data-lang="ja" data-url="https://landing.gmajor.biz/ja"
+                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                <img src="https://flagcdn.com/jp.svg" alt="Japanese" class="w-5 h-3 mr-3 rounded-sm" />
+                Tiếng Nhật
+              </li>
+            </ul>
+
+          </div>
 
           <button data-collapse-toggle="mobile-menu-2" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -207,12 +218,12 @@
         <div class="items-center justify-between hidden w-full" id="mobile-menu-2">
           <ul class="flex flex-col mt-4 font-medium lg:flex-row lg:space-x-8 lg:mt-0">
             <li>
-              <a href="https://gmajor.biz/about-us" target="_blank"
+              <a href="https://gmajor.biz/about-us/?lang=vi" target="_blank"
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b font-bold border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0">
                 VỀ CHÚNG TÔI</a>
             </li>
             <li>
-              <a href="https://market.gmajor.biz/register" target="_blank"
+              <a href="https://market.gmajor.biz/register/?lang=vi" target="_blank"
                 class="block py-2 pl-3 pr-4 text-gray-700 border-b font-bold border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-main lg:p-0">
                 ĐĂNG KÝ</a>
             </li>
@@ -234,11 +245,14 @@
           NỀN TẢNG KẾT NỐI TRỰC TUYẾN B2B THÔNG MINH
         </p>
         <p class="lg:max-w-xl text-text">
-          GMAJOR là nền tảng kết nối B2B thông minh giúp doanh nghiệp của bạn kết nối với các đối tác đáng tin cậy trên khắp Việt Nam, 
+          GMAJOR là nền tảng kết nối B2B thông minh giúp doanh nghiệp của bạn kết nối với các đối tác đáng tin cậy trên
+          khắp Việt Nam,
           Nhật Bản, ASEAN và Hoa Kỳ mà không gặp rào cản ngôn ngữ.<br>
-          Với tính năng trò chuyện đa ngôn ngữ tích hợp, công cụ Yêu cầu báo giá (RFQ) và tính năng đề xuất hàng loạt, bạn có thể hợp lý hóa 
+          Với tính năng trò chuyện đa ngôn ngữ tích hợp, công cụ Yêu cầu báo giá (RFQ) và tính năng đề xuất hàng loạt,
+          bạn có thể hợp lý hóa
           quy trình tìm nguồn cung ứng hoặc bán hàng hoàn toàn miễn phí.<br>
-          Để tăng khả năng hiển thị của bạn trên GMAJOR, chỉ cần sử dụng Điểm tín dụng để mở khóa các tính năng cao cấp như:
+          Để tăng khả năng hiển thị của bạn trên GMAJOR, chỉ cần sử dụng Điểm tín dụng để mở khóa các tính năng cao cấp
+          như:
         </p>
 
         <!-- List -->
@@ -292,7 +306,7 @@
           </li>
         </ul>
         <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
-          <a href="https://market.gmajor.biz/register" target="_blank"
+          <a href="https://market.gmajor.biz/register/?lang=vi" target="_blank"
             class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-bold text-center text-white bg-main hover:bg-main_hover border rounded-lg sm:w-auto">
             ĐĂNG KÝ NGAY
           </a>
@@ -412,8 +426,9 @@
           <img src="../images/marketplace-icon.png" alt="Marketplace icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Marketplace</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
-            Thị trường B2B dành cho các nhà bán buôn. 
-            Khám phá sản phẩm, kết nối với doanh nghiệp trên toàn thế giới và phát triển doanh nghiệp của bạn một cách dễ dàng và tự tin.
+            Thị trường B2B dành cho các nhà bán buôn.
+            Khám phá sản phẩm, kết nối với doanh nghiệp trên toàn thế giới và phát triển doanh nghiệp của bạn một cách
+            dễ dàng và tự tin.
           </p>
         </article>
 
@@ -429,7 +444,7 @@
           <img src="../images/chat-icon.png" alt="Multilingual Chat icon" class="w-10 h-10 mb-5 z-10">
           <h3 class="text-xl font-semibold mb-2 z-10">Trò chuyện đa ngôn ngữ</h3>
           <p class="text-base leading-6 text-gray-900 z-10">
-            Kiểm tra "Hộp trò chuyện" của bạn để nhắn tin với khách hàng với hỗ trợ đa ngôn ngữ 
+            Kiểm tra "Hộp trò chuyện" của bạn để nhắn tin với khách hàng với hỗ trợ đa ngôn ngữ
             &nbsp;(VN, EN, JP).
           </p>
         </article>
@@ -461,7 +476,7 @@
       <!-- heading -->
       <h1 class="font-extrabold uppercase tracking-tight
               [text-shadow:3px_3px_2px_rgba(0,0,0,.35)] text-3xl md:text-5xl mb-12">
-          CHÚNG TÔI SẼ LUÔN Ở BÊN BẠN&hellip;
+        CHÚNG TÔI SẼ LUÔN Ở BÊN BẠN&hellip;
       </h1>
 
       <!-- grid 4 cột × 2 hàng (thu nhỏ xuống 2 cột trên md) -->
@@ -482,8 +497,8 @@
             ĐỐI TÁC<br>KINH DOANH<br>TOÀN CẦU<br>CỦA BẠN
           </h2>
           <p class="text-sm md:text-base leading-6 max-w-prose">
-            Chúng tôi hỗ trợ hành trình giao thương của bạn với các giải pháp liền mạch, 
-            từ tìm nguồn cung ứng đến hỗ trợ sau bán hàng. Uy tín, minh bạch và tăng trưởng. 
+            Chúng tôi hỗ trợ hành trình giao thương của bạn với các giải pháp liền mạch,
+            từ tìm nguồn cung ứng đến hỗ trợ sau bán hàng. Uy tín, minh bạch và tăng trưởng.
             Tất cả tại một nơi.
           </p>
         </article>
@@ -522,10 +537,15 @@
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:col-span-2 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
           <div class="flex items-center justify-between h-full">
-            <h2 class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-loose uppercase">
-              CÔNG NGHỆ <br /> THÔNG MINH
-            </h2>
-
+            <div>
+              <h2 class="mb-3 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-loose uppercase">
+                CÔNG NGHỆ
+              </h2>
+              <h2 class="mb-3 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-loose uppercase">
+                THÔNG MINH
+              </h2>
+            </div>
+           
             <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="../images/ai-chip-transparent.png"
               alt="AI Chip" />
           </div>
@@ -800,7 +820,7 @@
                              text-base sm:text-xl
                              opacity-0 z-20
                              group-hover:opacity-100">
-                      NÔNG NGHIỆP
+                    NÔNG NGHIỆP
                   </span>
                 </div>
 
@@ -850,7 +870,7 @@
                              text-base sm:text-xl
                              opacity-0 z-20
                              group-hover:opacity-100">
-                    <span>THỰC PHẨM  &amp;<br>TRUNG BÌNH</span>
+                    <span>THỰC PHẨM &amp;<br>TRUNG BÌNH</span>
                   </span>
                 </div>
 
@@ -1131,12 +1151,13 @@
             class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
             <span
               class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+30,000<br>
-              NGƯỜI DÙNG TOÀN CẦU</span>
+              NGƯỜI DÙNG<br>TOÀN CẦU</span>
           </div>
           <div
             class="market-stat bg-gradient-to-r from-green_light to-blue_light rounded-xl px-10 py-6 shadow-lg text-left">
             <span
-              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>SẢN PHẨM</span>
+              class="text-xl md:text-3xl text-center font-extrabold text-gray-800 drop-shadow-text block">+50,000<br>SẢN
+              PHẨM</span>
           </div>
         </div>
         <!-- Map and markers -->
@@ -1144,40 +1165,40 @@
           <img src="../images/world-map.png" alt="World Map" class="w-full max-w-[2000px] block drop-shadow-sm" />
           <!-- Markers (adjust left/top for each location) -->
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="USA"
+            class="map-marker absolute left-[18%] top-[38%] w-[25px] md:w-[35px] cursor-pointer" data-location="Hoa Kỳ"
             alt="USA" />
           <img src="../images/gmajor-logo-map.png"
             class="map-marker absolute left-[32%] top-[68%] w-[20px] md:w-[25px] cursor-pointer" data-location="Brazil"
             alt="Brazil" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Europe"
+            class="map-marker absolute left-[48%] top-[32%] w-[20px] md:w-[25px] cursor-pointer" data-location="Châu Âu"
             alt="Europe" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer" data-location="Africa"
-            alt="Africa" />
+            class="map-marker absolute left-[50%] top-[58%] w-[20px] md:w-[25px] cursor-pointer"
+            data-location="Châu Phi" alt="Africa" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="India"
+            class="map-marker absolute left-[67%] top-[48%] w-[20px] md:w-[25px] cursor-pointer" data-location="Ấn Độ"
             alt="India" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer" data-location="China"
-            alt="China" />
+            class="map-marker absolute left-[70%] top-[38%] w-[20px] md:w-[25px] cursor-pointer"
+            data-location="Trung Quốc" alt="China" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer" data-location="Japan"
-            alt="Japan" />
+            class="map-marker absolute left-[83%] top-[37%] w-[25px] md:w-[35px] cursor-pointer"
+            data-location="Nhật Bản" alt="Japan" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer" data-location="Vietnam"
-            alt="Vietnam" />
+            class="map-marker absolute left-[75%] top-[48%] w-[25px] md:w-[35px] cursor-pointer"
+            data-location="Việt Nam" alt="Vietnam" />
           <img src="../images/gmajor-logo-map.png"
-            class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer"
-            data-location="Australia" alt="Australia" />
+            class="map-marker absolute left-[82%] top-[75%] w-[20px] md:w-[25px] cursor-pointer" data-location="Úc"
+            alt="Australia" />
         </div>
-      </div>
-      <!-- Tooltip -->
-      <div id="marker-tooltip"
-        class="hidden fixed pointer-events-none bg-black/85 text-white px-4 py-1.5 rounded-md text-base font-semibold z-50 whitespace-nowrap shadow-lg top-0 left-0">
-      </div>
 
-    </div>
+        <!-- Tooltip -->
+        <div id="marker-tooltip"
+          class="hidden fixed pointer-events-none bg-black/85 text-white px-4 py-1.5 rounded-md text-base font-semibold z-50 whitespace-nowrap shadow-lg top-0 left-0">
+        </div>
+
+      </div>
   </section>
 
 
@@ -1197,7 +1218,7 @@
       </h2>
 
       <div class="">
-        <a href="#"
+        <a href="https://market.gmajor.biz/register?lang=vi"
           class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           TÌM HIỂU THÊM
         </a>
@@ -1215,10 +1236,10 @@
     <div class="section-solutions max-w-[1280px] mx-auto px-4 lg:px-6 py-6 mb-20">
       <h2 class="font-bold tracking-tight text-center uppercase
         [text-shadow:2px_2px_0px_rgba(0,0,0,.25)] text-xl md:text-3xl mb-6">
-          BẠN KHÔNG ĐƠN ĐỘC - GMAJOR Ở ĐÂY VÌ BẠN
+        BẠN KHÔNG ĐƠN ĐỘC - GMAJOR Ở ĐÂY VÌ BẠN
       </h2>
       <div class="text-center">
-        <a href="#"
+        <a href="https://market.gmajor.biz/register?lang=vi"
           class="bg-white py-2 px-4 rounded-xl font-bold text-base md:text-lg uppercase [text-shadow:2px_2px_0px_rgba(0,0,0,.15)]">
           BẮT ĐẦU NGAY
         </a>
@@ -1232,8 +1253,7 @@
   <!-- Start block -->
   <section class="bg-gray-50 lg:bg-white transition-all duration-500 ease-in-out">
     <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-24 lg:px-6">
-      <h2
-        class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl ">
+      <h2 class="mb-6 text-3xl font-extrabold tracking-tight text-center text-gray-900 lg:mb-8 lg:text-3xl ">
         Not sure about GMAJOR?
       </h2>
       <div class="max-w-screen-md mx-auto">
@@ -1241,23 +1261,26 @@
           data-active-classes="bg-blue-50 border-blue-200 text-blue-900 transition-all duration-300 ease-in-out shadow-md"
           data-inactive-classes="bg-gray-50 text-gray-600 transition-all duration-300 ease-in-out">
           <!-- Question 1 -->
-          <h3 id="accordion-flush-heading-1" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-1"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-1" aria-expanded="false"
               aria-controls="accordion-flush-body-1">
               <span class="transition-all duration-300 ease-in-out">What is GMAJOR and who should use it?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-1" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-1">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-1" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-1">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 GMAJOR is a smart B2B platform that helps businesses connect and trade across countries — especially
                 between Vietnam, Japan, the U.S., and ASEAN. Whether you're a manufacturer, importer, trading company,
@@ -1267,47 +1290,55 @@
             </div>
           </div>
           <!-- Question 2 -->
-          <h3 id="accordion-flush-heading-2" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-2"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-2" aria-expanded="false"
               aria-controls="accordion-flush-body-2">
               <span class="transition-all duration-300 ease-in-out">Do I have to pay to use GMAJOR?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-2" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-2">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-2" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-2">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Absolutely not. GMAJOR offers a completely free plan that includes account registration, product
-                posting, RFQ submissions, messaging, and multilingual chat. Paid upgrades like banners or verified badges are optional.
+                posting, RFQ submissions, messaging, and multilingual chat. Paid upgrades like banners or verified
+                badges are optional.
               </p>
             </div>
           </div>
           <!-- Question 3 -->
-          <h3 id="accordion-flush-heading-3" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-3"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-3" aria-expanded="false"
               aria-controls="accordion-flush-body-3">
-              <span class="transition-all duration-300 ease-in-out">I'm not fluent in English, Japanese, or Vietnamese — how can I communicate?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <span class="transition-all duration-300 ease-in-out">I'm not fluent in English, Japanese, or Vietnamese —
+                how can I communicate?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-3" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-3">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-3" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-3">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 No worries! GMAJOR features a built-in multilingual chat that lets you type in your own language, and it
                 will automatically translate to your partner's language. No translators or long emails needed — just
@@ -1316,61 +1347,73 @@
             </div>
           </div>
           <!-- Question 4 -->
-          <h3 id="accordion-flush-heading-4" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-4"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-4" aria-expanded="false"
               aria-controls="accordion-flush-body-4">
-              <span class="transition-all duration-300 ease-in-out">I'm looking for suppliers or buyers. How does GMAJOR help?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <span class="transition-all duration-300 ease-in-out">I'm looking for suppliers or buyers. How does GMAJOR
+                help?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-4" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-4">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-4" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-4">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 You can:
               </p>
               <ul class="pl-5 text-gray-600 list-disc space-y-4">
                 <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
-                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Post products or services for visibility</strong>
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Post products or
+                    services for visibility</strong>
                 </li>
                 <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
-                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Send RFQs to multiple verified partners at once</strong>
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Send RFQs to
+                    multiple verified partners at once</strong>
                 </li>
                 <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
-                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Use Bulk Proposal tools to save time</strong>
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Use Bulk
+                    Proposal tools to save time</strong>
                 </li>
                 <li class="transition-all duration-300 ease-in-out hover:text-gray-800 hover:translate-x-1">
-                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Leverage the smart matching engine to find the most relevant business
+                  <strong class="text-main transition-all duration-300 ease-in-out hover:text-blue-700">Leverage the
+                    smart matching engine to find the most relevant business
                     connections</strong>
                 </li>
               </ul>
             </div>
           </div>
           <!-- Question 5 -->
-          <h3 id="accordion-flush-heading-5" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-5"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-5" aria-expanded="false"
               aria-controls="accordion-flush-body-5">
-              <span class="transition-all duration-300 ease-in-out">Are users on GMAJOR verified? Can I trust them?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <span class="transition-all duration-300 ease-in-out">Are users on GMAJOR verified? Can I trust
+                them?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-5" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-5">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-5" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-5">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Yes. GMAJOR manually reviews and verifies all business accounts before allowing posts and messages. You
                 can also apply for a Verification Badge to enhance trust and visibility. It's a secure environment for
@@ -1379,23 +1422,27 @@
             </div>
           </div>
           <!-- Question 6 -->
-          <h3 id="accordion-flush-heading-6" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-6"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-6" aria-expanded="false"
               aria-controls="accordion-flush-body-6">
-              <span class="transition-all duration-300 ease-in-out">How is GMAJOR different from Alibaba or Facebook groups?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <span class="transition-all duration-300 ease-in-out">How is GMAJOR different from Alibaba or Facebook
+                groups?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-6" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-6">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-6" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-6">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Compared to Alibaba: GMAJOR is completely free, doesn't rely on ads, and is easier for SMEs.
                 <br>
@@ -1405,23 +1452,27 @@
             </div>
           </div>
           <!-- Question 7 -->
-          <h3 id="accordion-flush-heading-7" class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
+          <h3 id="accordion-flush-heading-7"
+            class="transform transition-all duration-300 ease-in-out hover:scale-102 hover:shadow-lg rounded-lg">
             <button type="button"
               class="flex items-center justify-between w-full py-5 font-medium text-left text-gray-600 bg-gray-50 border-b border-gray-200
                      transition-all duration-300 ease-in-out hover:bg-blue-100 hover:border-blue-400 hover:text-blue-800 focus:ring-2 focus:ring-blue-500 focus:outline-none rounded-lg px-4"
               data-accordion-target="#accordion-flush-body-7" aria-expanded="false"
               aria-controls="accordion-flush-body-7">
-              <span class="transition-all duration-300 ease-in-out"> I'm just starting my business and don't have any clients yet. Should I use GMAJOR?</span>
-              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out" fill="currentColor" viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg">
+              <span class="transition-all duration-300 ease-in-out"> I'm just starting my business and don't have any
+                clients yet. Should I use GMAJOR?</span>
+              <svg data-accordion-icon="" class="w-6 h-6 shrink-0 transition-transform duration-500 ease-in-out"
+                fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                   d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                   clip-rule="evenodd"></path>
               </svg>
             </button>
           </h3>
-          <div id="accordion-flush-body-7" class="transition-all duration-500 ease-in-out transform" aria-labelledby="accordion-flush-heading-7">
-            <div class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
+          <div id="accordion-flush-body-7" class="transition-all duration-500 ease-in-out transform"
+            aria-labelledby="accordion-flush-heading-7">
+            <div
+              class="py-5 border-b border-gray-200 transition-all duration-300 ease-in-out bg-gray-25 hover:bg-gray-100 rounded-lg px-4">
               <p class="mb-2 text-gray-600 transition-all duration-300 ease-in-out hover:text-gray-800 leading-relaxed">
                 Definitely! GMAJOR is ideal for new businesses, startups, and small suppliers. You don't need a network
                 or large marketing budget — just create a profile, post your products, and let GMAJOR help you reach
@@ -1602,7 +1653,7 @@
     .then(html => {
       document.getElementById('contact-form').innerHTML = html;
     });
-  
+
   // fetch('./faq.html')
   //   .then(response => response.text())
   //   .then(html => {
@@ -1648,22 +1699,18 @@
 </script>
 
 <script>
-document.querySelectorAll('[data-accordion-target]').forEach(btn => {
-  btn.addEventListener('click', function() {
-    const targetId = btn.getAttribute('data-accordion-target');
-    const target = document.querySelector(targetId);
-    // Đóng tất cả accordion khác
-    document.querySelectorAll('[id^="accordion-flush-body-"]').forEach(div => {
-      if (div !== target) {
-        div.classList.remove('active');
-      }
+  document.querySelectorAll('[data-accordion-target]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      const targetId = btn.getAttribute('data-accordion-target');
+      const target = document.querySelector(targetId);
+      // Đóng tất cả accordion khác
+      document.querySelectorAll('[id^="accordion-flush-body-"]').forEach(div => {
+        if (div !== target) {
+          div.classList.remove('active');
+        }
+      });
+      // Toggle accordion hiện tại
+      target.classList.toggle('active');
     });
-    // Toggle accordion hiện tại
-    target.classList.toggle('active');
   });
-});
 </script>
-
-
-
-
