@@ -157,31 +157,36 @@
             class="text-white bg-main hover:bg-main_hover focus:ring-4 focus:ring-main font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none hidden sm:block">SIGN
             UP NOW</a>
 
-          <div class="relative inline-block text-left z-50">
-            <button id="lang-button" type="button"
-              class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none">
-              <img id="current-flag" src="https://flagcdn.com/us.svg" alt="flag" class="w-5 h-3 rounded-sm" />
-              <span id="current-lang">English</span>
-              <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
-
-            <ul id="lang-dropdown"
-              class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg">
-              <li data-lang="en" data-url="http://127.0.0.1:1060/en"
-                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                <img src="https://flagcdn.com/us.svg" alt="English" class="w-5 h-3 mr-3 rounded-sm" />
-                English
-              </li>
-              <li data-lang="vi" data-url="http://127.0.0.1:1060/vi"
-                class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
-                <img src="https://flagcdn.com/vn.svg" alt="Tiếng Việt" class="w-5 h-3 mr-3 rounded-sm" />
-                Tiếng Việt
-              </li>
-            </ul>
-
-          </div>
+            <div class="relative inline-block text-left z-50">
+              <button id="lang-button" type="button"
+                class="inline-flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 focus:outline-none">
+                <img id="current-flag" src="https://flagcdn.com/us.svg" alt="flag" class="w-5 h-3 rounded-sm" />
+                <span id="current-lang">English</span>
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+  
+              <ul id="lang-dropdown"
+                class="hidden absolute left-0 mt-2 w-40 bg-white border border-gray-200 rounded-md shadow-lg">
+                <li data-lang="en" data-url="http://127.0.0.1:1060/en"
+                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/us.svg" alt="English" class="w-5 h-3 mr-3 rounded-sm" />
+                  English
+                </li>
+                <li data-lang="vi" data-url="http://127.0.0.1:1060/vi"
+                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/vn.svg" alt="Vietnamese" class="w-5 h-3 mr-3 rounded-sm" />
+                  Vietnamese
+                </li>
+                <li data-lang="ja" data-url="http://127.0.0.1:1060/ja"
+                  class="flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 cursor-pointer">
+                  <img src="https://flagcdn.com/jp.svg" alt="Japanese" class="w-5 h-3 mr-3 rounded-sm" />
+                  Japanese
+                </li>
+              </ul>
+  
+            </div>
 
           <button data-collapse-toggle="mobile-menu-2" type="button"
             class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
@@ -519,8 +524,9 @@
         <article
           class="relative flex flex-col justify-center border-4 border-black rounded-[22px] bg-white p-6 md:p-8 drop-shadow-[2px_2px_5px_rgba(0,0,0,0.35)] lg:col-start-3 lg:col-span-2 lg:row-start-2 after:content-[''] after:absolute after:inset-3 after:border-[3px] after:border-black after:rounded-[18px] after:pointer-events-none holographic-card">
           <div class="flex items-center justify-between h-full">
-            <h2 class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-normal uppercase">
-              SMART <br /> TECH
+            <h2 class="m-0 text-xl md:text-3xl lg:text-[45px] font-extrabold leading-loose uppercase">
+              Smart<br>
+              Tech
             </h2>
 
             <img class="w-20 h-20 md:w-28 md:h-28 lg:w-36 lg:h-36" src="../images/ai-chip-transparent.png"
@@ -1445,7 +1451,8 @@
       const currentFlag = document.getElementById('current-flag');
 
       const isVietnamese = window.location.href.includes('vi');
-      if (!isVietnamese) {
+      const isJapanese = window.location.href.includes('ja');
+      if (!isVietnamese || !isJapanese) {
         currentLang.textContent = 'English';
         currentFlag.src = 'https://flagcdn.com/us.svg';
       }
