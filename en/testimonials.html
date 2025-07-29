@@ -32,23 +32,18 @@
       gap: 1.5rem;
   }
 
-  .animate-scroll-down {
-    animation: scroll-down 45s linear infinite;
-  }
-
-  .animate-scroll-up {
-    animation: scroll-up 45s linear infinite;
-  }
-
+  /* Smooth vertical marquee effect for testimonials - duplicated content for seamless loop */
   @keyframes scroll-down {
-    from { transform: translateY(0); }
-    to { transform: translateY(-50%); }
+    /* Cuộn từ đầu đến hết phần nội dung gốc (50% chiều cao nếu đã nhân đôi) */
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
   }
-
   @keyframes scroll-up {
-    from { transform: translateY(-50%); }
-    to { transform: translateY(0); }
+    /* Cuộn ngược lại từ giữa về đầu */
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
   }
+  /* Đảm bảo mỗi .scrolling-wrapper chứa đúng 2 lần lặp lại của các .testimonial-card-item để hiệu ứng liền mạch, không bị khựng */
 
   .testimonial-card-item > div {
     position: relative;
@@ -89,6 +84,24 @@
 
   .testimonial-column:hover .scrolling-wrapper {
     animation-play-state: paused;
+  }
+
+  .testimonial-card-item img {
+    object-fit: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+    aspect-ratio: 1/1;
+    display: block;
+  }
+
+  .animate-scroll-down {
+    /* Đặt lại thời gian animation về 45s để tốc độ cuộn từng testimonial giống như trước khi nhân đôi nội dung */
+    animation: scroll-down 45s linear infinite;
+  }
+
+  .animate-scroll-up {
+    /* Đặt lại thời gian animation về 45s để tốc độ cuộn từng testimonial giống như trước khi nhân đôi nội dung */
+    animation: scroll-up 45s linear infinite;
   }
 
   /* Responsive styles */
@@ -191,7 +204,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam .jpg" alt="Nguyen Van Hung avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Van Hung</p>
                       <p class="text-sm" style="color:#555;">Dak Lak Coffee Export Co., Ltd.</p>
@@ -207,7 +220,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Sato Kenji avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Sato Kenji</p>
                       <p class="text-sm" style="color:#555;">Osaka Food Trading Co., Ltd.</p>
@@ -223,7 +236,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 1.jpg" alt="Tran Thi My Linh avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Tran Thi My Linh</p>
                       <p class="text-sm" style="color:#555;">VietHerb Organic Co.</p>
@@ -239,7 +252,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu.jpg" alt="James Walker avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">James Walker</p>
                       <p class="text-sm" style="color:#555;">PureLeaf Distributors – Texas, USA</p>
@@ -255,7 +268,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam .jpg" alt="Nguyen Van Hung avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Van Hung</p>
                       <p class="text-sm" style="color:#555;">Dak Lak Coffee Export Co., Ltd.</p>
@@ -270,7 +283,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Sato Kenji avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Sato Kenji</p>
                       <p class="text-sm" style="color:#555;">Osaka Food Trading Co., Ltd.</p>
@@ -285,7 +298,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 1.jpg" alt="Tran Thi My Linh avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Tran Thi My Linh</p>
                       <p class="text-sm" style="color:#555;">VietHerb Organic Co.</p>
@@ -300,7 +313,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu.jpg" alt="James Walker avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">James Walker</p>
                       <p class="text-sm" style="color:#555;">PureLeaf Distributors – Texas, USA</p>
@@ -322,7 +335,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Nguyen Thanh Loc avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Thanh Loc</p>
                       <p class="text-sm" style="color:#555;">Quang Loc Mechanical Co., Ltd.</p>
@@ -338,7 +351,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 3.jpg" alt="Lee Min-Jae avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Lee Min-Jae</p>
                       <p class="text-sm" style="color:#555;">Korea BizSource Inc.</p>
@@ -354,7 +367,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ.jpg" alt="Nguyen Khanh Vy avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Khanh Vy</p>
                       <p class="text-sm" style="color:#555;">VFresh Farm Startup – Can Tho</p>
@@ -370,7 +383,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Nguyen Minh Khoa avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Minh Khoa</p>
                       <p class="text-sm" style="color:#555;">Minh Khoa Vegan Foods Co.</p>
@@ -386,7 +399,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Nguyen Thanh Loc avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Thanh Loc</p>
                       <p class="text-sm" style="color:#555;">Quang Loc Mechanical Co., Ltd.</p>
@@ -401,7 +414,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 3.jpg" alt="Lee Min-Jae avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Lee Min-Jae</p>
                       <p class="text-sm" style="color:#555;">Korea BizSource Inc.</p>
@@ -416,7 +429,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ.jpg" alt="Nguyen Khanh Vy avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Khanh Vy</p>
                       <p class="text-sm" style="color:#555;">VFresh Farm Startup – Can Tho</p>
@@ -431,7 +444,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Nguyen Minh Khoa avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Minh Khoa</p>
                       <p class="text-sm" style="color:#555;">Minh Khoa Vegan Foods Co.</p>
@@ -453,7 +466,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Le Quoc Phong avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Le Quoc Phong</p>
                       <p class="text-sm" style="color:#555;">An Nhien Garment Co., Ltd.</p>
@@ -469,7 +482,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 1.jpg" alt="Daniel Okeke avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Daniel Okeke</p>
                       <p class="text-sm" style="color:#555;">GreenPro Trading (Nigeria)</p>
@@ -485,7 +498,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 3.jpg" alt="Chen Jiawei avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Chen Jiawei</p>
                       <p class="text-sm" style="color:#555;">Shanghai Aroma Goods Co.</p>
@@ -501,7 +514,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 2.jpg" alt="Nguyen Ngoc Bao Tran avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Ngoc Bao Tran</p>
                       <p class="text-sm" style="color:#555;">Sales Leader – Viet Xanh Wood Co.</p>
@@ -517,7 +530,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I used to post on Facebook forums with no reply. But on GMAJOR, real buyers actually message us.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Le Quoc Phong avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Le Quoc Phong</p>
                       <p class="text-sm" style="color:#555;">An Nhien Garment Co., Ltd.</p>
@@ -532,7 +545,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Most platforms ignore Africa, but with GMAJOR we found pepper and cassia suppliers at fair prices and with clear documentation.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 1.jpg" alt="Daniel Okeke avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Daniel Okeke</p>
                       <p class="text-sm" style="color:#555;">GreenPro Trading (Nigeria)</p>
@@ -547,7 +560,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We connected with four Vietnamese spice exporters via GMAJOR. No agent fees, fast communication, and real results.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 3.jpg" alt="Chen Jiawei avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Chen Jiawei</p>
                       <p class="text-sm" style="color:#555;">Shanghai Aroma Goods Co.</p>
@@ -562,7 +575,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“The platform also supports professional business profile creation, which increases trust when working with international partners.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 2.jpg" alt="Nguyen Ngoc Bao Tran avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Nguyen Ngoc Bao Tran</p>
                       <p class="text-sm" style="color:#555;">Sales Leader – Viet Xanh Wood Co.</p>
@@ -584,7 +597,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 2.jpg" alt="Michael Tran avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Michael Tran</p>
                       <p class="text-sm" style="color:#555;">Global Exports</p>
@@ -600,7 +613,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 3.jpg" alt="David Chen avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">David Chen</p>
                       <p class="text-sm" style="color:#555;">Asia Imports Co.</p>
@@ -616,7 +629,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ âu 1.jpg" alt="Sophia Nguyen avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Sophia Nguyen</p>
                       <p class="text-sm" style="color:#555;">Authentic Goods LLC</p>
@@ -632,7 +645,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 3.jpg" alt="Liam O'Connell avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Liam O'Connell</p>
                       <p class="text-sm" style="color:#555;">Euro Foods Ltd.</p>
@@ -648,7 +661,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Thanks to GMAJOR, we connected with two Japanese buyers within a week of posting our products. The multilingual chat is super convenient — no need to hire a translator.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 2.jpg" alt="Michael Tran avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Michael Tran</p>
                       <p class="text-sm" style="color:#555;">Global Exports</p>
@@ -663,7 +676,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“GMAJOR allows us to chat directly with Vietnamese spice suppliers. It’s safe, simple, and helps move deals forward smoothly.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 3.jpg" alt="David Chen avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">David Chen</p>
                       <p class="text-sm" style="color:#555;">Asia Imports Co.</p>
@@ -678,7 +691,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We’ve tried many B2B platforms, but only GMAJOR verifies accounts seriously. No spam like on other sites.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ âu 1.jpg" alt="Sophia Nguyen avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Sophia Nguyen</p>
                       <p class="text-sm" style="color:#555;">Authentic Goods LLC</p>
@@ -693,7 +706,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“We used GMAJOR to find Vietnamese coconut coffee suppliers for our retail chain — smooth RFQ process and multilingual chat saved us weeks.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam âu 3.jpg" alt="Liam O'Connell avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Liam O'Connell</p>
                       <p class="text-sm" style="color:#555;">Euro Foods Ltd.</p>
@@ -715,7 +728,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam .jpg" alt="Tran Van Binh avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Tran Van Binh</p>
                       <p class="text-sm" style="color:#555;">Binh Minh Handicrafts</p>
@@ -731,7 +744,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Park Seo-joon avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Park Seo-joon</p>
                       <p class="text-sm" style="color:#555;">Seoul Sourcing Partners</p>
@@ -747,7 +760,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 3.jpg" alt="Le Thi Mai avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Le Thi Mai</p>
                       <p class="text-sm" style="color:#555;">Mai's Organic Snacks</p>
@@ -763,7 +776,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Pham Van Duc avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Pham Van Duc</p>
                       <p class="text-sm" style="color:#555;">Duc Phat Food Export</p>
@@ -779,7 +792,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Our first Japanese client came from GMAJOR. I don’t speak Japanese, but thanks to the auto-translation chat, I still closed the deal.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another Vietnamese Exporter avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam .jpg" alt="Tran Van Binh avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Tran Van Binh</p>
                       <p class="text-sm" style="color:#555;">Binh Minh Handicrafts</p>
@@ -794,7 +807,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“I discovered several verified Vietnamese OEM suppliers on GMAJOR within 3 days. Fast, clear, and no fake leads — a great platform.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Korean Buyer avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 1.jpg" alt="Park Seo-joon avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Park Seo-joon</p>
                       <p class="text-sm" style="color:#555;">Seoul Sourcing Partners</p>
@@ -809,7 +822,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“Even though I’m a new small business, I was able to reach international buyers. The platform is beginner-friendly and free to use.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Startup Founder avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nữ 3.jpg" alt="Le Thi Mai avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Le Thi Mai</p>
                       <p class="text-sm" style="color:#555;">Mai's Organic Snacks</p>
@@ -824,7 +837,7 @@
                 <div class="testimonial-content">
                   <p class="mb-5" style="color:#333;">“What I like most is the smart buyer suggestion feature — it saves me hours of manual searching.”</p>
                   <div class="flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Food Exporter avatar">
+                    <img class="w-10 h-10 rounded-full" src="images/nam 2.jpg" alt="Pham Van Duc avatar">
                     <div class="ml-4">
                       <p class="font-bold" style="color:#111;">Pham Van Duc</p>
                       <p class="text-sm" style="color:#555;">Duc Phat Food Export</p>
