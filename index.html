@@ -1451,7 +1451,7 @@
 
       const isVietnamese = window.location.href.includes('vi');
       const isJapanese = window.location.href.includes('ja');
-      if (!isVietnamese || !isJapanese) {
+      if (!isVietnamese && !isJapanese) {
         currentLang.textContent = 'English';
         currentFlag.src = 'https://flagcdn.com/us.svg';
       }
