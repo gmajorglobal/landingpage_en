@@ -1,0 +1,712 @@
+<style>
+  .testimonial-card-item {
+    break-inside: avoid;
+  }
+
+  .testimonials-container {
+    -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .testimonials-scroller {
+    display: flex;
+    gap: 1.5rem;
+    height: 70vh;
+    max-height: 800px;
+    width: 100%;
+  }
+
+  .testimonial-column {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent);
+  }
+
+  .scrolling-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+  }
+
+  .animate-scroll-down {
+    animation: scroll-down 45s linear infinite;
+  }
+
+  .animate-scroll-up {
+    animation: scroll-up 45s linear infinite;
+  }
+
+  @keyframes scroll-down {
+    from { transform: translateY(0); }
+    to { transform: translateY(-50%); }
+  }
+
+  @keyframes scroll-up {
+    from { transform: translateY(-50%); }
+    to { transform: translateY(0); }
+  }
+
+  .testimonial-card-item > div {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #f3f3f3;
+    color: #111;
+    transition: transform 0.2s, background-color 0.2s;
+  }
+  .testimonial-content {
+    position: relative;
+    z-index: 10;
+  }
+  .testimonial-hover-overlay {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: linear-gradient(to right, #b9fbc0, #a0c4ff);
+    background-size: 200%;
+    animation: gradient-x-custom 3s ease-in-out infinite;
+    border-radius: inherit;
+  }
+  .testimonial-card-item:hover > div .testimonial-hover-overlay {
+    opacity: 0.85;
+  }
+  @keyframes gradient-x-custom {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  .testimonial-card-item:hover > div {
+    transform: scale(1.01);
+    background-color: #e0e0e0;
+  }
+
+  .testimonial-column:hover .scrolling-wrapper {
+    animation-play-state: paused;
+  }
+
+  /* Responsive styles */
+  @media (max-width: 1024px) {
+    .testimonials-scroller {
+      gap: 1rem;
+    }
+    .testimonial-column {
+      flex: 1 1 33%;
+      min-width: 0;
+      display: block;
+    }
+    .testimonial-column:nth-child(n+4) {
+      display: none;
+    }
+    .testimonial-card-item > div {
+      padding: 1.25rem;
+    }
+  }
+  @media (max-width: 768px) {
+    .testimonials-scroller {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      flex-direction: row;
+      height: auto;
+      max-height: none;
+    }
+    .testimonial-column {
+      flex: 1 1 50%;
+      min-width: 250px;
+      max-width: 100%;
+      overflow: visible;
+      -webkit-mask-image: none;
+      mask-image: none;
+    }
+    .scrolling-wrapper {
+      gap: 1rem;
+      animation: none !important;
+    }
+    .testimonial-card-item > div {
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+  }
+  @media (max-width: 480px) {
+    .testimonials-container {
+      -webkit-mask-image: none;
+      mask-image: none;
+      padding: 0 0.5rem;
+    }
+    .testimonials-scroller {
+      flex-direction: column;
+      gap: 0.5rem;
+      height: auto;
+      max-height: none;
+    }
+    .testimonial-column {
+      flex: 1 1 100%;
+      min-width: 0;
+      max-width: 100%;
+      overflow: visible;
+      -webkit-mask-image: none;
+      mask-image: none;
+      margin-bottom: 1rem;
+    }
+    .testimonial-column:not(:first-child) {
+      display: none;
+    }
+    .scrolling-wrapper {
+      gap: 0.5rem;
+      animation: none !important;
+    }
+    .testimonial-card-item > div {
+      padding: 0.75rem;
+      font-size: 0.92rem;
+    }
+    h2 {
+      font-size: 1.5rem;
+      padding: 0 0.5rem;
+    }
+    .testimonial-card-item:nth-child(n+6) {
+      display: none;
+    }
+  }
+</style>
+<section class="bg-black" style="background:#fff;">
+  <div class="py-8 mx-auto lg:py-24">
+    <h2 class="mb-12 text-4xl font-extrabold tracking-tight text-center text-black px-4">
+      世界のビジネスから信頼されています
+    </h2>
+    <div class="testimonials-container">
+      <div class="testimonials-scroller">
+        
+        <!-- Column 1: Scrolls Down -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-down">
+            <!-- Card 1 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORのおかげで、商品を投稿してから1週間以内に日本のバイヤー2社とつながりました。多言語チャットがとても便利で、翻訳者を雇う必要がありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・バン・フン</p>
+                      <p class="text-sm" style="color:#555;">ダクラクコーヒー輸出株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORにより、ベトナムのスパイスサプライヤーと直接チャットできます。安全でシンプルで、取引がスムーズに進みます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">佐藤健二</p>
+                      <p class="text-sm" style="color:#555;">大阪食品貿易株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「多くのB2Bプラットフォームを試しましたが、GMAJORだけがアカウントを真剣に認証しています。他のサイトのようなスパムがありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">チャン・ティ・ミー・リン</p>
+                      <p class="text-sm" style="color:#555;">VietHerbオーガニック株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを使って小売チェーンのベトナムココナッツコーヒーサプライヤーを見つけました。スムーズなRFQプロセスと多言語チャットで数週間を節約できました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ジェームズ・ウォーカー</p>
+                      <p class="text-sm" style="color:#555;">PureLeafディストリビューター – テキサス、アメリカ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Duplicated -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORのおかげで、商品を投稿してから1週間以内に日本のバイヤー2社とつながりました。多言語チャットがとても便利で、翻訳者を雇う必要がありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Van Hung avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・バン・フン</p>
+                      <p class="text-sm" style="color:#555;">ダクラクコーヒー輸出株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORにより、ベトナムのスパイスサプライヤーと直接チャットできます。安全でシンプルで、取引がスムーズに進みます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sato Kenji avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">佐藤健二</p>
+                      <p class="text-sm" style="color:#555;">大阪食品貿易株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「多くのB2Bプラットフォームを試しましたが、GMAJORだけがアカウントを真剣に認証しています。他のサイトのようなスパムがありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Tran Thi My Linh avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">チャン・ティ・ミー・リン</p>
+                      <p class="text-sm" style="color:#555;">VietHerbオーガニック株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを使って小売チェーンのベトナムココナッツコーヒーサプライヤーを見つけました。スムーズなRFQプロセスと多言語チャットで数週間を節約できました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="James Walker avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ジェームズ・ウォーカー</p>
+                      <p class="text-sm" style="color:#555;">PureLeafディストリビューター – テキサス、アメリカ</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2: Scrolls Up -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-up">
+            <!-- Card 5 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「最初の日本のクライアントはGMAJORから来ました。日本語は話せませんが、自動翻訳チャットのおかげで取引を成立させることができました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・タイン・ロック</p>
+                      <p class="text-sm" style="color:#555;">クアンロック機械株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「3日以内にGMAJORで複数の認証済みベトナムOEMサプライヤーを発見しました。迅速で明確で、偽のリードがありません。素晴らしいプラットフォームです。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">イ・ミンジェ</p>
+                      <p class="text-sm" style="color:#555;">韓国ビズソース株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「新しい小さなビジネスにも関わらず、国際バイヤーにリーチできました。プラットフォームは初心者に優しく、無料で使用できます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・カイン・ヴィ</p>
+                      <p class="text-sm" style="color:#555;">VFreshファームスタートアップ – カントー</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「最も気に入っているのはスマートバイヤー提案機能です。手動検索の時間を節約できます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・ミン・コア</p>
+                      <p class="text-sm" style="color:#555;">ミンコアベジタリアンフーズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Duplicated -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「最初の日本のクライアントはGMAJORから来ました。日本語は話せませんが、自動翻訳チャットのおかげで取引を成立させることができました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Thanh Loc avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・タイン・ロック</p>
+                      <p class="text-sm" style="color:#555;">クアンロック機械株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「3日以内にGMAJORで複数の認証済みベトナムOEMサプライヤーを発見しました。迅速で明確で、偽のリードがありません。素晴らしいプラットフォームです。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Lee Min-Jae avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">イ・ミンジェ</p>
+                      <p class="text-sm" style="color:#555;">韓国ビズソース株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「新しい小さなビジネスにも関わらず、国際バイヤーにリーチできました。プラットフォームは初心者に優しく、無料で使用できます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Khanh Vy avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・カイン・ヴィ</p>
+                      <p class="text-sm" style="color:#555;">VFreshファームスタートアップ – カントー</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「最も気に入っているのはスマートバイヤー提案機能です。手動検索の時間を節約できます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Minh Khoa avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・ミン・コア</p>
+                      <p class="text-sm" style="color:#555;">ミンコアベジタリアンフーズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 3: Scrolls Down -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-down">
+            <!-- Card 9 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「以前はFacebookのフォーラムに投稿しても返信がありませんでした。でもGMAJORでは、本当のバイヤーが実際にメッセージを送ってくれます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">レ・クォック・フォン</p>
+                      <p class="text-sm" style="color:#555;">アンニエンガーメント株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 10 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「ほとんどのプラットフォームはアフリカを無視していますが、GMAJORでは公正な価格と明確な文書でペッパーとカシアのサプライヤーを見つけました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ダニエル・オケケ</p>
+                      <p class="text-sm" style="color:#555;">グリーンプロトレーディング（ナイジェリア）</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 11 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを通じて4つのベトナムスパイス輸出業者とつながりました。エージェント料金なし、迅速なコミュニケーション、そして実際の結果。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">チェン・ジャウェイ</p>
+                      <p class="text-sm" style="color:#555;">上海アロマグッズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 12 -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「プラットフォームはプロフェッショナルなビジネスプロフィール作成もサポートしており、国際パートナーとの取引で信頼性が向上します。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・ゴック・バオ・チャン</p>
+                      <p class="text-sm" style="color:#555;">営業リーダー – ベトザン木材株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Duplicated -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「以前はFacebookのフォーラムに投稿しても返信がありませんでした。でもGMAJORでは、本当のバイヤーが実際にメッセージを送ってくれます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Le Quoc Phong avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">レ・クォック・フォン</p>
+                      <p class="text-sm" style="color:#555;">アンニエンガーメント株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「ほとんどのプラットフォームはアフリカを無視していますが、GMAJORでは公正な価格と明確な文書でペッパーとカシアのサプライヤーを見つけました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Daniel Okeke avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ダニエル・オケケ</p>
+                      <p class="text-sm" style="color:#555;">グリーンプロトレーディング（ナイジェリア）</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを通じて4つのベトナムスパイス輸出業者とつながりました。エージェント料金なし、迅速なコミュニケーション、そして実際の結果。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Chen Jiawei avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">チェン・ジャウェイ</p>
+                      <p class="text-sm" style="color:#555;">上海アロマグッズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「プラットフォームはプロフェッショナルなビジネスプロフィール作成もサポートしており、国際パートナーとの取引で信頼性が向上します。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Nguyen Ngoc Bao Tran avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">グエン・ゴック・バオ・チャン</p>
+                      <p class="text-sm" style="color:#555;">営業リーダー – ベトザン木材株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 4: Scrolls Up -->
+        <div class="testimonial-column">
+          <div class="scrolling-wrapper animate-scroll-up">
+            <!-- Card 1 (repeated) -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORのおかげで、商品を投稿してから1週間以内に日本のバイヤー2社とつながりました。多言語チャットがとても便利で、翻訳者を雇う必要がありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">マイケル・チャン</p>
+                      <p class="text-sm" style="color:#555;">グローバルエクスポート</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 2 (repeated) -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORにより、ベトナムのスパイスサプライヤーと直接チャットできます。安全でシンプルで、取引がスムーズに進みます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">デビッド・チェン</p>
+                      <p class="text-sm" style="color:#555;">アジア輸入株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 3 (repeated) -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「多くのB2Bプラットフォームを試しましたが、GMAJORだけがアカウントを真剣に認証しています。他のサイトのようなスパムがありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ソフィア・グエン</p>
+                      <p class="text-sm" style="color:#555;">オーセンティックグッズLLC</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Card 4 (repeated) -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを使って小売チェーンのベトナムココナッツコーヒーサプライヤーを見つけました。スムーズなRFQプロセスと多言語チャットで数週間を節約できました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">リアム・オコネル</p>
+                      <p class="text-sm" style="color:#555;">ユーロフーズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <!-- Duplicated -->
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORのおかげで、商品を投稿してから1週間以内に日本のバイヤー2社とつながりました。多言語チャットがとても便利で、翻訳者を雇う必要がありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Another User avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">マイケル・チャン</p>
+                      <p class="text-sm" style="color:#555;">グローバルエクスポート</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORにより、ベトナムのスパイスサプライヤーと直接チャットできます。安全でシンプルで、取引がスムーズに進みます。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="International Buyer avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">デビッド・チェン</p>
+                      <p class="text-sm" style="color:#555;">アジア輸入株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「多くのB2Bプラットフォームを試しましたが、GMAJORだけがアカウントを真剣に認証しています。他のサイトのようなスパムがありません。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Business Owner avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">ソフィア・グエン</p>
+                      <p class="text-sm" style="color:#555;">オーセンティックグッズLLC</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+            <div class="testimonial-card-item">
+              <div class="p-6 rounded-lg">
+                <div class="testimonial-content">
+                  <p class="mb-5" style="color:#333;">「GMAJORを使って小売チェーンのベトナムココナッツコーヒーサプライヤーを見つけました。スムーズなRFQプロセスと多言語チャットで数週間を節約できました。」</p>
+                  <div class="flex items-center">
+                    <img class="w-10 h-10 rounded-full" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='20' fill='%234A5568'/%3E%3C/svg%3E" alt="Sourcing Manager avatar">
+                    <div class="ml-4">
+                      <p class="font-bold" style="color:#111;">リアム・オコネル</p>
+                      <p class="text-sm" style="color:#555;">ユーロフーズ株式会社</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="testimonial-hover-overlay"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section> 
