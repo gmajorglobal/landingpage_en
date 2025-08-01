@@ -1,6 +1,6 @@
-# Redirect www to non-www
-https://www.landing.gmajor.biz/* https://landing.gmajor.biz/:splat 301!
+# Redirect non-www to www
+https://landing.gmajor.biz/* https://www.landing.gmajor.biz/:splat 301!
 
 # Force HTTPS for custom domain
-http://landing.gmajor.biz/* https://landing.gmajor.biz/:splat 301!
-http://www.landing.gmajor.biz/* https://landing.gmajor.biz/:splat 301! 
+http://landing.gmajor.biz/* https://www.landing.gmajor.biz/:splat 301!
+http://www.landing.gmajor.biz/* https://www.landing.gmajor.biz/:splat 301! 
